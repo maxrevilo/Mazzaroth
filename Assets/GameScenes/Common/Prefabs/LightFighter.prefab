@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &112642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 412642}
+  - 135: {fileID: 13512642}
+  - 114: {fileID: 11466072}
+  m_Layer: 0
+  m_Name: DetectionArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &189274
 GameObject:
   m_ObjectHideFlags: 0
@@ -16,8 +33,9 @@ GameObject:
   - 114: {fileID: 11466360}
   - 114: {fileID: 11477476}
   - 114: {fileID: 11477474}
-  - 114: {fileID: 11422480}
-  - 114: {fileID: 11422474}
+  - 114: {fileID: 11474742}
+  - 114: {fileID: 11474740}
+  - 114: {fileID: 11474738}
   m_Layer: 0
   m_Name: LightFighter
   m_TagString: Untagged
@@ -55,6 +73,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &412642
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112642}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 34.1407433, y: 39.370079, z: 39.370079}
+  m_Children: []
+  m_Father: {fileID: 489274}
+  m_RootOrder: 0
 --- !u!4 &489274
 Transform:
   m_ObjectHideFlags: 1
@@ -65,6 +95,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: .0292905178, y: .0253999997, z: .0253999997}
   m_Children:
+  - {fileID: 412642}
   - {fileID: 490136}
   - {fileID: 490138}
   m_Father: {fileID: 0}
@@ -80,7 +111,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 489274}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &490138
 Transform:
   m_ObjectHideFlags: 1
@@ -92,7 +123,7 @@ Transform:
   m_LocalScale: {x: 1.00001657, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 489274}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!23 &2389274
 Renderer:
   m_ObjectHideFlags: 1
@@ -135,96 +166,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
---- !u!114 &11422474
+--- !u!114 &11466072
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 189274}
-  m_Enabled: 0
+  m_GameObject: {fileID: 112642}
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c22f108f25b8d4045879dfff227bb81b, type: 3}
+  m_Script: {fileID: 11500000, guid: af0d5e4c0bae74f65bf78ee8f7236711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Blackboard: {fileID: 11477476}
-  m_Parent: {fileID: 11477474}
-  m_StateName: Moving
-  m_Color: 0
-  m_HideScript: 1
-  m_Position: {x: 420, y: 140}
-  m_Transitions:
-  - m_Destination: {fileID: 11422480}
-    m_EventID: 1202858853
-  m_CachedInstanceID: -30966
-  m_NodeSerialization:
-    m_NodeTypes:
-    - BehaviourMachine.EveryFrame
-    m_NodeTypeHash: 89ef8210
-    m_NodeFieldStartIndex: 0000000003000000
-    m_BranchIndex: ffffffff
-    m_UnityObjectValue: []
-    m_IntValue: 0100000001000000
-    m_FloatValue: []
-    m_StringValue:
-    - EveryFrame
-    m_CurveValue: []
-    m_GenericFieldType: []
-    m_GenericFieldHash: 
-    m_GenericFieldSize: 
-    m_FieldIndex: 000000000000000001000000
-    m_FieldType: 010000000200000005000000
-    m_FieldPath:
-    - instanceID
-    - name
-    - enabled
-  m_Description: 
-  m_IgnoreTimeScale: 0
-  m_ResetStatusOnDisable: 1
---- !u!114 &11422480
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 189274}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c22f108f25b8d4045879dfff227bb81b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Blackboard: {fileID: 11477476}
-  m_Parent: {fileID: 11477474}
-  m_StateName: Idle
-  m_Color: 0
-  m_HideScript: 1
-  m_Position: {x: 220, y: 10}
-  m_Transitions:
-  - m_Destination: {fileID: 11422474}
-    m_EventID: 1761075472
-  m_CachedInstanceID: -25598
-  m_NodeSerialization:
-    m_NodeTypes:
-    - BehaviourMachine.EveryFrame
-    m_NodeTypeHash: 89ef8210
-    m_NodeFieldStartIndex: 0000000003000000
-    m_BranchIndex: ffffffff
-    m_UnityObjectValue: []
-    m_IntValue: 0100000001000000
-    m_FloatValue: []
-    m_StringValue:
-    - EveryFrame
-    m_CurveValue: []
-    m_GenericFieldType: []
-    m_GenericFieldHash: 
-    m_GenericFieldSize: 
-    m_FieldIndex: 000000000000000001000000
-    m_FieldType: 010000000200000005000000
-    m_FieldPath:
-    - instanceID
-    - name
-    - enabled
-  m_Description: 
-  m_IgnoreTimeScale: 0
-  m_ResetStatusOnDisable: 1
 --- !u!114 &11466360
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -244,6 +196,72 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 490136}
   - {fileID: 490138}
+  DetectionArea: {fileID: 11466072}
+--- !u!114 &11474738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189274}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f628474ff1d37472692c1197d13aaedc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 11477476}
+  m_Parent: {fileID: 11477474}
+  m_StateName: Attacking
+  m_Color: 4
+  m_HideScript: 1
+  m_Position: {x: 40, y: 70}
+  m_Transitions:
+  - m_Destination: {fileID: 11474740}
+    m_EventID: 843881883
+  m_CachedInstanceID: 7486
+--- !u!114 &11474740
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189274}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d2d778d7eb9447d9209188f3718a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 11477476}
+  m_Parent: {fileID: 11477474}
+  m_StateName: Idle
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: 230, y: -20}
+  m_Transitions:
+  - m_Destination: {fileID: 11474742}
+    m_EventID: 1761075472
+  - m_Destination: {fileID: 11474738}
+    m_EventID: 573566531
+  m_CachedInstanceID: 7488
+--- !u!114 &11474742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189274}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9898cf537ddc348a99d26461205357ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 11477476}
+  m_Parent: {fileID: 11477474}
+  m_StateName: Moving
+  m_Color: 1
+  m_HideScript: 1
+  m_Position: {x: 420, y: 90}
+  m_Transitions:
+  - m_Destination: {fileID: 11474740}
+    m_EventID: 1202858853
+  m_CachedInstanceID: 7490
 --- !u!114 &11476564
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -287,11 +305,11 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: -12148
+  m_CachedInstanceID: 7492
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
-  m_StartState: {fileID: 11422480}
+  m_StartState: {fileID: 11474740}
   m_AnyState: {fileID: 0}
   m_ConcurrentState: {fileID: 0}
 --- !u!114 &11477476
@@ -331,7 +349,31 @@ MonoBehaviour:
     m_IsConstant: 0
     m_EventId: 0
     m_IsSystem: 0
+  - m_ID: 573566531
+    m_Name: EnemyDetected
+    m_Blackboard: {fileID: 11477476}
+    m_IsConstant: 0
+    m_EventId: 0
+    m_IsSystem: 0
+  - m_ID: 843881883
+    m_Name: EnemyDied
+    m_Blackboard: {fileID: 11477476}
+    m_IsConstant: 0
+    m_EventId: 0
+    m_IsSystem: 0
   m_Namespace: 
+--- !u!135 &13512642
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112642}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &13529324
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -339,7 +381,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189274}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 70.5263977

@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 using BehaviourMachine;
 
 namespace Mazzaroth {
 
     public class ShipState : BaseMonoBehaviour {
-
         public enum ShipStances {
             Raid,
             HoldPosition,
@@ -28,8 +28,12 @@ namespace Mazzaroth {
 
         public float LateralStabilizatorsFactor = 0.1f;
         public Transform[] FiringLocations;
+        public DetectionArea DetectionArea;
         public Vector3 DestinyLocation { get; private set; }
         public Vector3 RelativeVelocity { get; private set; }
+        public ShipState EnemyOnLock { get; private set; }
+
+        public DebugConf DebugConfigurations;
 
         public bool Fire(Transform target, WeaponStats weapon = null) {
             if (weapon == null)
@@ -64,8 +68,13 @@ namespace Mazzaroth {
         }
 
         public void MoveOrder(Vector3 destiny) {
-            blackboard.SendEvent(1761075472); //MoveOrder
             DestinyLocation = destiny;
+            blackboard.SendEvent(1761075472); //MoveOrder
+        }
+
+        public void AttackOrder(ShipState enemy) {
+            EnemyOnLock = enemy;
+            blackboard.SendEvent(573566531); //EnemyDetected
         }
 
         public void HeadTowardPosition(Vector3 position) {
@@ -75,12 +84,19 @@ namespace Mazzaroth {
 
             float discriminant = Mathf.Pow(rigidbody.angularVelocity.y, 2) - 2f * stats.angularAccelerationRad * absAngle;
 
-            if (discriminant < 0f) {
-                Debug.DrawLine(transform.position, transform.up * 3f + transform.position, Color.green);
-                addAngularVelocity(Vector3.up * sign * stats.angularAccelerationRad * Time.deltaTime);
+            bool reachable = isInsideSteeringLimit(position);
+
+            if (reachable) {
+                if (discriminant < 0f) {
+                    Debug.DrawLine(transform.position, transform.up * 3f + transform.position, Color.green);
+                    addAngularVelocity(Vector3.up * sign * stats.angularAccelerationRad * Time.deltaTime);
+                } else {
+                    Debug.DrawLine(transform.position, transform.position - transform.up * 3f, Color.red);
+                    UseAngularBreaks();
+                }
             } else {
-                Debug.DrawLine(transform.position, transform.position - transform.up * 5f, Color.red);
-                UseAngularBreaks();
+                Debug.DrawLine(transform.position, transform.position - transform.up * 5f, Color.magenta);
+                addAngularVelocity(-Vector3.up * sign * stats.angularAccelerationRad * Time.deltaTime);
             }
         }
 
@@ -91,15 +107,16 @@ namespace Mazzaroth {
 
             if (discriminant < 0f) {
                 Debug.DrawLine(transform.position, position, Color.green);
-                addVelocity(transform.forward * stats.acceleration * Time.deltaTime);
+                MoveForward();
             } else {
                 Debug.DrawLine(transform.position, position, Color.red);
                 UseBreaks();
             }
 
-            if (rigidbody.velocity.sqrMagnitude > Mathf.Pow(stats.Speed, 2)) {
-                rigidbody.velocity = Math3d.SetVectorLength(rigidbody.velocity, stats.Speed);
-            }
+        }
+
+        public void MoveForward() {
+            addVelocity(transform.forward * stats.acceleration * Time.deltaTime);
         }
 
         public void UseBreaks() {
@@ -148,15 +165,28 @@ namespace Mazzaroth {
             if (HealthPoints < 0f) {
                 HealthPoints = stats.HealthPoints;
             }
+
+            DetectionArea.transform.localScale *= stats.Sight;
+            DetectionArea.ShipDetected += shipDetected;
+        }
+
+        void shipDetected(ShipState ship) {
+            EnemyOnLock = ship;
+            blackboard.SendEvent(573566531); //EnemyDetected
         }
 
         void Update () {
             TimeToFire -= Time.deltaTime;
+            if(DebugConfigurations.ShowSteeringLimits) drawSteeringLimits();
         }
 
         void FixedUpdate() {
             RelativeVelocity = transform.InverseTransformDirection(rigidbody.velocity);
             useLateralStabilizators();
+
+            if (rigidbody.velocity.sqrMagnitude > Mathf.Pow(stats.Speed, 2)) {
+                rigidbody.velocity = Math3d.SetVectorLength(rigidbody.velocity, stats.Speed);
+            }
         }
 
         private void useLateralStabilizators() {
@@ -180,6 +210,51 @@ namespace Mazzaroth {
             }
 
             return firingLocation;
+        }
+
+
+        float steeringLimitLateralRadius = 7.5f;
+
+        void drawSteeringLimits() {
+            float STEPS = 24;
+
+            float deff = 2f * Mathf.PI / STEPS;
+            Vector3 posA = this.transform.position + this.transform.right * steeringLimitLateralRadius;
+            Vector3 previous = posA;
+            Vector3 actual;
+            for (float r = 0; r <= 2f * Mathf.PI; r += deff) {
+                actual = posA + new Vector3(Mathf.Sin(r) * steeringLimitLateralRadius, 0f, Mathf.Cos(r) * steeringLimitLateralRadius);
+                Debug.DrawLine(previous, actual);
+                previous = actual;
+            }
+
+            Vector3 posB = this.transform.position - this.transform.right * steeringLimitLateralRadius;
+            previous = posB;
+            for (float r = 0; r <= 2f * Mathf.PI; r += deff) {
+                actual = posB + new Vector3(Mathf.Sin(r) * steeringLimitLateralRadius, 0f, Mathf.Cos(r) * steeringLimitLateralRadius);
+                Debug.DrawLine(previous, actual);
+                previous = actual;
+            }
+        }
+
+        bool isInsideSteeringLimit(Vector3 destiny) {
+            Vector2 right2D = new Vector2(transform.right.x, transform.right.z);
+            Circle steeringLimitRight = new Circle(steeringLimitLateralRadius, right2D * steeringLimitLateralRadius);
+            Circle steeringLimitLeft = new Circle(steeringLimitLateralRadius, -right2D * steeringLimitLateralRadius);
+
+            destiny = destiny - transform.position;
+            Vector2 destiny2D = new Vector2(destiny.x, destiny.z);
+
+            bool result = 
+                steeringLimitRight.Contains(destiny2D) ||
+                steeringLimitLeft.Contains(destiny2D);
+            return !result;
+        }
+
+
+        [Serializable]
+        public class DebugConf {
+            public bool ShowSteeringLimits = false;
         }
     }
 }
