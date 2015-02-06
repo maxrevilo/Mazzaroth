@@ -16,7 +16,7 @@ namespace Mazzaroth {
                 float rayDistance;
                 if (groundPlane.Raycast(ray, out rayDistance)) {
                     obj.position = ray.GetPoint(rayDistance);
-                    Ship.goToLocation(obj.position);
+                    Ship.MoveOrder(obj.position);
                 }
             }
         }

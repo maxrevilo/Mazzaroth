@@ -339,7 +339,33 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11477474, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
+      propertyPath: m_CachedInstanceID
+      value: -12150
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422480, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
+      propertyPath: m_Transitions.Array.data[0].m_Destination
+      value: 
+      objectReference: {fileID: 1286875451}
+    - target: {fileID: 11422480, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
+      propertyPath: m_CachedInstanceID
+      value: -25600
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422480, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
+      propertyPath: m_Position.x
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422480, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
+      propertyPath: m_Position.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11477474, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
+      propertyPath: m_StartState
+      value: 
+      objectReference: {fileID: 1286875450}
+    m_RemovedComponents:
+    - {fileID: 11422474, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
+    - {fileID: 11422480, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
   m_RootGameObject: {fileID: 1286875440}
   m_IsPrefabParent: 0
@@ -455,6 +481,10 @@ GameObject:
   - 135: {fileID: 1286875445}
   - 114: {fileID: 1286875446}
   - 114: {fileID: 1286875447}
+  - 114: {fileID: 1286875449}
+  - 114: {fileID: 1286875448}
+  - 114: {fileID: 1286875451}
+  - 114: {fileID: 1286875450}
   m_Layer: 0
   m_Name: LightFighter
   m_TagString: Untagged
@@ -580,6 +610,113 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 327041561}
   - {fileID: 815459594}
+--- !u!114 &1286875448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11477474, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 594155538}
+  m_GameObject: {fileID: 1286875440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a27b962ddfa21461eb78fac1cb2f955f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 1286875449}
+  m_Parent: {fileID: 0}
+  m_StateName: StateMachine
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: 0, y: 0}
+  m_Transitions: []
+  m_CachedInstanceID: -12150
+  m_Description: 
+  m_EnabledState: {fileID: 0}
+  m_LastEnabledState: {fileID: 0}
+  m_StartState: {fileID: 1286875450}
+  m_AnyState: {fileID: 0}
+  m_ConcurrentState: {fileID: 0}
+--- !u!114 &1286875449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11477476, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 594155538}
+  m_GameObject: {fileID: 1286875440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634db10235c0241d6ad43433a106016d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FloatVars: []
+  m_IntVars: []
+  m_BoolVars: []
+  m_StringVars: []
+  m_Vector3Vars: []
+  m_RectVars: []
+  m_ColorVars: []
+  m_QuaternionVars: []
+  m_GameObjectVars: []
+  m_TextureVars: []
+  m_MaterialVars: []
+  m_ObjectVars: []
+  m_FsmEvents: []
+  m_ConcreteFsmEvents:
+  - m_ID: 1761075472
+    m_Name: MoveOrder
+    m_Blackboard: {fileID: 1286875449}
+    m_IsConstant: 0
+    m_EventId: 0
+    m_IsSystem: 0
+  - m_ID: 1202858853
+    m_Name: OnDestiny
+    m_Blackboard: {fileID: 1286875449}
+    m_IsConstant: 0
+    m_EventId: 0
+    m_IsSystem: 0
+  m_Namespace: 
+--- !u!114 &1286875450
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1286875440}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d2d778d7eb9447d9209188f3718a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 1286875449}
+  m_Parent: {fileID: 1286875448}
+  m_StateName: Idle
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: 180, y: 20}
+  m_Transitions:
+  - m_Destination: {fileID: 1286875451}
+    m_EventID: 1761075472
+  m_CachedInstanceID: -70150
+--- !u!114 &1286875451
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1286875440}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9898cf537ddc348a99d26461205357ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 1286875449}
+  m_Parent: {fileID: 1286875448}
+  m_StateName: Moving
+  m_Color: 1
+  m_HideScript: 1
+  m_Position: {x: 390, y: 120}
+  m_Transitions:
+  - m_Destination: {fileID: 1286875450}
+    m_EventID: 1202858853
+  m_CachedInstanceID: -58138
 --- !u!1 &1579341371
 GameObject:
   m_ObjectHideFlags: 0

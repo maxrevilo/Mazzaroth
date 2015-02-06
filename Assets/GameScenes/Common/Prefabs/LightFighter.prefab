@@ -14,6 +14,10 @@ GameObject:
   - 135: {fileID: 13529324}
   - 114: {fileID: 11476564}
   - 114: {fileID: 11466360}
+  - 114: {fileID: 11477476}
+  - 114: {fileID: 11477474}
+  - 114: {fileID: 11422480}
+  - 114: {fileID: 11422474}
   m_Layer: 0
   m_Name: LightFighter
   m_TagString: Untagged
@@ -131,6 +135,96 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!114 &11422474
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189274}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c22f108f25b8d4045879dfff227bb81b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 11477476}
+  m_Parent: {fileID: 11477474}
+  m_StateName: Moving
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: 420, y: 140}
+  m_Transitions:
+  - m_Destination: {fileID: 11422480}
+    m_EventID: 1202858853
+  m_CachedInstanceID: -30966
+  m_NodeSerialization:
+    m_NodeTypes:
+    - BehaviourMachine.EveryFrame
+    m_NodeTypeHash: 89ef8210
+    m_NodeFieldStartIndex: 0000000003000000
+    m_BranchIndex: ffffffff
+    m_UnityObjectValue: []
+    m_IntValue: 0100000001000000
+    m_FloatValue: []
+    m_StringValue:
+    - EveryFrame
+    m_CurveValue: []
+    m_GenericFieldType: []
+    m_GenericFieldHash: 
+    m_GenericFieldSize: 
+    m_FieldIndex: 000000000000000001000000
+    m_FieldType: 010000000200000005000000
+    m_FieldPath:
+    - instanceID
+    - name
+    - enabled
+  m_Description: 
+  m_IgnoreTimeScale: 0
+  m_ResetStatusOnDisable: 1
+--- !u!114 &11422480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189274}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c22f108f25b8d4045879dfff227bb81b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 11477476}
+  m_Parent: {fileID: 11477474}
+  m_StateName: Idle
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: 220, y: 10}
+  m_Transitions:
+  - m_Destination: {fileID: 11422474}
+    m_EventID: 1761075472
+  m_CachedInstanceID: -25598
+  m_NodeSerialization:
+    m_NodeTypes:
+    - BehaviourMachine.EveryFrame
+    m_NodeTypeHash: 89ef8210
+    m_NodeFieldStartIndex: 0000000003000000
+    m_BranchIndex: ffffffff
+    m_UnityObjectValue: []
+    m_IntValue: 0100000001000000
+    m_FloatValue: []
+    m_StringValue:
+    - EveryFrame
+    m_CurveValue: []
+    m_GenericFieldType: []
+    m_GenericFieldHash: 
+    m_GenericFieldSize: 
+    m_FieldIndex: 000000000000000001000000
+    m_FieldType: 010000000200000005000000
+    m_FieldPath:
+    - instanceID
+    - name
+    - enabled
+  m_Description: 
+  m_IgnoreTimeScale: 0
+  m_ResetStatusOnDisable: 1
 --- !u!114 &11466360
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -175,6 +269,69 @@ MonoBehaviour:
   angularSpeed: .600000024
   angularAcceleration: 1
   ShipPrefab: {fileID: 489274}
+--- !u!114 &11477474
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a27b962ddfa21461eb78fac1cb2f955f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 11477476}
+  m_Parent: {fileID: 0}
+  m_StateName: StateMachine
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: 0, y: 0}
+  m_Transitions: []
+  m_CachedInstanceID: -12148
+  m_Description: 
+  m_EnabledState: {fileID: 0}
+  m_LastEnabledState: {fileID: 0}
+  m_StartState: {fileID: 11422480}
+  m_AnyState: {fileID: 0}
+  m_ConcurrentState: {fileID: 0}
+--- !u!114 &11477476
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634db10235c0241d6ad43433a106016d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FloatVars: []
+  m_IntVars: []
+  m_BoolVars: []
+  m_StringVars: []
+  m_Vector3Vars: []
+  m_RectVars: []
+  m_ColorVars: []
+  m_QuaternionVars: []
+  m_GameObjectVars: []
+  m_TextureVars: []
+  m_MaterialVars: []
+  m_ObjectVars: []
+  m_FsmEvents: []
+  m_ConcreteFsmEvents:
+  - m_ID: 1761075472
+    m_Name: MoveOrder
+    m_Blackboard: {fileID: 11477476}
+    m_IsConstant: 0
+    m_EventId: 0
+    m_IsSystem: 0
+  - m_ID: 1202858853
+    m_Name: OnDestiny
+    m_Blackboard: {fileID: 11477476}
+    m_IsConstant: 0
+    m_EventId: 0
+    m_IsSystem: 0
+  m_Namespace: 
 --- !u!135 &13529324
 SphereCollider:
   m_ObjectHideFlags: 1

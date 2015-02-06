@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using BehaviourMachine;
 
 namespace Mazzaroth {
 
@@ -26,14 +27,15 @@ namespace Mazzaroth {
         public float TimeToFire;
 
         public float LateralStabilizatorsFactor = 0.1f;
-
         public Transform[] FiringLocations;
+        public Vector3 DestinyLocation { get; private set; }
+        public Vector3 RelativeVelocity { get; private set; }
 
         public bool Fire(Transform target, WeaponStats weapon = null) {
             if (weapon == null)
                 weapon = getWeaponAt(0);
 
-            if (!isReadyToFire() || !isTargetInRange(target, weapon)) {
+            if (!isReadyToFire() || !IsTargetInRange(target, weapon)) {
                 return false;
             }
 
@@ -61,72 +63,12 @@ namespace Mazzaroth {
             return HealthPoints > 0f;
         }
 
-        public void goToLocation(Vector3 destiny) {
-            destinyLocation = destiny;
-//            moving = true;
+        public void MoveOrder(Vector3 destiny) {
+            blackboard.SendEvent(1761075472); //MoveOrder
+            DestinyLocation = destiny;
         }
 
-        bool isTargetInRange(Transform target, WeaponStats weapon = null) {
-            if (weapon == null)
-                weapon = getWeaponAt(0);
-
-            float distSqr = Vector3.SqrMagnitude(this.transform.position - target.position);
-
-            return distSqr <= Mathf.Pow(weapon.Range, 2);
-        }
-
-
-        private ShipStats stats;
-        private int actualFiringLocation;
-        private Vector3 destinyLocation;
-        private float destinyFacingDirection;
-//        private bool moving = false;
-        private Vector3 relativeVel;
-
-        // Use this for initialization
-        void Start () {
-            stats = GetComponent<ShipStats>();
-            TimeToFire = 0f;
-
-            destinyLocation = transform.position;
-            destinyFacingDirection = transform.rotation.eulerAngles.y;
-            rigidbody.maxAngularVelocity = stats.angularSpeedRad;
-
-            if (HealthPoints < 0f) {
-                HealthPoints = stats.HealthPoints;
-            }
-        }
-
-        // Update is called once per frame
-        void Update () {
-            TimeToFire -= Time.deltaTime;
-
-            Fire(this.transform);
-        }
-
-        void FixedUpdate() {
-            const float MIN_DISTANCE_TO_DESTINY = 0.5f;
-            float sqrSistanceToDestiny = Vector3.SqrMagnitude(this.transform.position - destinyLocation);
-
-            relativeVel = transform.InverseTransformDirection(rigidbody.velocity);
-
-            useLateralStabilizators();
-//            multiplyAngularVelocity(0.9f);
-
-            if (sqrSistanceToDestiny >= Mathf.Pow(MIN_DISTANCE_TO_DESTINY, 2)) {
-                headTowardPosition(destinyLocation);
-                moveForwardToPosition(destinyLocation);
-            } else {
-                useBreaks();
-                useAngularBreaks();
-            }
-        }
-
-        WeaponStats getWeaponAt(int index) {
-            return stats.Weapons[index];
-        }
-
-        void headTowardPosition(Vector3 position) {
+        public void HeadTowardPosition(Vector3 position) {
             float angle = Math3d.SignedVectorAngle(transform.forward, position - transform.position, transform.up) * Mathf.Deg2Rad;
             float sign = Mathf.Sign(angle);
             float absAngle = sign * angle;
@@ -138,21 +80,21 @@ namespace Mazzaroth {
                 addAngularVelocity(Vector3.up * sign * stats.angularAccelerationRad * Time.deltaTime);
             } else {
                 Debug.DrawLine(transform.position, transform.position - transform.up * 5f, Color.red);
-                useAngularBreaks();
+                UseAngularBreaks();
             }
         }
 
-        void moveForwardToPosition(Vector3 position) {
+        public void MoveForwardToPosition(Vector3 position) {
             float distance = Vector3.Magnitude(transform.position - position);
-            float discriminant = Mathf.Pow(relativeVel.z, 2) - 2f * stats.deacceleration * distance;
+            float discriminant = Mathf.Pow(RelativeVelocity.z, 2) - 2f * stats.deacceleration * distance;
 
 
             if (discriminant < 0f) {
-                Debug.DrawLine(transform.position, destinyLocation, Color.green);
+                Debug.DrawLine(transform.position, position, Color.green);
                 addVelocity(transform.forward * stats.acceleration * Time.deltaTime);
             } else {
-                Debug.DrawLine(transform.position, destinyLocation, Color.red);
-                useBreaks();
+                Debug.DrawLine(transform.position, position, Color.red);
+                UseBreaks();
             }
 
             if (rigidbody.velocity.sqrMagnitude > Mathf.Pow(stats.Speed, 2)) {
@@ -160,19 +102,13 @@ namespace Mazzaroth {
             }
         }
 
-        void useLateralStabilizators() {
-            Vector3 stabilizerVel = -relativeVel;
-            stabilizerVel.z = 0;
-            addVelocity(transform.TransformDirection(stabilizerVel) * LateralStabilizatorsFactor);
-        }
-
-        void useBreaks() {
+        public void UseBreaks() {
             float amount = stats.deacceleration * Time.deltaTime;
-            amount = Mathf.Min(relativeVel.z, amount);
+            amount = Mathf.Min(RelativeVelocity.z, amount);
             addVelocity(-transform.forward * amount);
         }
 
-        void useAngularBreaks() {
+        public void UseAngularBreaks() {
             float angularVelocity = rigidbody.angularVelocity.y;
             float angularDirection = Mathf.Sign(angularVelocity);
             float absAngularVelocity = angularVelocity * angularDirection;
@@ -180,6 +116,57 @@ namespace Mazzaroth {
             float amount = stats.angularAccelerationRad * Time.deltaTime;
             amount = Mathf.Min(absAngularVelocity, amount);
             addAngularVelocity(- angularDirection * Vector3.up * amount);
+        }
+
+        bool IsTargetInRange(Transform target, WeaponStats weapon = null) {
+            if (weapon == null)
+                weapon = getWeaponAt(0);
+
+            float distSqr = Vector3.SqrMagnitude(this.transform.position - target.position);
+
+            return distSqr <= Mathf.Pow(weapon.Range, 2);
+        }
+
+
+        ////////////////////////// PRIVATE //////////////////////////
+
+        private ShipStats stats;
+        private Blackboard blackboard;
+        private int actualFiringLocation;
+//        private float destinyFacingDirection;
+
+        // Use this for initialization
+        void Start () {
+            stats = GetComponent<ShipStats>();
+            blackboard = GetComponent<Blackboard>();
+            TimeToFire = 0f;
+
+            DestinyLocation = transform.position;
+//            destinyFacingDirection = transform.rotation.eulerAngles.y;
+            rigidbody.maxAngularVelocity = stats.angularSpeedRad;
+
+            if (HealthPoints < 0f) {
+                HealthPoints = stats.HealthPoints;
+            }
+        }
+
+        void Update () {
+            TimeToFire -= Time.deltaTime;
+        }
+
+        void FixedUpdate() {
+            RelativeVelocity = transform.InverseTransformDirection(rigidbody.velocity);
+            useLateralStabilizators();
+        }
+
+        private void useLateralStabilizators() {
+            Vector3 stabilizerVel = -RelativeVelocity;
+            stabilizerVel.z = 0;
+            addVelocity(transform.TransformDirection(stabilizerVel) * LateralStabilizatorsFactor);
+        }
+
+        WeaponStats getWeaponAt(int index) {
+            return stats.Weapons[index];
         }
 
         Transform getActualFiringLocation(bool MoveToTheNextFiringLocation = false) {
