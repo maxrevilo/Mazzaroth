@@ -153,7 +153,7 @@ namespace Mazzaroth {
 //        private float destinyFacingDirection;
 
         // Use this for initialization
-        void Start () {
+        void Awake () {
             stats = GetComponent<ShipStats>();
             blackboard = GetComponent<Blackboard>();
             TimeToFire = 0f;

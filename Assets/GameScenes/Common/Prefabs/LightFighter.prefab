@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &189274
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,6 +197,8 @@ MonoBehaviour:
   - {fileID: 490136}
   - {fileID: 490138}
   DetectionArea: {fileID: 11466072}
+  DebugConfigurations:
+    ShowSteeringLimits: 0
 --- !u!114 &11474738
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -217,6 +219,8 @@ MonoBehaviour:
   m_Transitions:
   - m_Destination: {fileID: 11474740}
     m_EventID: 843881883
+  - m_Destination: {fileID: 11474742}
+    m_EventID: 1761075472
   m_CachedInstanceID: 7486
 --- !u!114 &11474740
 MonoBehaviour:
@@ -279,7 +283,7 @@ MonoBehaviour:
   Cargo: 1
   Size: 4
   Speed: 20
-  Sight: 20
+  Sight: 35
   Weapons:
   - {fileID: 11465302, guid: 3bd7da48b7e934108a35d616d6bd4144, type: 2}
   acceleration: 20
@@ -300,7 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Blackboard: {fileID: 11477476}
   m_Parent: {fileID: 0}
-  m_StateName: StateMachine
+  m_StateName: ShipFSM
   m_Color: 0
   m_HideScript: 1
   m_Position: {x: 0, y: 0}

@@ -7,13 +7,20 @@ namespace Mazzaroth {
 
         private ShipState shipState;
 
-        void Start() {
+        void OnEnable () {
+            shipState.DetectionArea.gameObject.SetActive(true);
+        }
+
+        // Called when the state is disabled
+        void OnDisable () {
+            shipState.DetectionArea.gameObject.SetActive(false);
+        }
+
+        void Awake() {
             shipState = GetComponent<ShipState>();
         }
 
         void Update() {
-            Debug.Log("shipState -> " + shipState);
-            Debug.Log("shipState.EnemyOnLock -> " + (shipState.EnemyOnLock == null));
             shipState.Fire(shipState.EnemyOnLock.transform, null);
         }
 

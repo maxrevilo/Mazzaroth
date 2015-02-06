@@ -7,7 +7,14 @@ namespace Mazzaroth {
 
         private ShipState shipState;
 
-        void Start() {
+        void OnEnable () {
+        }
+
+        // Called when the state is disabled
+        void OnDisable () {
+        }
+
+        void Awake() {
             shipState = GetComponent<ShipState>();
         }
 
