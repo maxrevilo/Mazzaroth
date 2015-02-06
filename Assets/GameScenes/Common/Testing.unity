@@ -590,7 +590,7 @@ MonoBehaviour:
   m_StateName: Attacking
   m_Color: 4
   m_HideScript: 1
-  m_Position: {x: 40, y: 70}
+  m_Position: {x: 210, y: 60}
   m_Transitions:
   - m_Destination: {fileID: 695361698}
     m_EventID: 843881883
@@ -614,12 +614,14 @@ MonoBehaviour:
   m_StateName: Idle
   m_Color: 0
   m_HideScript: 1
-  m_Position: {x: 230, y: -20}
+  m_Position: {x: 400, y: -20}
   m_Transitions:
   - m_Destination: {fileID: 695361699}
     m_EventID: 1761075472
   - m_Destination: {fileID: 695361697}
     m_EventID: 573566531
+  - m_Destination: {fileID: 695361697}
+    m_EventID: 1577261801
   m_CachedInstanceID: -1164948
 --- !u!114 &695361699
 MonoBehaviour:
@@ -638,10 +640,12 @@ MonoBehaviour:
   m_StateName: Moving
   m_Color: 1
   m_HideScript: 1
-  m_Position: {x: 420, y: 90}
+  m_Position: {x: 590, y: 80}
   m_Transitions:
   - m_Destination: {fileID: 695361698}
     m_EventID: 1202858853
+  - m_Destination: {fileID: 695361697}
+    m_EventID: 1577261801
   m_CachedInstanceID: -1164950
 --- !u!114 &695361700
 MonoBehaviour:
@@ -715,6 +719,12 @@ MonoBehaviour:
     m_IsSystem: 0
   - m_ID: 843881883
     m_Name: EnemyDied
+    m_Blackboard: {fileID: 695361701}
+    m_IsConstant: 0
+    m_EventId: 0
+    m_IsSystem: 0
+  - m_ID: 1577261801
+    m_Name: AtackOrder
     m_Blackboard: {fileID: 695361701}
     m_IsConstant: 0
     m_EventId: 0
@@ -1202,6 +1212,12 @@ MonoBehaviour:
     m_IsConstant: 0
     m_EventId: 0
     m_IsSystem: 0
+  - m_ID: 1577261801
+    m_Name: AtackOrder
+    m_Blackboard: {fileID: 1286875449}
+    m_IsConstant: 0
+    m_EventId: 0
+    m_IsSystem: 0
   m_Namespace: 
 --- !u!114 &1286875450
 MonoBehaviour:
@@ -1220,12 +1236,14 @@ MonoBehaviour:
   m_StateName: Idle
   m_Color: 0
   m_HideScript: 1
-  m_Position: {x: 230, y: -20}
+  m_Position: {x: 400, y: -20}
   m_Transitions:
   - m_Destination: {fileID: 1286875451}
     m_EventID: 1761075472
   - m_Destination: {fileID: 1286875452}
     m_EventID: 573566531
+  - m_Destination: {fileID: 1286875452}
+    m_EventID: 1577261801
   m_CachedInstanceID: 7420
 --- !u!114 &1286875451
 MonoBehaviour:
@@ -1244,10 +1262,12 @@ MonoBehaviour:
   m_StateName: Moving
   m_Color: 1
   m_HideScript: 1
-  m_Position: {x: 420, y: 90}
+  m_Position: {x: 590, y: 80}
   m_Transitions:
   - m_Destination: {fileID: 1286875450}
     m_EventID: 1202858853
+  - m_Destination: {fileID: 1286875452}
+    m_EventID: 1577261801
   m_CachedInstanceID: 7422
 --- !u!114 &1286875452
 MonoBehaviour:
@@ -1266,7 +1286,7 @@ MonoBehaviour:
   m_StateName: Attacking
   m_Color: 4
   m_HideScript: 1
-  m_Position: {x: 40, y: 70}
+  m_Position: {x: 210, y: 60}
   m_Transitions:
   - m_Destination: {fileID: 1286875450}
     m_EventID: 843881883
@@ -1319,6 +1339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 448638339}
   Ship: {fileID: 1286875447}
+  Ship2: {fileID: 695361702}
 --- !u!1 &2147470663
 GameObject:
   m_ObjectHideFlags: 0

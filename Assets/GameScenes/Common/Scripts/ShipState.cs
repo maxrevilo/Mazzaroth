@@ -74,7 +74,7 @@ namespace Mazzaroth {
 
         public void AttackOrder(ShipState enemy) {
             EnemyOnLock = enemy;
-            blackboard.SendEvent(573566531); //EnemyDetected
+            blackboard.SendEvent(1577261801); //EnemyDetected
         }
 
         public void HeadTowardPosition(Vector3 position) {
