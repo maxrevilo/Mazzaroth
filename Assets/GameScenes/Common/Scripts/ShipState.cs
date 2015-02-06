@@ -133,10 +133,6 @@ namespace Mazzaroth {
 
             float discriminant = Mathf.Pow(rigidbody.angularVelocity.y, 2) - 2f * stats.angularAccelerationRad * absAngle;
 
-            Debug.Log("rigidbody.angularVelocity.y " + rigidbody.angularVelocity.y);
-            Debug.Log("stats.angularAccelerationRad "+ stats.angularAccelerationRad);
-            Debug.Log("absAngle" + absAngle);
-
             if (discriminant < 0f) {
                 Debug.DrawLine(transform.position, transform.up * 3f + transform.position, Color.green);
                 addAngularVelocity(Vector3.up * sign * stats.angularAccelerationRad * Time.deltaTime);
