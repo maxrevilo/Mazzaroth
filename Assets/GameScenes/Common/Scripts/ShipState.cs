@@ -47,16 +47,33 @@ namespace Mazzaroth {
             Transform firingLocation = getActualFiringLocation(true);
 
 
-            pS.InstantiateAPS(
+            GameObject projectile = pS.InstantiateAPS(
                 weapon.BulletPrefab.name,
                 firingLocation.position,
                 firingLocation.rotation,
                 this.transform.parent.gameObject
             );
 
+            projectile.GetComponent<ProjectileState>().Initiate(this);
+
             TimeToFire = weapon.Cooldown;
 
             return true;
+        }
+
+        public float Damage(WeaponStats weapon) {
+            float heatRawDamage = weapon.HeatConversion * weapon.Damage;
+            float physicalRawDamage = weapon.Damage - heatRawDamage;
+
+            float computedDamage = Math.Max(physicalRawDamage - stats.Armor, 0f) + heatRawDamage * (1f - stats.HeatDissipation);
+
+            HealthPoints -= computedDamage;
+
+            AngularImpact(weapon.Impact);
+
+            if (!isAlive()) { Die(); }
+
+            return computedDamage;
         }
 
         public bool isReadyToFire() {
@@ -144,6 +161,15 @@ namespace Mazzaroth {
             return distSqr <= Mathf.Pow(weapon.Range, 2);
         }
 
+        public void Die() {
+            gameObject.DestroyAPS();
+        }
+
+        public void AngularImpact(float impact) {
+            float impactStr = impact / rigidbody.mass * Mathf.Sign(UnityEngine.Random.Range(-1, 1));
+            addAngularVelocity(Vector3.up * 3f * impactStr);
+            transform.Rotate(new Vector3(0, 20f * impactStr, 0));
+        }
 
         ////////////////////////// PRIVATE //////////////////////////
 

@@ -132,8 +132,9 @@ MonoBehaviour:
   Range: 20
   HeatConversion: .400000006
   Speed: 100
-  Impact: .300000012
+  Impact: .200000003
   BulletPrefab: {fileID: 485666}
+  ImpactPrefab: {fileID: 490718, guid: 3a854058e46d64e59aa71b17b8931262, type: 2}
 --- !u!114 &11494762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -147,6 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Alive: 1
   BulletElongation: 3
+  Breader: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

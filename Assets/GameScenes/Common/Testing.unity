@@ -168,6 +168,8 @@ MonoBehaviour:
   poolingItems:
   - prefab: {fileID: 185666, guid: 3bd7da48b7e934108a35d616d6bd4144, type: 2}
     amount: 50
+  - prefab: {fileID: 190718, guid: 3a854058e46d64e59aa71b17b8931262, type: 2}
+    amount: 50
   defaultPoolAmount: 50
   poolExpand: 1
 --- !u!4 &80322918
@@ -596,7 +598,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 695361699}
     m_EventID: 1761075472
-  m_CachedInstanceID: -1164952
+  m_CachedInstanceID: 7404
 --- !u!114 &695361698
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -622,7 +624,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 695361697}
     m_EventID: 1577261801
-  m_CachedInstanceID: -1164948
+  m_CachedInstanceID: 7406
 --- !u!114 &695361699
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -646,7 +648,7 @@ MonoBehaviour:
     m_EventID: 1202858853
   - m_Destination: {fileID: 695361697}
     m_EventID: 1577261801
-  m_CachedInstanceID: -1164950
+  m_CachedInstanceID: 7408
 --- !u!114 &695361700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -666,7 +668,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: -1164944
+  m_CachedInstanceID: 7410
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -1155,7 +1157,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 7416
+  m_CachedInstanceID: 7464
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -1244,7 +1246,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 1286875452}
     m_EventID: 1577261801
-  m_CachedInstanceID: 7420
+  m_CachedInstanceID: 7468
 --- !u!114 &1286875451
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1268,7 +1270,7 @@ MonoBehaviour:
     m_EventID: 1202858853
   - m_Destination: {fileID: 1286875452}
     m_EventID: 1577261801
-  m_CachedInstanceID: 7422
+  m_CachedInstanceID: 7470
 --- !u!114 &1286875452
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1292,7 +1294,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 1286875451}
     m_EventID: 1761075472
-  m_CachedInstanceID: 7424
+  m_CachedInstanceID: 7472
 --- !u!1 &1579341371
 GameObject:
   m_ObjectHideFlags: 0

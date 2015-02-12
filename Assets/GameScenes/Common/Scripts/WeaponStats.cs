@@ -28,6 +28,7 @@ namespace Mazzaroth {
 
         // The prefab that will be instanced whit this stats.
         public Transform BulletPrefab;
+        public Transform ImpactPrefab;
     }
 
 }
