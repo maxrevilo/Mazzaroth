@@ -40,6 +40,7 @@ namespace Mazzaroth {
 
         // The prefab that will be instanced whit this stats.
         public Transform ShipPrefab;
+        public Transform DebrisPrefab;
 
         private const float REV2RAD = 2f * Mathf.PI;
 

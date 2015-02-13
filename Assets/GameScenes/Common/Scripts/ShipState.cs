@@ -164,6 +164,12 @@ namespace Mazzaroth {
         }
 
         public void Die() {
+            DebrisInstance.transform.parent = transform.parent;
+            DebrisInstance.transform.position = transform.position;
+            DebrisInstance.transform.rotation = transform.rotation;
+            DebrisInstance.rigidbody.velocity = rigidbody.velocity;
+            DebrisInstance.rigidbody.angularVelocity = rigidbody.angularVelocity;
+            DebrisInstance.SetActive(true);
             gameObject.DestroyAPS();
         }
 
@@ -182,6 +188,7 @@ namespace Mazzaroth {
         private ShipStats stats;
         private Blackboard blackboard;
         private int actualFiringLocation;
+        private GameObject DebrisInstance;
 //        private float destinyFacingDirection;
 
         // Use this for initialization
@@ -197,6 +204,10 @@ namespace Mazzaroth {
             if (HealthPoints < 0f) {
                 HealthPoints = stats.HealthPoints;
             }
+
+            DebrisInstance = (Instantiate(stats.DebrisPrefab) as Transform).gameObject;
+            DebrisInstance.SetActive(false);
+            DebrisInstance.transform.parent = transform;
 
             DetectionArea.transform.localScale *= stats.Sight;
             DetectionArea.ShipDetected += shipDetected;

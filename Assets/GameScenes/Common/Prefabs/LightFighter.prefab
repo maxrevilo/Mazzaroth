@@ -221,7 +221,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 11474742}
     m_EventID: 1761075472
-  m_CachedInstanceID: 7486
+  m_CachedInstanceID: 7496
 --- !u!114 &11474740
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -246,7 +246,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 11474738}
     m_EventID: 1577261801
-  m_CachedInstanceID: 7488
+  m_CachedInstanceID: 7492
 --- !u!114 &11474742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -269,7 +269,7 @@ MonoBehaviour:
     m_EventID: 1202858853
   - m_Destination: {fileID: 11474738}
     m_EventID: 1577261801
-  m_CachedInstanceID: 7490
+  m_CachedInstanceID: 7494
 --- !u!114 &11476564
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -295,6 +295,7 @@ MonoBehaviour:
   angularSpeed: .600000024
   angularAcceleration: 1
   ShipPrefab: {fileID: 489274}
+  DebrisPrefab: {fileID: 422226, guid: 62df16f81a6b24442a9183b576f0a5ab, type: 2}
 --- !u!114 &11477474
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -313,7 +314,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 7492
+  m_CachedInstanceID: 7490
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
