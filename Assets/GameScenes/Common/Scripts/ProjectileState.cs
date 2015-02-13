@@ -5,7 +5,7 @@ namespace Mazzaroth {
 
         public bool Alive = true;
         public float BulletElongation = 1f;
-        public ShipState Breader;
+        public ShipState Shooter;
 
         WeaponStats stats;
         Vector3 initialPosition;
@@ -14,9 +14,9 @@ namespace Mazzaroth {
             gameObject.DestroyAPS();
         }
 
-        public void Initiate(ShipState breader) {
+        public void Initiate(ShipState shooter) {
             stats = GetComponent<WeaponStats>();
-            Breader = breader;
+            Shooter = shooter;
 
             initialPosition = this.transform.position;
 
@@ -39,10 +39,9 @@ namespace Mazzaroth {
         }
 
         void OnTriggerEnter (Collider collider) {
-            GameObject gameObject = collider.gameObject;
             ShipState ship = collider.GetComponent<ShipState>();
 
-            if (ship != null && gameObject != Breader.gameObject) {
+            if (ship != null && Shooter.IsEnemy(ship)) {
                 Die();
                 SpawnImpactPrefab();
                 ship.Damage(stats);

@@ -35,6 +35,8 @@ namespace Mazzaroth {
 
         public DebugConf DebugConfigurations;
 
+        public ShipsGroup Group { get; set; }
+
         public bool Fire(Transform target, WeaponStats weapon = null) {
             if (weapon == null)
                 weapon = getWeaponAt(0);
@@ -171,6 +173,10 @@ namespace Mazzaroth {
             transform.Rotate(new Vector3(0, 20f * impactStr, 0));
         }
 
+        public bool IsEnemy(ShipState ship) {
+            return Group == null || Group.Army.Player.IsEnemy(ship.Group.Army.Player);
+        }
+
         ////////////////////////// PRIVATE //////////////////////////
 
         private ShipStats stats;
@@ -194,6 +200,12 @@ namespace Mazzaroth {
 
             DetectionArea.transform.localScale *= stats.Sight;
             DetectionArea.ShipDetected += shipDetected;
+        }
+
+        void Start() {
+            if (Group != null) {
+                renderer.material.SetColor("_TeamColor", Group.Army.Player.Color);
+            }
         }
 
         void shipDetected(ShipState ship) {

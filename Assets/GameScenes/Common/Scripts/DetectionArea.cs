@@ -6,11 +6,16 @@ namespace Mazzaroth {
         public delegate void EventHandler (ShipState ship);
         public event EventHandler ShipDetected;
 
+        private ShipState Ship;
+
+        void Awake() {
+            Ship = GetComponentInParent<ShipState>();
+        }
+
         void OnTriggerEnter (Collider collider) {
-            GameObject gameObject = collider.gameObject;
-            ShipState ship = collider.GetComponent<ShipState>();
-            if (ship != null && gameObject != transform.parent.gameObject) {
-                if(ShipDetected != null) ShipDetected(ship);
+            ShipState otherShip = collider.GetComponent<ShipState>();
+            if (otherShip != null && Ship.IsEnemy(otherShip)) {
+                if(ShipDetected != null) ShipDetected(otherShip);
             }
         }
     }
