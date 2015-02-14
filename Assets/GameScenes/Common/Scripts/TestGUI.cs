@@ -1,10 +1,13 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Mazzaroth {
     public class TestGUI : BaseMonoBehaviour {
         public Transform obj;
         public ShipState Ship;
         public ShipState Ship2;
+        public RTSCamera RTSCamera;
+
         Plane groundPlane;
 
         void Start () {
@@ -29,6 +32,30 @@ namespace Mazzaroth {
 
 
             }
+
+            float horizontalSpeed = Input.GetAxisRaw("Horizontal");
+            float verticalSpeed = Input.GetAxisRaw("Vertical");
+            float deepSpeed = Input.GetAxis("Mouse ScrollWheel");
+            float CameraSpeed = 80f;
+            float ZoomSpeed = 1f;
+            if (Mathf.Abs(verticalSpeed) > 0.05f) {
+                RTSCamera.MoveDiff(Vector3.forward * verticalSpeed * CameraSpeed * Time.deltaTime);
+            }
+
+            if (Mathf.Abs(horizontalSpeed) > 0.05f) {
+                RTSCamera.MoveDiff(Vector3.right * horizontalSpeed * CameraSpeed * Time.deltaTime);
+            }
+
+
+            if (deepSpeed > 0) {
+                RTSCamera.ZoomFactor(1f / (1f + deepSpeed) * ZoomSpeed);
+            }
+
+            if (deepSpeed < 0) {
+                RTSCamera.ZoomFactor(1f - deepSpeed * ZoomSpeed);
+            }
+
+
             /*
             if ( Input.GetMouseButtonDown(0)){
                 var hit : RaycastHit;
