@@ -36,6 +36,7 @@ GameObject:
   - 114: {fileID: 11474742}
   - 114: {fileID: 11474740}
   - 114: {fileID: 11474738}
+  - 114: {fileID: 11432708}
   m_Layer: 0
   m_Name: LightFighter
   m_TagString: Untagged
@@ -166,6 +167,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!114 &11432708
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08ef6cae5b2e24b09bde4977721c0a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Radius: 2
+  Color: {r: 1, g: 1, b: 1, a: .325490206}
+  Width: .699999988
 --- !u!114 &11466072
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -221,7 +236,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 11474742}
     m_EventID: 1761075472
-  m_CachedInstanceID: 7496
+  m_CachedInstanceID: 8666
 --- !u!114 &11474740
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -246,7 +261,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 11474738}
     m_EventID: 1577261801
-  m_CachedInstanceID: 7492
+  m_CachedInstanceID: 8662
 --- !u!114 &11474742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -269,7 +284,7 @@ MonoBehaviour:
     m_EventID: 1202858853
   - m_Destination: {fileID: 11474738}
     m_EventID: 1577261801
-  m_CachedInstanceID: 7494
+  m_CachedInstanceID: 8664
 --- !u!114 &11476564
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -314,7 +329,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 7490
+  m_CachedInstanceID: 8660
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}

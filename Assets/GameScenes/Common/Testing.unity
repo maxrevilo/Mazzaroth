@@ -115,19 +115,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11477474, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_CachedInstanceID
-      value: 7410
+      value: 13318
       objectReference: {fileID: 0}
     - target: {fileID: 11474740, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_CachedInstanceID
-      value: 7406
+      value: 13314
       objectReference: {fileID: 0}
     - target: {fileID: 11474742, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_CachedInstanceID
-      value: 7408
+      value: 13316
       objectReference: {fileID: 0}
     - target: {fileID: 11474738, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_CachedInstanceID
-      value: 7404
+      value: 13312
       objectReference: {fileID: 0}
     - target: {fileID: 489274, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_LocalScale.x
@@ -384,19 +384,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11477474, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_CachedInstanceID
-      value: -3330852
+      value: 13504
       objectReference: {fileID: 0}
     - target: {fileID: 11474740, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_CachedInstanceID
-      value: -3330856
+      value: 13500
       objectReference: {fileID: 0}
     - target: {fileID: 11474742, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_CachedInstanceID
-      value: -3330858
+      value: 13502
       objectReference: {fileID: 0}
     - target: {fileID: 11474738, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_CachedInstanceID
-      value: -3330860
+      value: 13498
       objectReference: {fileID: 0}
     - target: {fileID: 189274, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_Name
@@ -409,6 +409,14 @@ Prefab:
     - target: {fileID: 489274, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_LocalScale.z
       value: .0254000016
+      objectReference: {fileID: 0}
+    - target: {fileID: 11466360, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
+      propertyPath: HealthPoints
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 189274, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
@@ -481,6 +489,7 @@ GameObject:
   - 92: {fileID: 309916337}
   - 124: {fileID: 309916336}
   - 81: {fileID: 309916335}
+  - 114: {fileID: 309916340}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -549,11 +558,28 @@ Transform:
   m_GameObject: {fileID: 309916334}
   m_LocalRotation: {x: .353553414, y: .353553414, z: -.14644663, w: .853553355}
   m_LocalPosition: {x: -16.4059448, y: 26.8972931, z: -17.1582146}
-  m_LocalScale: {x: .999999881, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 845555127}
   m_Father: {fileID: 1579341372}
   m_RootOrder: 0
+--- !u!114 &309916340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 309916334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f944fe121cf944e9cae07a5463716e88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetPosition: {x: 0, y: 0, z: 0}
+  TargetZoom: 1
+  MaxZoom: 4
+  MinZoom: .5
+  MovementAdaptationSpeed: .400000006
+  ZoomAdaptationSpeed: .100000001
 --- !u!1 &315221241
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,6 +599,7 @@ GameObject:
   - 114: {fileID: 315221246}
   - 114: {fileID: 315221245}
   - 114: {fileID: 315221244}
+  - 114: {fileID: 315221254}
   m_Layer: 0
   m_Name: LightFighterE
   m_TagString: Untagged
@@ -641,7 +668,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 315221246}
     m_EventID: 1761075472
-  m_CachedInstanceID: 20182
+  m_CachedInstanceID: 13254
 --- !u!114 &315221245
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -667,7 +694,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 315221244}
     m_EventID: 1577261801
-  m_CachedInstanceID: 20184
+  m_CachedInstanceID: 13256
 --- !u!114 &315221246
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -691,7 +718,7 @@ MonoBehaviour:
     m_EventID: 1202858853
   - m_Destination: {fileID: 315221244}
     m_EventID: 1577261801
-  m_CachedInstanceID: 20186
+  m_CachedInstanceID: 13258
 --- !u!114 &315221247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -711,7 +738,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 20188
+  m_CachedInstanceID: 13260
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -860,6 +887,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1090867307}
   m_GameObject: {fileID: 315221241}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &315221254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11432708, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1090867307}
+  m_GameObject: {fileID: 315221241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08ef6cae5b2e24b09bde4977721c0a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Radius: 2
+  Color: {r: 1, g: 1, b: 1, a: .325490206}
+  Width: .699999988
 --- !u!1 &327041560
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,7 +972,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &448638339
 Transform:
   m_ObjectHideFlags: 0
@@ -1011,19 +1053,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11477474, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_CachedInstanceID
-      value: 7464
+      value: 13410
       objectReference: {fileID: 0}
     - target: {fileID: 11474740, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_CachedInstanceID
-      value: 7468
+      value: 13414
       objectReference: {fileID: 0}
     - target: {fileID: 11474742, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_CachedInstanceID
-      value: 7470
+      value: 13416
       objectReference: {fileID: 0}
     - target: {fileID: 11474738, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_CachedInstanceID
-      value: 7472
+      value: 13418
       objectReference: {fileID: 0}
     - target: {fileID: 189274, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_Name
@@ -1161,6 +1203,7 @@ GameObject:
   - 114: {fileID: 695361699}
   - 114: {fileID: 695361698}
   - 114: {fileID: 695361697}
+  - 114: {fileID: 695361708}
   m_Layer: 0
   m_Name: LightFighterB
   m_TagString: Untagged
@@ -1206,7 +1249,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 695361699}
     m_EventID: 1761075472
-  m_CachedInstanceID: 20240
+  m_CachedInstanceID: 13312
 --- !u!114 &695361698
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1232,7 +1275,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 695361697}
     m_EventID: 1577261801
-  m_CachedInstanceID: 20242
+  m_CachedInstanceID: 13314
 --- !u!114 &695361699
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1256,7 +1299,7 @@ MonoBehaviour:
     m_EventID: 1202858853
   - m_Destination: {fileID: 695361697}
     m_EventID: 1577261801
-  m_CachedInstanceID: 20244
+  m_CachedInstanceID: 13316
 --- !u!114 &695361700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1276,7 +1319,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 20246
+  m_CachedInstanceID: 13318
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -1448,6 +1491,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 51664860}
   m_GameObject: {fileID: 695361695}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &695361708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11432708, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 51664860}
+  m_GameObject: {fileID: 695361695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08ef6cae5b2e24b09bde4977721c0a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Radius: 2
+  Color: {r: 1, g: 1, b: 1, a: .325490206}
+  Width: .699999988
 --- !u!1 &731482554
 GameObject:
   m_ObjectHideFlags: 0
@@ -1457,6 +1515,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 731482555}
   - 114: {fileID: 731482556}
+  - 114: {fileID: 731482557}
   m_Layer: 0
   m_Name: Scene
   m_TagString: Untagged
@@ -1495,6 +1554,7 @@ MonoBehaviour:
       - Ships:
         - {fileID: 1286875447}
         - {fileID: 695361702}
+      - Ships:
         - {fileID: 1408689432}
     Color: {r: .011141777, g: 0, b: 1, a: 1}
     Name: Player 1
@@ -1508,6 +1568,26 @@ MonoBehaviour:
     Color: {r: 1, g: 0, b: 0, a: 1}
     Name: Player 2
     IsTheMainPlayer: 0
+  MainPlayer:
+    Army:
+      Groups: []
+    Color: {r: .5, g: .5, b: .5, a: 1}
+    Name: 
+    IsTheMainPlayer: 0
+--- !u!114 &731482557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 731482554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aac381ab182014ec68d4153c51fc21f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 448638339}
+  Scene: {fileID: 731482556}
+  RTSCamera: {fileID: 309916340}
 --- !u!1001 &739578693
 Prefab:
   m_ObjectHideFlags: 0
@@ -1549,19 +1629,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11477474, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_CachedInstanceID
-      value: -3330752
+      value: 13456
       objectReference: {fileID: 0}
     - target: {fileID: 11474740, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_CachedInstanceID
-      value: -3330756
+      value: 13452
       objectReference: {fileID: 0}
     - target: {fileID: 11474742, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_CachedInstanceID
-      value: -3330754
+      value: 13454
       objectReference: {fileID: 0}
     - target: {fileID: 11474738, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_CachedInstanceID
-      value: -3330758
+      value: 13450
       objectReference: {fileID: 0}
     - target: {fileID: 489274, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_LocalScale.x
@@ -1574,6 +1654,10 @@ Prefab:
     - target: {fileID: 189274, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11466360, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
+      propertyPath: HealthPoints
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
@@ -1648,9 +1732,9 @@ Rigidbody:
   m_GameObject: {fileID: 790959169}
   serializedVersion: 2
   m_Mass: 1.00000001e-07
-  m_Drag: 1
+  m_Drag: .300000012
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -1763,7 +1847,7 @@ Transform:
   m_GameObject: {fileID: 845555123}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 85, y: 45, z: 1}
+  m_LocalScale: {x: 170, y: 90, z: 1}
   m_Children: []
   m_Father: {fileID: 309916339}
   m_RootOrder: 0
@@ -1889,19 +1973,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11477474, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_CachedInstanceID
-      value: -3324922
+      value: 13430
       objectReference: {fileID: 0}
     - target: {fileID: 11474740, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_CachedInstanceID
-      value: -3324918
+      value: 13426
       objectReference: {fileID: 0}
     - target: {fileID: 11474742, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_CachedInstanceID
-      value: -3324920
+      value: 13428
       objectReference: {fileID: 0}
     - target: {fileID: 11474738, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_CachedInstanceID
-      value: -3324916
+      value: 13424
       objectReference: {fileID: 0}
     - target: {fileID: 489274, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_LocalScale.x
@@ -1957,19 +2041,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11477474, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_CachedInstanceID
-      value: -3330808
+      value: 13260
       objectReference: {fileID: 0}
     - target: {fileID: 11474740, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_CachedInstanceID
-      value: -3330804
+      value: 13256
       objectReference: {fileID: 0}
     - target: {fileID: 11474742, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_CachedInstanceID
-      value: -3330806
+      value: 13258
       objectReference: {fileID: 0}
     - target: {fileID: 11474738, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_CachedInstanceID
-      value: -3330802
+      value: 13254
       objectReference: {fileID: 0}
     - target: {fileID: 489274, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_LocalScale.x
@@ -1982,6 +2066,14 @@ Prefab:
     - target: {fileID: 489274, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
       propertyPath: m_LocalScale.z
       value: .0254000016
+      objectReference: {fileID: 0}
+    - target: {fileID: 11466360, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
+      propertyPath: HealthPoints
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 189274, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
@@ -2098,6 +2190,7 @@ GameObject:
   - 114: {fileID: 1286875451}
   - 114: {fileID: 1286875450}
   - 114: {fileID: 1286875452}
+  - 114: {fileID: 1286875453}
   m_Layer: 0
   m_Name: LightFighterA
   m_TagString: Untagged
@@ -2247,7 +2340,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 20338
+  m_CachedInstanceID: 13410
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -2336,7 +2429,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 1286875452}
     m_EventID: 1577261801
-  m_CachedInstanceID: 20342
+  m_CachedInstanceID: 13414
 --- !u!114 &1286875451
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2360,7 +2453,7 @@ MonoBehaviour:
     m_EventID: 1202858853
   - m_Destination: {fileID: 1286875452}
     m_EventID: 1577261801
-  m_CachedInstanceID: 20344
+  m_CachedInstanceID: 13416
 --- !u!114 &1286875452
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2384,7 +2477,22 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 1286875451}
     m_EventID: 1761075472
-  m_CachedInstanceID: 20346
+  m_CachedInstanceID: 13418
+--- !u!114 &1286875453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11432708, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 514982056}
+  m_GameObject: {fileID: 1286875440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08ef6cae5b2e24b09bde4977721c0a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Radius: 2
+  Color: {r: 1, g: 1, b: 1, a: .325490206}
+  Width: .699999988
 --- !u!1 &1408689425
 GameObject:
   m_ObjectHideFlags: 0
@@ -2404,6 +2512,7 @@ GameObject:
   - 114: {fileID: 1408689429}
   - 114: {fileID: 1408689428}
   - 114: {fileID: 1408689427}
+  - 114: {fileID: 1408689438}
   m_Layer: 0
   m_Name: LightFighterC
   m_TagString: Untagged
@@ -2449,7 +2558,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 1408689429}
     m_EventID: 1761075472
-  m_CachedInstanceID: 20352
+  m_CachedInstanceID: 13424
 --- !u!114 &1408689428
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2475,7 +2584,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 1408689427}
     m_EventID: 1577261801
-  m_CachedInstanceID: 20354
+  m_CachedInstanceID: 13426
 --- !u!114 &1408689429
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2499,7 +2608,7 @@ MonoBehaviour:
     m_EventID: 1202858853
   - m_Destination: {fileID: 1408689427}
     m_EventID: 1577261801
-  m_CachedInstanceID: 20356
+  m_CachedInstanceID: 13428
 --- !u!114 &1408689430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2519,7 +2628,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 20358
+  m_CachedInstanceID: 13430
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -2691,6 +2800,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1054930296}
   m_GameObject: {fileID: 1408689425}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &1408689438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11432708, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1054930296}
+  m_GameObject: {fileID: 1408689425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08ef6cae5b2e24b09bde4977721c0a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Radius: 2
+  Color: {r: 1, g: 1, b: 1, a: .325490206}
+  Width: .699999988
 --- !u!1 &1506414239
 GameObject:
   m_ObjectHideFlags: 0
@@ -2710,6 +2834,7 @@ GameObject:
   - 114: {fileID: 1506414243}
   - 114: {fileID: 1506414242}
   - 114: {fileID: 1506414241}
+  - 114: {fileID: 1506414252}
   m_Layer: 0
   m_Name: LightFighterF
   m_TagString: Untagged
@@ -2755,7 +2880,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 1506414243}
     m_EventID: 1761075472
-  m_CachedInstanceID: 20378
+  m_CachedInstanceID: 13450
 --- !u!114 &1506414242
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2781,7 +2906,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 1506414241}
     m_EventID: 1577261801
-  m_CachedInstanceID: 20380
+  m_CachedInstanceID: 13452
 --- !u!114 &1506414243
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2805,7 +2930,7 @@ MonoBehaviour:
     m_EventID: 1202858853
   - m_Destination: {fileID: 1506414241}
     m_EventID: 1577261801
-  m_CachedInstanceID: 20382
+  m_CachedInstanceID: 13454
 --- !u!114 &1506414244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2825,7 +2950,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 20384
+  m_CachedInstanceID: 13456
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -2997,6 +3122,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 739578693}
   m_GameObject: {fileID: 1506414239}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &1506414252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11432708, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 739578693}
+  m_GameObject: {fileID: 1506414239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08ef6cae5b2e24b09bde4977721c0a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Radius: 2
+  Color: {r: 1, g: 1, b: 1, a: .325490206}
+  Width: .699999988
 --- !u!1 &1522644742
 GameObject:
   m_ObjectHideFlags: 0
@@ -3113,7 +3253,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1579341372}
-  - 114: {fileID: 1579341373}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -3142,20 +3281,6 @@ Transform:
   - {fileID: 448638339}
   m_Father: {fileID: 731482555}
   m_RootOrder: 1
---- !u!114 &1579341373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1579341371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aac381ab182014ec68d4153c51fc21f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obj: {fileID: 448638339}
-  Ship: {fileID: 1286875447}
-  Ship2: {fileID: 695361702}
 --- !u!1 &1619317698
 GameObject:
   m_ObjectHideFlags: 0
@@ -3175,6 +3300,7 @@ GameObject:
   - 114: {fileID: 1619317702}
   - 114: {fileID: 1619317701}
   - 114: {fileID: 1619317700}
+  - 114: {fileID: 1619317711}
   m_Layer: 0
   m_Name: LightFighterD
   m_TagString: Untagged
@@ -3220,7 +3346,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 1619317702}
     m_EventID: 1761075472
-  m_CachedInstanceID: 20426
+  m_CachedInstanceID: 13498
 --- !u!114 &1619317701
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3246,7 +3372,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 1619317700}
     m_EventID: 1577261801
-  m_CachedInstanceID: 20428
+  m_CachedInstanceID: 13500
 --- !u!114 &1619317702
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3270,7 +3396,7 @@ MonoBehaviour:
     m_EventID: 1202858853
   - m_Destination: {fileID: 1619317700}
     m_EventID: 1577261801
-  m_CachedInstanceID: 20430
+  m_CachedInstanceID: 13502
 --- !u!114 &1619317703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3290,7 +3416,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 20432
+  m_CachedInstanceID: 13504
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -3462,6 +3588,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 198588311}
   m_GameObject: {fileID: 1619317698}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &1619317711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11432708, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 198588311}
+  m_GameObject: {fileID: 1619317698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08ef6cae5b2e24b09bde4977721c0a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Radius: 2
+  Color: {r: 1, g: 1, b: 1, a: .325490206}
+  Width: .699999988
 --- !u!1 &1689263371
 GameObject:
   m_ObjectHideFlags: 0

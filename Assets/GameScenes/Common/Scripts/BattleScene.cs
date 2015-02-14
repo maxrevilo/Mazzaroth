@@ -12,9 +12,13 @@ namespace Mazzaroth {
             return null;
         }
 
+        public Player MainPlayer;
+
         void Awake() {
             foreach(Player player in Players) {
                 player.Initialize();
+                if (player.IsTheMainPlayer)
+                    MainPlayer = player;
             }
         }
     }

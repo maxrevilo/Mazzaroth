@@ -14,6 +14,8 @@ namespace Mazzaroth {
         public Player() {
             if (Army == null)
                 Army = new Army(){ Player = this };
+
+//            if (IsTheMainPlayer) Player.Main = this;
         }
 
         public void Initialize() {
@@ -23,6 +25,8 @@ namespace Mazzaroth {
         public bool IsEnemy(Player player) {
             return player != this;
         }
+
+//        public static Player Main { get; private set; }
     }
 }
 
