@@ -37,6 +37,8 @@ GameObject:
   - 114: {fileID: 11474740}
   - 114: {fileID: 11474738}
   - 114: {fileID: 11432708}
+  - 114: {fileID: 11483692}
+  - 114: {fileID: 11457766}
   m_Layer: 0
   m_Name: LightFighter
   m_TagString: Untagged
@@ -181,6 +183,31 @@ MonoBehaviour:
   Radius: 2
   Color: {r: 1, g: 1, b: 1, a: .325490206}
   Width: .699999988
+--- !u!114 &11457766
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189274}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f628474ff1d37472692c1197d13aaedc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 11477476}
+  m_Parent: {fileID: 11477474}
+  m_StateName: Attacking On AMove
+  m_Color: 4
+  m_HideScript: 1
+  m_Position: {x: 160, y: 350}
+  m_Transitions:
+  - m_Destination: {fileID: 11474742}
+    m_EventID: 1761075472
+  - m_Destination: {fileID: 11483692}
+    m_EventID: 843881883
+  - m_Destination: {fileID: 11474738}
+    m_EventID: 1577261801
+  m_CachedInstanceID: -78576
 --- !u!114 &11466072
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -230,13 +257,13 @@ MonoBehaviour:
   m_StateName: Attacking
   m_Color: 4
   m_HideScript: 1
-  m_Position: {x: 210, y: 60}
+  m_Position: {x: 160, y: 100}
   m_Transitions:
   - m_Destination: {fileID: 11474740}
     m_EventID: 843881883
   - m_Destination: {fileID: 11474742}
     m_EventID: 1761075472
-  m_CachedInstanceID: 8666
+  m_CachedInstanceID: 8754
 --- !u!114 &11474740
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -253,7 +280,7 @@ MonoBehaviour:
   m_StateName: Idle
   m_Color: 0
   m_HideScript: 1
-  m_Position: {x: 400, y: -20}
+  m_Position: {x: 380, y: 0}
   m_Transitions:
   - m_Destination: {fileID: 11474742}
     m_EventID: 1761075472
@@ -261,7 +288,9 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 11474738}
     m_EventID: 1577261801
-  m_CachedInstanceID: 8662
+  - m_Destination: {fileID: 11483692}
+    m_EventID: 1965341386
+  m_CachedInstanceID: 8750
 --- !u!114 &11474742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -278,13 +307,15 @@ MonoBehaviour:
   m_StateName: Moving
   m_Color: 1
   m_HideScript: 1
-  m_Position: {x: 590, y: 80}
+  m_Position: {x: 590, y: 100}
   m_Transitions:
   - m_Destination: {fileID: 11474740}
     m_EventID: 1202858853
   - m_Destination: {fileID: 11474738}
     m_EventID: 1577261801
-  m_CachedInstanceID: 8664
+  - m_Destination: {fileID: 11483692}
+    m_EventID: 1965341386
+  m_CachedInstanceID: 8752
 --- !u!114 &11476564
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -329,7 +360,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 8660
+  m_CachedInstanceID: 8748
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -391,7 +422,40 @@ MonoBehaviour:
     m_IsConstant: 0
     m_EventId: 0
     m_IsSystem: 0
+  - m_ID: 1965341386
+    m_Name: AggressiveMoveOrder
+    m_Blackboard: {fileID: 11477476}
+    m_IsConstant: 0
+    m_EventId: 0
+    m_IsSystem: 0
   m_Namespace: 
+--- !u!114 &11483692
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189274}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d52963f1998524cd090b4370b8cd9f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 11477476}
+  m_Parent: {fileID: 11477474}
+  m_StateName: Aggressive Move
+  m_Color: 4
+  m_HideScript: 1
+  m_Position: {x: 160, y: 210}
+  m_Transitions:
+  - m_Destination: {fileID: 11474742}
+    m_EventID: 1761075472
+  - m_Destination: {fileID: 11474740}
+    m_EventID: 1202858853
+  - m_Destination: {fileID: 11457766}
+    m_EventID: 573566531
+  - m_Destination: {fileID: 11474738}
+    m_EventID: 1577261801
+  m_CachedInstanceID: -27620
 --- !u!135 &13512642
 SphereCollider:
   m_ObjectHideFlags: 1

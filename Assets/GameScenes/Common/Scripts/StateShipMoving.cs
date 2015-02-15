@@ -5,7 +5,7 @@ using BehaviourMachine;
 namespace Mazzaroth {
     public class StateShipMoving : StateBehaviour {
 
-        private ShipState shipState;
+		protected ShipState shipState;
 
         void OnEnable () {
         }

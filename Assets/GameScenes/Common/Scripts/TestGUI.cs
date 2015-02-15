@@ -60,7 +60,14 @@ namespace Mazzaroth {
                         SelectedGroup.MoveOrder(obj.position);
                     }
                 }
-            }
+			} else if (Input.GetMouseButtonDown(1)) {
+				Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+				float rayDistance;
+				if (groundPlane.Raycast(ray, out rayDistance)) {
+					obj.position = ray.GetPoint(rayDistance);
+					SelectedGroup.AggressiveMoveOrder(obj.position);
+				}
+			}
         }
 
         void UpdateGroupSelection() {

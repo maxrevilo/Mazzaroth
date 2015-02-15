@@ -13,17 +13,8 @@ namespace Mazzaroth {
             Retreat,
         }
 
-        //TODO: Esto debería estar en el Group, no en ShipState
-        public enum ShipFormations {
-            Bird,
-            Line,
-            Square,
-            Circle
-        }
-
         public float HealthPoints = -1f;
         public ShipStances Stance = ShipStances.Raid;
-        public ShipFormations Formation = ShipFormations.Bird;
         public float TimeToFire;
 
         public float LateralStabilizatorsFactor = 0.1f;
@@ -95,6 +86,11 @@ namespace Mazzaroth {
             EnemyOnLock = enemy;
             blackboard.SendEvent(1577261801); //EnemyDetected
         }
+			
+		public void AggressiveMoveOrder(Vector3 destiny) {
+			DestinyLocation = destiny;
+			blackboard.SendEvent(1965341386); //MoveOrder
+		}
 
         public void HeadTowardPosition(Vector3 position) {
             float angle = Math3d.SignedVectorAngle(transform.forward, position - transform.position, transform.up) * Mathf.Deg2Rad;
