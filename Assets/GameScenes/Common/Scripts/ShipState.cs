@@ -23,7 +23,7 @@ namespace Mazzaroth {
         public Vector3 DestinyLocation { get; private set; }
         public Vector3 RelativeVelocity { get; private set; }
         public ShipState EnemyOnLock { get; private set; }
-
+		public GameObject GUIPrefab;
         public DebugConf DebugConfigurations;
 
         public ShipsGroup Group { get; set; }
@@ -207,6 +207,9 @@ namespace Mazzaroth {
 
             DetectionArea.transform.localScale *= stats.Sight;
             DetectionArea.ShipDetected += shipDetected;
+
+			GUIShipStatus gui = (Instantiate(GUIPrefab) as GameObject).GetComponent<GUIShipStatus>();
+			gui.ship = this;
         }
 
         void Start() {

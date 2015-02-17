@@ -207,7 +207,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 11474738}
     m_EventID: 1577261801
-  m_CachedInstanceID: -78576
+  m_CachedInstanceID: 8816
 --- !u!114 &11466072
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -232,13 +232,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealthPoints: -1
   Stance: 0
-  Formation: 0
   TimeToFire: 0
   LateralStabilizatorsFactor: .100000001
   FiringLocations:
   - {fileID: 490136}
   - {fileID: 490138}
   DetectionArea: {fileID: 11466072}
+  GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
   DebugConfigurations:
     ShowSteeringLimits: 0
 --- !u!114 &11474738
@@ -263,7 +263,9 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 11474742}
     m_EventID: 1761075472
-  m_CachedInstanceID: 8754
+  - m_Destination: {fileID: 11483692}
+    m_EventID: 1965341386
+  m_CachedInstanceID: 8812
 --- !u!114 &11474740
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -290,7 +292,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 11483692}
     m_EventID: 1965341386
-  m_CachedInstanceID: 8750
+  m_CachedInstanceID: 8808
 --- !u!114 &11474742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -315,7 +317,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 11483692}
     m_EventID: 1965341386
-  m_CachedInstanceID: 8752
+  m_CachedInstanceID: 8810
 --- !u!114 &11476564
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -360,7 +362,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 8748
+  m_CachedInstanceID: 8806
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -455,7 +457,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 11474738}
     m_EventID: 1577261801
-  m_CachedInstanceID: -27620
+  m_CachedInstanceID: 8814
 --- !u!135 &13512642
 SphereCollider:
   m_ObjectHideFlags: 1
