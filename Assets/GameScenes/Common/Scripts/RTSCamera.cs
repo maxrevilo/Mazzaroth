@@ -17,8 +17,15 @@ namespace Mazzaroth {
         private Vector3 right;
 
         float currentZoom {
-            get { return  20f / camera.orthographicSize; }
-            set { camera.orthographicSize = 1f / value * 20f; }
+            get {
+				if(camera.isOrthoGraphic) return  20f / camera.orthographicSize;
+				else return  60f / camera.fieldOfView;
+			}
+            set {
+				if(camera.isOrthoGraphic) camera.orthographicSize = 1f / value * 20f;
+				else camera.fieldOfView = 1f / value * 60f;
+
+			}
         }
 
         void Awake() {
