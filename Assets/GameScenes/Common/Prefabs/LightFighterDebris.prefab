@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3322228}
   - 23: {fileID: 2322228}
   - 54: {fileID: 5422228}
+  - 114: {fileID: 11414966}
   m_Layer: 0
   m_Name: LightFighterDebris
   m_TagString: Untagged
@@ -166,6 +167,18 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &11414966
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95b06b07179dc4348842dce40a0f488a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Explosion: {fileID: 144232, guid: 2cb3e2be1a898438b95f04580d94d1ac, type: 2}
 --- !u!114 &11422226
 MonoBehaviour:
   m_ObjectHideFlags: 1

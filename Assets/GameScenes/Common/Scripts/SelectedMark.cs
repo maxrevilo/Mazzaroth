@@ -13,7 +13,7 @@ namespace Mazzaroth {
         void Start() {
             ship = GetComponent<ShipState>();
             if (ship) {
-                Color TeamColor = ship.Group.Army.Player.Color;
+				Color TeamColor = ship.Color;
                 TeamColor.a = Color.a;
                 Color = TeamColor;
             }
@@ -22,7 +22,7 @@ namespace Mazzaroth {
             int size = (int) ((2.0f * Mathf.PI) / theta_scale); //Total number of points in circle.
 
             lineRenderer = gameObject.AddComponent<LineRenderer>();
-            lineRenderer.material = new Material(Shader.Find("Particles/Additive"));
+            lineRenderer.material = new Material(Shader.Find("Mobile/Particles/Additive"));
             lineRenderer.SetColors(Color, Color);
             lineRenderer.SetWidth(Width, Width);
             lineRenderer.SetVertexCount(size + 2);

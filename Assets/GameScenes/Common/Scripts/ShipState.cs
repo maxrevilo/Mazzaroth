@@ -159,6 +159,8 @@ namespace Mazzaroth {
             return distSqr <= Mathf.Pow(weapon.Range, 2);
         }
 
+		public Color Color { get { return Group.Army.Player.Color; } }
+
         public void Die() {
             DebrisInstance.transform.parent = transform.parent;
             DebrisInstance.transform.position = transform.position;
@@ -214,7 +216,7 @@ namespace Mazzaroth {
 
         void Start() {
             if (Group != null) {
-                renderer.material.SetColor("_TeamColor", Group.Army.Player.Color);
+				renderer.material.SetColor("_TeamColor", this.Color);
             }
         }
 

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Mazzaroth {
     public class TestGUI : BaseMonoBehaviour {
-        public Transform obj;
+		public PlayerMarker marker;
         public BattleScene Scene;
         public RTSCamera RTSCamera;
 
@@ -56,16 +56,16 @@ namespace Mazzaroth {
                 if(!pointed) {
                     float rayDistance;
                     if (groundPlane.Raycast(ray, out rayDistance)) {
-                        obj.position = ray.GetPoint(rayDistance);
-                        SelectedGroup.MoveOrder(obj.position);
+						marker.MoveTo(ray.GetPoint(rayDistance));
+						SelectedGroup.MoveOrder(marker.Position);
                     }
                 }
 			} else if (Input.GetMouseButtonDown(1)) {
 				Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 				float rayDistance;
 				if (groundPlane.Raycast(ray, out rayDistance)) {
-					obj.position = ray.GetPoint(rayDistance);
-					SelectedGroup.AggressiveMoveOrder(obj.position);
+					marker.MoveTo(ray.GetPoint(rayDistance), true);
+					SelectedGroup.AggressiveMoveOrder(marker.Position);
 				}
 			}
         }

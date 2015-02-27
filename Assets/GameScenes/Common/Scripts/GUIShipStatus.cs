@@ -30,7 +30,6 @@ namespace Mazzaroth {
 				scale.x = Mathf.Clamp01(ship.HealthPoints / ship.GetComponent<ShipStats>().HealthPoints);
 
 				canvas.enabled = scale.x < 1f;// && ship.Group.Selected;
-				Debug.Log("Enabled " + canvas.enabled + " " + scale.x);
 
 				LifeBar.localScale = scale;
 
