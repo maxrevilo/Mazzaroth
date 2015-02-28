@@ -449,6 +449,8 @@ MonoBehaviour:
   - {fileID: 916237399}
   ObjectsToDisable:
   - {fileID: 1566363736}
+  BehavioursToEnable: []
+  BehavioursToDisable: []
   SelfDeactivateOnTrigger: 1
   OnlyTriggerWith: {fileID: 970958820}
 --- !u!135 &136250533
@@ -2636,6 +2638,8 @@ MonoBehaviour:
   - {fileID: 1309653342}
   ObjectsToDisable:
   - {fileID: 1840013648}
+  BehavioursToEnable: []
+  BehavioursToDisable: []
   SelfDeactivateOnTrigger: 1
 --- !u!114 &916237409
 MonoBehaviour:
@@ -2885,7 +2889,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 970958825}
     m_EventID: 1577261801
-  m_CachedInstanceID: -2382686
+  m_CachedInstanceID: 116418
 --- !u!114 &970958823
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2913,7 +2917,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 970958825}
     m_EventID: 1577261801
-  m_CachedInstanceID: -2382684
+  m_CachedInstanceID: 116420
 --- !u!114 &970958824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2954,7 +2958,7 @@ MonoBehaviour:
     m_EventID: 1761075472
   - m_Destination: {fileID: 970958823}
     m_EventID: 1965341386
-  m_CachedInstanceID: -2382680
+  m_CachedInstanceID: 116424
 --- !u!114 &970958826
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2982,7 +2986,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 970958823}
     m_EventID: 1965341386
-  m_CachedInstanceID: -2382676
+  m_CachedInstanceID: 116426
 --- !u!114 &970958827
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3008,7 +3012,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 970958823}
     m_EventID: 1965341386
-  m_CachedInstanceID: -2382678
+  m_CachedInstanceID: 116428
 --- !u!114 &970958828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3028,7 +3032,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: -2382672
+  m_CachedInstanceID: 116430
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -3366,6 +3370,7 @@ GameObject:
   - 4: {fileID: 1041055053}
   - 114: {fileID: 1041055055}
   - 114: {fileID: 1041055054}
+  - 114: {fileID: 1041055056}
   m_Layer: 0
   m_Name: Scene
   m_TagString: Untagged
@@ -3441,6 +3446,20 @@ MonoBehaviour:
     Color: {r: .5, g: .5, b: .5, a: 1}
     Name: 
     IsTheMainPlayer: 0
+--- !u!114 &1041055056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1041055052}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3158e1043239d45ccbb8dc8251e24ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExitTime: 2
+  NextLevel: MissionsMenu
+  SceneController: {fileID: 1041055055}
 --- !u!1 &1062195818
 GameObject:
   m_ObjectHideFlags: 0
@@ -3821,7 +3840,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 1255496953}
     m_EventID: 1577261801
-  m_CachedInstanceID: -2382802
+  m_CachedInstanceID: 116504
 --- !u!114 &1255496951
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3849,7 +3868,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 1255496953}
     m_EventID: 1577261801
-  m_CachedInstanceID: -2382800
+  m_CachedInstanceID: 116506
 --- !u!114 &1255496952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3890,7 +3909,7 @@ MonoBehaviour:
     m_EventID: 1761075472
   - m_Destination: {fileID: 1255496951}
     m_EventID: 1965341386
-  m_CachedInstanceID: -2382776
+  m_CachedInstanceID: 116510
 --- !u!114 &1255496954
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3918,7 +3937,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 1255496951}
     m_EventID: 1965341386
-  m_CachedInstanceID: -2382778
+  m_CachedInstanceID: 116512
 --- !u!114 &1255496955
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3944,7 +3963,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 1255496951}
     m_EventID: 1965341386
-  m_CachedInstanceID: -2382780
+  m_CachedInstanceID: 116514
 --- !u!114 &1255496956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3964,7 +3983,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: -2382782
+  m_CachedInstanceID: 116516
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -4570,6 +4589,9 @@ MonoBehaviour:
   ObjectsToEnable:
   - {fileID: 2105905257}
   ObjectsToDisable: []
+  BehavioursToEnable:
+  - {fileID: 1041055056}
+  BehavioursToDisable: []
   SelfDeactivateOnTrigger: 0
   DestructiblesToWatch:
   - {fileID: 1255496958}
@@ -5033,6 +5055,8 @@ MonoBehaviour:
   ObjectsToDisable:
   - {fileID: 1318054880}
   - {fileID: 2081139320}
+  BehavioursToEnable: []
+  BehavioursToDisable: []
   SelfDeactivateOnTrigger: 1
   OnlyTriggerWith: {fileID: 970958820}
 --- !u!1 &1552663075
@@ -6179,7 +6203,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 2033359584}
     m_EventID: 1577261801
-  m_CachedInstanceID: -2382498
+  m_CachedInstanceID: 116752
 --- !u!114 &2033359582
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6207,7 +6231,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 2033359584}
     m_EventID: 1577261801
-  m_CachedInstanceID: -2382496
+  m_CachedInstanceID: 116754
 --- !u!114 &2033359583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6248,7 +6272,7 @@ MonoBehaviour:
     m_EventID: 1761075472
   - m_Destination: {fileID: 2033359582}
     m_EventID: 1965341386
-  m_CachedInstanceID: -2382474
+  m_CachedInstanceID: 116758
 --- !u!114 &2033359585
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6276,7 +6300,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 2033359582}
     m_EventID: 1965341386
-  m_CachedInstanceID: -2382476
+  m_CachedInstanceID: 116760
 --- !u!114 &2033359586
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6302,7 +6326,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 2033359582}
     m_EventID: 1965341386
-  m_CachedInstanceID: -2382478
+  m_CachedInstanceID: 116762
 --- !u!114 &2033359587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6322,7 +6346,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: -2382480
+  m_CachedInstanceID: 116764
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
