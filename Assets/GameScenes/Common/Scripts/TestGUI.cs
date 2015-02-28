@@ -13,10 +13,12 @@ namespace Mazzaroth {
 
         Plane groundPlane;
 
-        int groupSelected = -1;
+        int groupSelected = 0;
 
         void Start () {
             groundPlane = new Plane(Vector3.up, 0);
+
+			SelectGroup(groupSelected);
         }
 
         void Update () {

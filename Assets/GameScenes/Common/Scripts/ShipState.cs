@@ -6,6 +6,10 @@ using BehaviourMachine;
 namespace Mazzaroth {
 
     public class ShipState : BaseMonoBehaviour {
+		public delegate void ShipDestroyed(ShipState Ship);
+		public event ShipDestroyed OnShipDestroyed;
+
+
         public enum ShipStances {
             Raid,
             HoldPosition,
@@ -162,6 +166,8 @@ namespace Mazzaroth {
 		public Color Color { get { return Group.Army.Player.Color; } }
 
         public void Die() {
+			if (OnShipDestroyed != null) OnShipDestroyed(this);
+
             DebrisInstance.transform.parent = transform.parent;
             DebrisInstance.transform.position = transform.position;
             DebrisInstance.transform.rotation = transform.rotation;
