@@ -18,7 +18,7 @@ namespace Mazzaroth {
 				percentageField.enabled = false;
 			else {
 				percentageField.enabled = true;
-				percentageField.text = Application.GetStreamProgressForLevel(1) * 100 + "%";
+				percentageField.text = Mathf.Floor(Application.GetStreamProgressForLevel(1) * 100) + "%";
 			}
 		}
 	}
