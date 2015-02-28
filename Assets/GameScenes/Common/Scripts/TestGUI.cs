@@ -81,11 +81,11 @@ namespace Mazzaroth {
         }
 
         void SelectGroup(int groupIndex) {
-            groupSelected = groupIndex;
-            ShipsGroup[] groups = Scene.MainPlayer.Army.Groups;
+			ShipsGroup[] groups = Scene.MainPlayer.Army.Groups;
+			groupSelected = Mathf.Clamp(groupIndex, 0, groups.Length - 1);
             for (int i = 0; i < groups.Length; i++) {
                 ShipsGroup group = groups[i];
-                group.Selected = i == groupIndex;
+				group.Selected = i == groupSelected;
             }
         }
 
