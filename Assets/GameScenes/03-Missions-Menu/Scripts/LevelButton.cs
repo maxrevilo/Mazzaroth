@@ -13,7 +13,6 @@ namespace Mazzaroth {
 		}
 
 		void Update() {
-			Debug.Log(Application.GetStreamProgressForLevel(LevelName));
 			if (Application.GetStreamProgressForLevel(LevelName) == 1)
 				percentageField.enabled = false;
 			else {
