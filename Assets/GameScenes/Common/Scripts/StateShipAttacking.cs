@@ -33,6 +33,8 @@ namespace Mazzaroth {
             Vector3 enemyPosition = shipState.EnemyOnLock.transform.position;
             shipState.HeadTowardPosition(enemyPosition);
             shipState.MoveForward();
+
+			Debug.DrawLine(transform.position, enemyPosition, Color.red);
         }
     }
 }

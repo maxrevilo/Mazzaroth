@@ -227,7 +227,9 @@ namespace Mazzaroth {
         }
 
         void shipDetected(ShipState ship) {
-            EnemyOnLock = ship;
+			if (EnemyOnLock == null || !EnemyOnLock.isAlive()) {
+				EnemyOnLock = ship;
+			}
             blackboard.SendEvent(573566531); //EnemyDetected
         }
 
