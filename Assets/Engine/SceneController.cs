@@ -27,7 +27,7 @@ public class SceneController : BaseMonoBehaviour {
 
 	void Start () {
 		fadeTexture = Texture2D.whiteTexture;
-
+		Application.targetFrameRate = 60;
 
 		if (FadeInOnEnabled) {
 			timeToFadeIn = TotalTimeToFadeIn;

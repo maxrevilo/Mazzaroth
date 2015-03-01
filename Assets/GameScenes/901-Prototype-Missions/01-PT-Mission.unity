@@ -552,7 +552,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Bien! Ya no explota cuando frena.\n\nCuando termine de probar los controles
-    de movimiento dirigaje a la siguiente zona siguiendo la direcci\xF3n de las flechas"
+    de movimiento, dirijase a la siguiente zona siguiendo la direcci\xF3n de las flechas"
 --- !u!222 &155882165
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2419,8 +2419,9 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Ahora debe enfrentar naves con capacidad ofensiva. Es escencial sacar la
-    m\xE1yor ventaja posible del area de combate, para esto la tecnica m\xE1s b\xE1sica
-    es aproximarse por detras.\nSigua las flechas y ataca el grupo de naves enemigas."
+    m\xE1yor ventaja posible del \xE1rea de combate, para esto la t\xE9cnica m\xE1s
+    b\xE1sica es aproximarse por detr\xE1s.\nSigua las flechas y ataque el grupo de
+    naves enemigas."
 --- !u!222 &785313453
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2486,8 +2487,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Dar una orden de ataque m\xE1s efectiva haga click derecho. La nave se
-    movera con comportamiento agreviso y atacar\xE1 a cualquier enemigo en su camino."
+  m_Text: "Para dar una orden de ataque m\xE1s efectiva haga click derecho. La nave
+    se mover\xE1 con comportamiento agreviso y atacar\xE1 a cualquier enemigo en su
+    camino."
 --- !u!222 &856312661
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2810,9 +2812,9 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Los controles b\xE1sicos de visi\xF3n funcionan correctamente.\n\nAhora
-    iniciaremos las pruebas de movimieto. Debe traer su nave hasta aqu\xED.\n\nPara
+    iniciaremos las pruebas de movimiento. Debe traer su nave hasta aqu\xED.\n\nPara
     esto debe hacer click con el mouse sobre el punto al que desea que la nave se
-    mueva.\n\nMueva al siguiente recuadro:\n\n"
+    mueva.\n\nUbiquela en el siguiente recuadro:\n\n"
 --- !u!222 &966982558
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2889,7 +2891,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 970958825}
     m_EventID: 1577261801
-  m_CachedInstanceID: 169748
+  m_CachedInstanceID: 229618
 --- !u!114 &970958823
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2917,7 +2919,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 970958825}
     m_EventID: 1577261801
-  m_CachedInstanceID: 169750
+  m_CachedInstanceID: 229620
 --- !u!114 &970958824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2958,7 +2960,7 @@ MonoBehaviour:
     m_EventID: 1761075472
   - m_Destination: {fileID: 970958823}
     m_EventID: 1965341386
-  m_CachedInstanceID: 169754
+  m_CachedInstanceID: 229624
 --- !u!114 &970958826
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2986,7 +2988,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 970958823}
     m_EventID: 1965341386
-  m_CachedInstanceID: 169756
+  m_CachedInstanceID: 229626
 --- !u!114 &970958827
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3012,7 +3014,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 970958823}
     m_EventID: 1965341386
-  m_CachedInstanceID: 169758
+  m_CachedInstanceID: 229628
 --- !u!114 &970958828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3032,7 +3034,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 169760
+  m_CachedInstanceID: 229630
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -3352,8 +3354,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xA1Exelente! has echo click y la IA se ha encargado de todo \xA1eres un
-    genio!... de hacer clicks..."
+  m_Text: "\xA1Exelente! has hecho click y la IA se ha encargado de todo \xA1eres
+    un genio!... de hacer clicks..."
 --- !u!222 &1009576669
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3840,7 +3842,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 1255496953}
     m_EventID: 1577261801
-  m_CachedInstanceID: 169836
+  m_CachedInstanceID: 229706
 --- !u!114 &1255496951
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3868,7 +3870,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 1255496953}
     m_EventID: 1577261801
-  m_CachedInstanceID: 169838
+  m_CachedInstanceID: 229708
 --- !u!114 &1255496952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3909,7 +3911,7 @@ MonoBehaviour:
     m_EventID: 1761075472
   - m_Destination: {fileID: 1255496951}
     m_EventID: 1965341386
-  m_CachedInstanceID: 169842
+  m_CachedInstanceID: 229712
 --- !u!114 &1255496954
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3937,7 +3939,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 1255496951}
     m_EventID: 1965341386
-  m_CachedInstanceID: 169844
+  m_CachedInstanceID: 229714
 --- !u!114 &1255496955
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3963,7 +3965,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 1255496951}
     m_EventID: 1965341386
-  m_CachedInstanceID: 169846
+  m_CachedInstanceID: 229716
 --- !u!114 &1255496956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3983,7 +3985,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 169848
+  m_CachedInstanceID: 229718
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -5239,9 +5241,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "En esta etapa probaremos las capacidades de ofensivas de la nave. \n\nHemos
-    acivado una nave se\xF1uelo en el siguiente sector. Dirija su nave cerca del se\xF1uelo
-    y esta atacar\xE1 automaticamente."
+  m_Text: "En esta etapa probaremos las capacidades ofensivas de la nave. \n\nHemos
+    activado una nave se\xF1uelo en el siguiente sector. Dirija su nave cerca del
+    se\xF1uelo y esta atacar\xE1 automaticamente."
 --- !u!222 &1625892345
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5673,8 +5675,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Si el enemigo se engancha en la cola de su nave sin permitirle contrata
-    atacar use el click izquierdo para maniobrar su nave y salir del enganche.
+  m_Text: Si el enemigo se engancha en la cola de su nave sin permitirle contraatacar
+    use el click izquierdo para maniobrar su nave y salir del enganche.
 --- !u!222 &1876581815
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5742,7 +5744,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "En esta misi\xF3n necesitamos que pruebe los controles visuales, motoros
     y ofensivos de su nave.\n\nEmpezemos por los controles visuales. Puede cambiar
-    el zoom usando la rueda del rat\xF3n.\n\nTrate de expandir su campo de visi\xF3n
+    el zoom usando la rueda del mouse.\n\nTrate de expandir su campo de visi\xF3n
     disminuyendo el zoom."
 --- !u!222 &1920298344
 CanvasRenderer:
@@ -6102,7 +6104,7 @@ Transform:
   m_GameObject: {fileID: 2017656375}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 170, y: 90, z: 1}
+  m_LocalScale: {x: 148.62738, y: 148.62735, z: .874278426}
   m_Children: []
   m_Father: {fileID: 1407961382}
   m_RootOrder: 0
@@ -6203,7 +6205,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 2033359584}
     m_EventID: 1577261801
-  m_CachedInstanceID: 170084
+  m_CachedInstanceID: 229954
 --- !u!114 &2033359582
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6231,7 +6233,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 2033359584}
     m_EventID: 1577261801
-  m_CachedInstanceID: 170086
+  m_CachedInstanceID: 229956
 --- !u!114 &2033359583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6272,7 +6274,7 @@ MonoBehaviour:
     m_EventID: 1761075472
   - m_Destination: {fileID: 2033359582}
     m_EventID: 1965341386
-  m_CachedInstanceID: 170090
+  m_CachedInstanceID: 229960
 --- !u!114 &2033359585
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6300,7 +6302,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 2033359582}
     m_EventID: 1965341386
-  m_CachedInstanceID: 170092
+  m_CachedInstanceID: 229962
 --- !u!114 &2033359586
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6326,7 +6328,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 2033359582}
     m_EventID: 1965341386
-  m_CachedInstanceID: 170094
+  m_CachedInstanceID: 229964
 --- !u!114 &2033359587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6346,7 +6348,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 170096
+  m_CachedInstanceID: 229966
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -6703,7 +6705,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Misi\xF3n cumplida.\nBuen trabajo oficial."
+  m_Text: "Misi\xF3n cumplida.\nBuen trabajo, oficial."
 --- !u!222 &2105905260
 CanvasRenderer:
   m_ObjectHideFlags: 0
