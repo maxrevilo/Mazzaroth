@@ -4,7 +4,7 @@ namespace Mazzaroth {
     [Serializable]
     public class Army {
 
-        public Player Player { get; set; }
+		[NonSerialized] public Player Player;
         public ShipsGroup[] Groups;
 
         public void Initialize(Player player) {

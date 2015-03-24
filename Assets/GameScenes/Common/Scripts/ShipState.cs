@@ -29,8 +29,8 @@ namespace Mazzaroth {
         public ShipState EnemyOnLock { get; private set; }
 		public GameObject GUIPrefab;
         public DebugConf DebugConfigurations;
-
-        public ShipsGroup Group { get; set; }
+		
+		[NonSerialized] public ShipsGroup Group;
 
         public bool Fire(Transform target, WeaponStats weapon = null) {
             if (weapon == null)

@@ -12,7 +12,7 @@ namespace Mazzaroth {
 			Circle
 		}
 
-        public Army Army { get; set; }
+		[NonSerialized] public Army Army;
 
         public ShipState[] Ships;
 
