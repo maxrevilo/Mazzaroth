@@ -6,7 +6,7 @@ namespace Mazzaroth {
     public class LightFighterStats: ShipStats {
         public LightFighterStats()
         {
-            HealthPoints = 35;
+            HealthPoints = 90;
             Armor = 0;
             HeatDissipation = 0;
             Cargo = 1;

@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace Mazzaroth {
 
-    public abstract class WeaponStats : BaseMonoBehaviour {
+    public class WeaponStats : BaseMonoBehaviour {
         public enum WeaponTypes {
             PlasmaBullet,
             KineticMissile,

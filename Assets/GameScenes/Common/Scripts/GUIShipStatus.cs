@@ -24,6 +24,16 @@ namespace Mazzaroth {
 			canvas.enabled = false;
 		}
 
+		void Start() {
+			Color color;
+			if (ship.Group.Army.Player.IsTheMainPlayer) {
+				color = FUllLifeColor;
+			} else {
+				color = LowLifeColor;
+			}
+			LifeBarImage.color = color;
+		}
+
 		void Update() {
 			if (ship) {
 				Vector3 scale = LifeBar.localScale;
@@ -33,7 +43,7 @@ namespace Mazzaroth {
 
 				LifeBar.localScale = scale;
 
-				LifeBarImage.color = Color.Lerp(LowLifeColor, FUllLifeColor, scale.x);
+				//LifeBarImage.color = Color.Lerp(LowLifeColor, FUllLifeColor, scale.x);
 
 				if (!ship.gameObject.activeSelf) {
 					gameObject.DestroyAPS();

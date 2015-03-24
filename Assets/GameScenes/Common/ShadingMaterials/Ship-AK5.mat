@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Ship-AK5
-  m_Shader: {fileID: 6, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: 8a15600d97be4477794218d1fa3a49ef, type: 3}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -18,6 +18,20 @@ Material:
           name: _MainTex
         second:
           m_Texture: {fileID: 2800000, guid: ff76b41d5b90147909fd2db299314a70, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _MatCap
+        second:
+          m_Texture: {fileID: 2800000, guid: fd2df1be33f17465ab79e2798601aad0, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _TeamMask
+        second:
+          m_Texture: {fileID: 2800000, guid: 13ec019415d2644c885e21743d9414f1, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -32,9 +46,13 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
+          name: _SpecColor
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
           name: _Emission
         second: {r: 0, g: 0, b: 0, a: 0}
       data:
         first:
-          name: _SpecColor
+          name: _TeamColor
         second: {r: 1, g: 1, b: 1, a: 1}
