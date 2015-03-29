@@ -26,7 +26,7 @@ namespace Mazzaroth {
 
         void FixedUpdate() {
             if (!shipState.EnemyOnLock.isAlive()) {
-                blackboard.SendEvent(843881883); //EnemyDied
+				GetComponent<Blackboard>().SendEvent(843881883); //EnemyDied
                 return;
             }
 

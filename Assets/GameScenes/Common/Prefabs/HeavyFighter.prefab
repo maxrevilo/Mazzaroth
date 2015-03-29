@@ -78,19 +78,14 @@ GameObject:
   - 135: {fileID: 13595232}
   - 114: {fileID: 11450588}
   - 114: {fileID: 11460708}
-  - 114: {fileID: 11419294}
-  - 114: {fileID: 11419296}
-  - 114: {fileID: 11419298}
-  - 114: {fileID: 11419300}
-  - 114: {fileID: 11419302}
-  - 114: {fileID: 11436200}
-  - 114: {fileID: 11457920}
-  - 114: {fileID: 11457922}
-  - 114: {fileID: 11402292}
-  - 114: {fileID: 11402294}
-  - 114: {fileID: 11402296}
-  - 114: {fileID: 11402298}
-  - 114: {fileID: 11402300}
+  - 114: {fileID: 11432928}
+  - 114: {fileID: 11430434}
+  - 114: {fileID: 11430432}
+  - 114: {fileID: 11417192}
+  - 114: {fileID: 11417194}
+  - 114: {fileID: 11417196}
+  - 114: {fileID: 11417198}
+  - 114: {fileID: 11417200}
   m_Layer: 0
   m_Name: HeavyFighter
   m_TagString: Untagged
@@ -245,34 +240,7 @@ TrailRenderer:
       rgba: 16777215
   m_MinVertexDistance: .5
   m_Autodestruct: 0
---- !u!114 &11402292
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 182008}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71d2d778d7eb9447d9209188f3718a98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Blackboard: {fileID: 11477476, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
-  m_Parent: {fileID: 11457922}
-  m_StateName: Idle
-  m_Color: 0
-  m_HideScript: 1
-  m_Position: {x: 790, y: 120}
-  m_Transitions:
-  - m_Destination: {fileID: 11402294}
-    m_EventID: 1761075472
-  - m_Destination: {fileID: 11402296}
-    m_EventID: 573566531
-  - m_Destination: {fileID: 11402296}
-    m_EventID: 1577261801
-  - m_Destination: {fileID: 11402298}
-    m_EventID: 1965341386
-  m_CachedInstanceID: 11246
---- !u!114 &11402294
+--- !u!114 &11417192
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -284,149 +252,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Blackboard: {fileID: 11477476, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
-  m_Parent: {fileID: 11457922}
-  m_StateName: Moving
-  m_Color: 1
-  m_HideScript: 1
-  m_Position: {x: 1000, y: 220}
-  m_Transitions:
-  - m_Destination: {fileID: 11402292}
-    m_EventID: 1202858853
-  - m_Destination: {fileID: 11402296}
-    m_EventID: 1577261801
-  - m_Destination: {fileID: 11402298}
-    m_EventID: 1965341386
-  m_CachedInstanceID: 11248
---- !u!114 &11402296
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 182008}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f628474ff1d37472692c1197d13aaedc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Blackboard: {fileID: 11477476, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
-  m_Parent: {fileID: 11457922}
-  m_StateName: Attacking
-  m_Color: 4
-  m_HideScript: 1
-  m_Position: {x: 570, y: 220}
-  m_Transitions:
-  - m_Destination: {fileID: 11402292}
-    m_EventID: 843881883
-  - m_Destination: {fileID: 11402294}
-    m_EventID: 1761075472
-  - m_Destination: {fileID: 11402298}
-    m_EventID: 1965341386
-  m_CachedInstanceID: 11250
---- !u!114 &11402298
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 182008}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d52963f1998524cd090b4370b8cd9f1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Blackboard: {fileID: 11477476, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
-  m_Parent: {fileID: 11457922}
-  m_StateName: Aggressive Move
-  m_Color: 4
-  m_HideScript: 1
-  m_Position: {x: 570, y: 330}
-  m_Transitions:
-  - m_Destination: {fileID: 11402294}
-    m_EventID: 1761075472
-  - m_Destination: {fileID: 11402292}
-    m_EventID: 1202858853
-  - m_Destination: {fileID: 11402300}
-    m_EventID: 573566531
-  - m_Destination: {fileID: 11402296}
-    m_EventID: 1577261801
-  m_CachedInstanceID: 11252
---- !u!114 &11402300
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 182008}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f628474ff1d37472692c1197d13aaedc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Blackboard: {fileID: 11477476, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
-  m_Parent: {fileID: 11457922}
-  m_StateName: Attacking On AMove
-  m_Color: 4
-  m_HideScript: 1
-  m_Position: {x: 570, y: 470}
-  m_Transitions:
-  - m_Destination: {fileID: 11402294}
-    m_EventID: 1761075472
-  - m_Destination: {fileID: 11402298}
-    m_EventID: 843881883
-  - m_Destination: {fileID: 11402296}
-    m_EventID: 1577261801
-  m_CachedInstanceID: 11240
---- !u!114 &11419294
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 182008}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71d2d778d7eb9447d9209188f3718a98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Blackboard: {fileID: 11477476, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
-  m_Parent: {fileID: 0}
-  m_StateName: Idle
-  m_Color: 0
-  m_HideScript: 1
-  m_Position: {x: 380, y: 0}
-  m_Transitions:
-  - m_Destination: {fileID: 11419296}
-    m_EventID: 1761075472
-  - m_Destination: {fileID: 11419298}
-    m_EventID: 573566531
-  - m_Destination: {fileID: 11419298}
-    m_EventID: 1577261801
-  - m_Destination: {fileID: 11419300}
-    m_EventID: 1965341386
-  m_CachedInstanceID: 11234
---- !u!114 &11419296
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 182008}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9898cf537ddc348a99d26461205357ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Blackboard: {fileID: 11477476, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
-  m_Parent: {fileID: 0}
+  m_Parent: {fileID: 11430432}
   m_StateName: Moving
   m_Color: 1
   m_HideScript: 1
   m_Position: {x: 590, y: 100}
   m_Transitions:
-  - m_Destination: {fileID: 11419294}
+  - m_Destination: {fileID: 11417200}
     m_EventID: 1202858853
-  - m_Destination: {fileID: 11419298}
+  - m_Destination: {fileID: 11417198}
     m_EventID: 1577261801
-  - m_Destination: {fileID: 11419300}
+  - m_Destination: {fileID: 11417196}
     m_EventID: 1965341386
-  m_CachedInstanceID: 11232
---- !u!114 &11419298
+  m_CachedInstanceID: -3575388
+--- !u!114 &11417194
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -438,20 +277,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Blackboard: {fileID: 11477476, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
-  m_Parent: {fileID: 0}
-  m_StateName: Attacking
+  m_Parent: {fileID: 11430432}
+  m_StateName: Attacking On AMove
   m_Color: 4
   m_HideScript: 1
-  m_Position: {x: 160, y: 100}
+  m_Position: {x: 160, y: 350}
   m_Transitions:
-  - m_Destination: {fileID: 11419294}
-    m_EventID: 843881883
-  - m_Destination: {fileID: 11419296}
+  - m_Destination: {fileID: 11417192}
     m_EventID: 1761075472
-  - m_Destination: {fileID: 11419300}
-    m_EventID: 1965341386
-  m_CachedInstanceID: 11236
---- !u!114 &11419300
+  - m_Destination: {fileID: 11417196}
+    m_EventID: 843881883
+  - m_Destination: {fileID: 11417198}
+    m_EventID: 1577261801
+  m_CachedInstanceID: -3575390
+--- !u!114 &11417196
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -463,22 +302,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Blackboard: {fileID: 11477476, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
-  m_Parent: {fileID: 0}
+  m_Parent: {fileID: 11430432}
   m_StateName: Aggressive Move
   m_Color: 4
   m_HideScript: 1
   m_Position: {x: 160, y: 210}
   m_Transitions:
-  - m_Destination: {fileID: 11419296}
+  - m_Destination: {fileID: 11417192}
     m_EventID: 1761075472
-  - m_Destination: {fileID: 11419294}
+  - m_Destination: {fileID: 11417200}
     m_EventID: 1202858853
-  - m_Destination: {fileID: 11419302}
+  - m_Destination: {fileID: 11417194}
     m_EventID: 573566531
-  - m_Destination: {fileID: 11419298}
+  - m_Destination: {fileID: 11417198}
     m_EventID: 1577261801
-  m_CachedInstanceID: 11238
---- !u!114 &11419302
+  m_CachedInstanceID: -3575392
+--- !u!114 &11417198
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -490,20 +329,134 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Blackboard: {fileID: 11477476, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
-  m_Parent: {fileID: 0}
-  m_StateName: Attacking On AMove
+  m_Parent: {fileID: 11430432}
+  m_StateName: Attacking
   m_Color: 4
   m_HideScript: 1
-  m_Position: {x: 160, y: 350}
+  m_Position: {x: 160, y: 100}
   m_Transitions:
-  - m_Destination: {fileID: 11419296}
-    m_EventID: 1761075472
-  - m_Destination: {fileID: 11419300}
+  - m_Destination: {fileID: 11417200}
     m_EventID: 843881883
-  - m_Destination: {fileID: 11419298}
+  - m_Destination: {fileID: 11417192}
+    m_EventID: 1761075472
+  - m_Destination: {fileID: 11417196}
+    m_EventID: 1965341386
+  m_CachedInstanceID: -3575394
+--- !u!114 &11417200
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182008}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d2d778d7eb9447d9209188f3718a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 11477476, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
+  m_Parent: {fileID: 11430432}
+  m_StateName: Idle
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: 380, y: 0}
+  m_Transitions:
+  - m_Destination: {fileID: 11417192}
+    m_EventID: 1761075472
+  - m_Destination: {fileID: 11417198}
+    m_EventID: 573566531
+  - m_Destination: {fileID: 11417198}
     m_EventID: 1577261801
-  m_CachedInstanceID: 11230
---- !u!114 &11436200
+  - m_Destination: {fileID: 11417196}
+    m_EventID: 1965341386
+  m_CachedInstanceID: -3575396
+--- !u!114 &11430432
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a27b962ddfa21461eb78fac1cb2f955f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Blackboard: {fileID: 11430434}
+  m_Parent: {fileID: 0}
+  m_StateName: HeavyFighterFSM
+  m_Color: 0
+  m_HideScript: 1
+  m_Position: {x: 0, y: 0}
+  m_Transitions: []
+  m_CachedInstanceID: -3551670
+  m_Description: 
+  m_EnabledState: {fileID: 0}
+  m_LastEnabledState: {fileID: 0}
+  m_StartState: {fileID: 11417200}
+  m_AnyState: {fileID: 0}
+  m_ConcurrentState: {fileID: 0}
+--- !u!114 &11430434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634db10235c0241d6ad43433a106016d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FloatVars: []
+  m_IntVars: []
+  m_BoolVars: []
+  m_StringVars: []
+  m_Vector3Vars: []
+  m_RectVars: []
+  m_ColorVars: []
+  m_QuaternionVars: []
+  m_GameObjectVars: []
+  m_TextureVars: []
+  m_MaterialVars: []
+  m_ObjectVars: []
+  m_FsmEvents: []
+  m_ConcreteFsmEvents:
+  - m_ID: 1761075472
+    m_Name: MoveOrder
+    m_Blackboard: {fileID: 11430434}
+    m_IsConstant: 0
+    m_EventId: 0
+    m_IsSystem: 0
+  - m_ID: 1202858853
+    m_Name: OnDestiny
+    m_Blackboard: {fileID: 11430434}
+    m_IsConstant: 0
+    m_EventId: 0
+    m_IsSystem: 0
+  - m_ID: 573566531
+    m_Name: EnemyDetected
+    m_Blackboard: {fileID: 11430434}
+    m_IsConstant: 0
+    m_EventId: 0
+    m_IsSystem: 0
+  - m_ID: 843881883
+    m_Name: EnemyDied
+    m_Blackboard: {fileID: 11430434}
+    m_IsConstant: 0
+    m_EventId: 0
+    m_IsSystem: 0
+  - m_ID: 1577261801
+    m_Name: AtackOrder
+    m_Blackboard: {fileID: 11430434}
+    m_IsConstant: 0
+    m_EventId: 0
+    m_IsSystem: 0
+  - m_ID: 1965341386
+    m_Name: AggressiveMoveOrder
+    m_Blackboard: {fileID: 11430434}
+    m_IsConstant: 0
+    m_EventId: 0
+    m_IsSystem: 0
+  m_Namespace: 
+--- !u!114 &11432928
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -550,93 +503,6 @@ MonoBehaviour:
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
   DebugConfigurations:
     ShowSteeringLimits: 1
---- !u!114 &11457920
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 182008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 634db10235c0241d6ad43433a106016d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FloatVars: []
-  m_IntVars: []
-  m_BoolVars: []
-  m_StringVars: []
-  m_Vector3Vars: []
-  m_RectVars: []
-  m_ColorVars: []
-  m_QuaternionVars: []
-  m_GameObjectVars: []
-  m_TextureVars: []
-  m_MaterialVars: []
-  m_ObjectVars: []
-  m_FsmEvents: []
-  m_ConcreteFsmEvents:
-  - m_ID: 1761075472
-    m_Name: MoveOrder
-    m_Blackboard: {fileID: 11457920}
-    m_IsConstant: 0
-    m_EventId: 0
-    m_IsSystem: 0
-  - m_ID: 1202858853
-    m_Name: OnDestiny
-    m_Blackboard: {fileID: 11457920}
-    m_IsConstant: 0
-    m_EventId: 0
-    m_IsSystem: 0
-  - m_ID: 573566531
-    m_Name: EnemyDetected
-    m_Blackboard: {fileID: 11457920}
-    m_IsConstant: 0
-    m_EventId: 0
-    m_IsSystem: 0
-  - m_ID: 843881883
-    m_Name: EnemyDied
-    m_Blackboard: {fileID: 11457920}
-    m_IsConstant: 0
-    m_EventId: 0
-    m_IsSystem: 0
-  - m_ID: 1577261801
-    m_Name: AtackOrder
-    m_Blackboard: {fileID: 11457920}
-    m_IsConstant: 0
-    m_EventId: 0
-    m_IsSystem: 0
-  - m_ID: 1965341386
-    m_Name: AggressiveMoveOrder
-    m_Blackboard: {fileID: 11457920}
-    m_IsConstant: 0
-    m_EventId: 0
-    m_IsSystem: 0
-  m_Namespace: 
---- !u!114 &11457922
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 182008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a27b962ddfa21461eb78fac1cb2f955f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Blackboard: {fileID: 11457920}
-  m_Parent: {fileID: 0}
-  m_StateName: StateMachine
-  m_Color: 0
-  m_HideScript: 1
-  m_Position: {x: 0, y: 0}
-  m_Transitions: []
-  m_CachedInstanceID: 11242
-  m_Description: 
-  m_EnabledState: {fileID: 0}
-  m_LastEnabledState: {fileID: 0}
-  m_StartState: {fileID: 11402292}
-  m_AnyState: {fileID: 0}
-  m_ConcurrentState: {fileID: 0}
 --- !u!114 &11460708
 MonoBehaviour:
   m_ObjectHideFlags: 1

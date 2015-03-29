@@ -22,7 +22,7 @@ namespace Mazzaroth {
             const float MIN_DISTANCE_TO_DESTINY = 0.5f;
             float sqrSistanceToDestiny = Vector3.SqrMagnitude(this.transform.position - shipState.DestinyLocation);
             if (sqrSistanceToDestiny < Mathf.Pow(MIN_DISTANCE_TO_DESTINY, 2)) {
-                blackboard.SendEvent(1202858853); //OnDestiny
+				GetComponent<Blackboard>().SendEvent(1202858853); //OnDestiny
                 return;
             }
 
