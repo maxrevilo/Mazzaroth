@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 0
-  Damage: 20
+  Damage: 10
   Cooldown: .5
   Range: 50
   HeatConversion: .699999988

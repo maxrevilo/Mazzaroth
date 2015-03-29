@@ -514,12 +514,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8910d7525df2ba349a74d139aad98fd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthPoints: 200
+  HealthPoints: 100
   Armor: 2
   HeatDissipation: .300000012
   Cargo: 4
   Size: 6
-  Speed: 5
+  Speed: 10
   Sight: 60
   Weapons:
   - {fileID: 11465302, guid: 6c25cd780dfb9b243b76776a3871bf32, type: 2}

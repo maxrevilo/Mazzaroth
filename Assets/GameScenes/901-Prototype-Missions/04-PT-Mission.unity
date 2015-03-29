@@ -8433,49 +8433,29 @@ Prefab:
       propertyPath: m_Name
       value: P1-HeavyFighter
       objectReference: {fileID: 0}
-    - target: {fileID: 11419302, guid: b081e506cbe20415fabf15fcabc2e5aa, type: 2}
+    - target: {fileID: 11430432, guid: b081e506cbe20415fabf15fcabc2e5aa, type: 2}
       propertyPath: m_CachedInstanceID
-      value: 9462
+      value: -3743254
       objectReference: {fileID: 0}
-    - target: {fileID: 11419300, guid: b081e506cbe20415fabf15fcabc2e5aa, type: 2}
+    - target: {fileID: 11417192, guid: b081e506cbe20415fabf15fcabc2e5aa, type: 2}
       propertyPath: m_CachedInstanceID
-      value: 9464
+      value: -3743252
       objectReference: {fileID: 0}
-    - target: {fileID: 11419298, guid: b081e506cbe20415fabf15fcabc2e5aa, type: 2}
+    - target: {fileID: 11417194, guid: b081e506cbe20415fabf15fcabc2e5aa, type: 2}
       propertyPath: m_CachedInstanceID
-      value: 9466
+      value: -3743250
       objectReference: {fileID: 0}
-    - target: {fileID: 11419296, guid: b081e506cbe20415fabf15fcabc2e5aa, type: 2}
+    - target: {fileID: 11417196, guid: b081e506cbe20415fabf15fcabc2e5aa, type: 2}
       propertyPath: m_CachedInstanceID
-      value: 9468
+      value: -3743248
       objectReference: {fileID: 0}
-    - target: {fileID: 11419294, guid: b081e506cbe20415fabf15fcabc2e5aa, type: 2}
+    - target: {fileID: 11417198, guid: b081e506cbe20415fabf15fcabc2e5aa, type: 2}
       propertyPath: m_CachedInstanceID
-      value: 9470
+      value: -3743246
       objectReference: {fileID: 0}
-    - target: {fileID: 11402300, guid: b081e506cbe20415fabf15fcabc2e5aa, type: 2}
+    - target: {fileID: 11417200, guid: b081e506cbe20415fabf15fcabc2e5aa, type: 2}
       propertyPath: m_CachedInstanceID
-      value: 9472
-      objectReference: {fileID: 0}
-    - target: {fileID: 11402298, guid: b081e506cbe20415fabf15fcabc2e5aa, type: 2}
-      propertyPath: m_CachedInstanceID
-      value: 9474
-      objectReference: {fileID: 0}
-    - target: {fileID: 11402296, guid: b081e506cbe20415fabf15fcabc2e5aa, type: 2}
-      propertyPath: m_CachedInstanceID
-      value: 9488
-      objectReference: {fileID: 0}
-    - target: {fileID: 11402294, guid: b081e506cbe20415fabf15fcabc2e5aa, type: 2}
-      propertyPath: m_CachedInstanceID
-      value: 9490
-      objectReference: {fileID: 0}
-    - target: {fileID: 11402292, guid: b081e506cbe20415fabf15fcabc2e5aa, type: 2}
-      propertyPath: m_CachedInstanceID
-      value: 9492
-      objectReference: {fileID: 0}
-    - target: {fileID: 11457922, guid: b081e506cbe20415fabf15fcabc2e5aa, type: 2}
-      propertyPath: m_CachedInstanceID
-      value: 9494
+      value: -3743244
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b081e506cbe20415fabf15fcabc2e5aa, type: 2}
