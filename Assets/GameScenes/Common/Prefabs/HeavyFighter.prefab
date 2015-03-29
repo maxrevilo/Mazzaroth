@@ -281,7 +281,7 @@ MonoBehaviour:
   m_StateName: Attacking On AMove
   m_Color: 4
   m_HideScript: 1
-  m_Position: {x: 160, y: 350}
+  m_Position: {x: 590, y: 220}
   m_Transitions:
   - m_Destination: {fileID: 11417192}
     m_EventID: 1761075472
@@ -492,17 +492,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthPoints: -1
-  Stance: 0
-  TimeToFire: 0
-  LateralStabilizatorsFactor: .100000001
-  FiringLocations:
-  - {fileID: 414246}
-  - {fileID: 414248}
-  DetectionArea: {fileID: 11485044}
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
   DebugConfigurations:
     ShowSteeringLimits: 1
+  TimeToFire: 0
+  FiringLocations:
+  - {fileID: 414246}
+  - {fileID: 414248}
+  LateralStabilizatorsFactor: .100000001
+  HealthPoints: -1
+  Stance: 0
+  DetectionArea: {fileID: 11485044}
 --- !u!114 &11460708
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -511,7 +511,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 182008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8910d7525df2ba349a74d139aad98fd8, type: 3}
+  m_Script: {fileID: 11500000, guid: dcceff334464c4d0a80513fd229f09bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   HealthPoints: 100

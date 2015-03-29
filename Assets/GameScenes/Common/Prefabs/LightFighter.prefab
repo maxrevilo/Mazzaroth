@@ -312,17 +312,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthPoints: -1
-  Stance: 0
-  TimeToFire: 0
-  LateralStabilizatorsFactor: .100000001
-  FiringLocations:
-  - {fileID: 490136}
-  - {fileID: 490138}
-  DetectionArea: {fileID: 11466072}
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
   DebugConfigurations:
     ShowSteeringLimits: 0
+  TimeToFire: 0
+  FiringLocations:
+  - {fileID: 490136}
+  - {fileID: 490138}
+  LateralStabilizatorsFactor: .100000001
+  HealthPoints: -1
+  Stance: 0
+  DetectionArea: {fileID: 11466072}
 --- !u!114 &11474738
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -408,7 +408,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 189274}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ab91664129f94c3d91dbfe75a5b0d65, type: 3}
+  m_Script: {fileID: 11500000, guid: dcceff334464c4d0a80513fd229f09bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   HealthPoints: 35

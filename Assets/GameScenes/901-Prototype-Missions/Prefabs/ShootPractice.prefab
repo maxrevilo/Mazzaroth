@@ -273,7 +273,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 184472}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ab91664129f94c3d91dbfe75a5b0d65, type: 3}
+  m_Script: {fileID: 11500000, guid: dcceff334464c4d0a80513fd229f09bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   HealthPoints: 35
@@ -289,7 +289,7 @@ MonoBehaviour:
   deacceleration: 40
   angularSpeed: .600000024
   angularAcceleration: 1
-  ShipPrefab: {fileID: 484472}
+  ShipPrefab: {fileID: 489274, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
   DebrisPrefab: {fileID: 422226, guid: 62df16f81a6b24442a9183b576f0a5ab, type: 2}
 --- !u!114 &11484480
 MonoBehaviour:
@@ -302,17 +302,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthPoints: -1
-  Stance: 0
-  TimeToFire: 0
-  LateralStabilizatorsFactor: .100000001
-  FiringLocations:
-  - {fileID: 484476}
-  - {fileID: 484474}
-  DetectionArea: {fileID: 11484470}
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
   DebugConfigurations:
     ShowSteeringLimits: 0
+  TimeToFire: 0
+  FiringLocations:
+  - {fileID: 484476}
+  - {fileID: 484474}
+  LateralStabilizatorsFactor: .100000001
+  HealthPoints: -1
+  Stance: 0
+  DetectionArea: {fileID: 11484470}
 --- !u!114 &11484492
 MonoBehaviour:
   m_ObjectHideFlags: 1

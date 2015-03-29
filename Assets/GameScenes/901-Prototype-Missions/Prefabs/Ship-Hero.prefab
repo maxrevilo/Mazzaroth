@@ -77,7 +77,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &112222
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,7 +264,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 11412220}
     m_EventID: 1577261801
-  m_CachedInstanceID: 29594
+  m_CachedInstanceID: 150084
 --- !u!114 &11412216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -291,7 +291,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 11412220}
     m_EventID: 1577261801
-  m_CachedInstanceID: 29606
+  m_CachedInstanceID: 150096
 --- !u!114 &11412218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -330,7 +330,7 @@ MonoBehaviour:
     m_EventID: 1761075472
   - m_Destination: {fileID: 11412216}
     m_EventID: 1965341386
-  m_CachedInstanceID: 29604
+  m_CachedInstanceID: 150094
 --- !u!114 &11412222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -355,7 +355,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 11412216}
     m_EventID: 1965341386
-  m_CachedInstanceID: 29602
+  m_CachedInstanceID: 150092
 --- !u!114 &11412224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -382,7 +382,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 11412216}
     m_EventID: 1965341386
-  m_CachedInstanceID: 29600
+  m_CachedInstanceID: 150090
 --- !u!114 &11412226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -463,7 +463,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 29598
+  m_CachedInstanceID: 150088
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -481,17 +481,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthPoints: -1
-  Stance: 0
-  TimeToFire: 0
-  LateralStabilizatorsFactor: .100000001
-  FiringLocations:
-  - {fileID: 412222}
-  - {fileID: 412216}
-  DetectionArea: {fileID: 11412236}
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
   DebugConfigurations:
     ShowSteeringLimits: 0
+  TimeToFire: 0
+  FiringLocations:
+  - {fileID: 412222}
+  - {fileID: 412216}
+  LateralStabilizatorsFactor: .100000001
+  HealthPoints: -1
+  Stance: 0
+  DetectionArea: {fileID: 11412236}
 --- !u!114 &11412232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -500,13 +500,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 112214}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ab91664129f94c3d91dbfe75a5b0d65, type: 3}
+  m_Script: {fileID: 11500000, guid: dcceff334464c4d0a80513fd229f09bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthPoints: 80
-  Armor: 2
+  HealthPoints: 75
+  Armor: 1
   HeatDissipation: 0
-  Cargo: 1
+  Cargo: 2
   Size: 4
   Speed: 20
   Sight: 35
@@ -516,7 +516,7 @@ MonoBehaviour:
   deacceleration: 40
   angularSpeed: .600000024
   angularAcceleration: 1
-  ShipPrefab: {fileID: 412214}
+  ShipPrefab: {fileID: 489274, guid: a722de5813dd643f4b9b3af416c85044, type: 2}
   DebrisPrefab: {fileID: 422226, guid: 62df16f81a6b24442a9183b576f0a5ab, type: 2}
 --- !u!114 &11412234
 MonoBehaviour:

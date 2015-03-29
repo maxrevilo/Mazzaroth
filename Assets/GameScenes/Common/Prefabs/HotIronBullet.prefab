@@ -55,7 +55,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 185668}
-  m_LocalRotation: {x: .70710659, y: 0, z: 0, w: -.707106948}
+  m_LocalRotation: {x: .70710665, y: 0, z: 0, w: -.707107008}
   m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: .0500000007, y: 1, z: .0500000007}
   m_Children: []
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 185666}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03dd12c88bca749198f95a94be4657ac, type: 3}
+  m_Script: {fileID: 11500000, guid: 19f729f2e645f476ca4ebc4cc438aa79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 0
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Alive: 1
   BulletElongation: 3
-  Breader: {fileID: 0}
+  Shooter: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

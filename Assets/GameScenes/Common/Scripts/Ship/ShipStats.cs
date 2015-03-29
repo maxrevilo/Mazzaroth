@@ -6,7 +6,7 @@ namespace Mazzaroth {
     /*
      * The base class of all Ships Stats.
      */
-    public abstract class ShipStats : BaseMonoBehaviour {
+    public class ShipStats : BaseMonoBehaviour {
 
         // The max ammount of Health Points of the ship.
         public int HealthPoints;
