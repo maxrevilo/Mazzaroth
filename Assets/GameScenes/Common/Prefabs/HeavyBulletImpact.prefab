@@ -62,7 +62,7 @@ GameObject:
   - 54: {fileID: 5417900}
   - 114: {fileID: 11429530}
   m_Layer: 0
-  m_Name: ProjectileImpact
+  m_Name: HeavyBulletImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163,7 +163,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: .200000003
+      scalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -323,7 +323,7 @@ ParticleSystem:
         rgba: 4286085240
       minMaxState: 0
     startSize:
-      scalar: 3
+      scalar: 10
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1220,7 +1220,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: .600000024
+      scalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1374,13 +1374,13 @@ ParticleSystem:
         m_NumAlphaKeys: 2
       minColor:
         serializedVersion: 2
-        rgba: 4290756543
+        rgba: 4278202367
       maxColor:
         serializedVersion: 2
         rgba: 4282992969
       minMaxState: 2
     startSize:
-      scalar: .600000024
+      scalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1395,7 +1395,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: .166666657
+          value: .400000006
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -1427,13 +1427,13 @@ ParticleSystem:
       minMaxState: 3
     gravityModifier: 0
     inheritVelocity: .699999988
-    maxNumParticles: 5
+    maxNumParticles: 9
   ShapeModule:
     serializedVersion: 2
     enabled: 1
     type: 4
-    radius: .621109128
-    angle: 14.1730852
+    radius: .5
+    angle: 40
     length: 5
     boxX: 1
     boxY: 1
@@ -1477,9 +1477,9 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
       minMaxState: 0
-    cnt0: 3
-    cnt1: 1
-    cnt2: 1
+    cnt0: 5
+    cnt1: 2
+    cnt2: 2
     cnt3: 3
     time0: 0
     time1: .100000001
@@ -1524,7 +1524,7 @@ ParticleSystem:
   RotationModule:
     enabled: 1
     curve:
-      scalar: 6.28318501
+      scalar: 62.831852
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1582,7 +1582,7 @@ ParticleSystem:
         ctime5: 0
         ctime6: 0
         ctime7: 0
-        atime0: 47609
+        atime0: 45875
         atime1: 65535
         atime2: 0
         atime3: 0
@@ -1595,13 +1595,13 @@ ParticleSystem:
       minGradient:
         key0:
           serializedVersion: 2
-          rgba: 4294967295
+          rgba: 4278210559
         key1:
           serializedVersion: 2
-          rgba: 4294967295
+          rgba: 0
         key2:
           serializedVersion: 2
-          rgba: 0
+          rgba: 4278190080
         key3:
           serializedVersion: 2
           rgba: 0
@@ -1625,9 +1625,9 @@ ParticleSystem:
         ctime5: 0
         ctime6: 0
         ctime7: 0
-        atime0: 0
+        atime0: 45875
         atime1: 65535
-        atime2: 0
+        atime2: 65535
         atime3: 0
         atime4: 0
         atime5: 0
@@ -2242,7 +2242,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: .300000012
+      scalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2275,7 +2275,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 15
+      scalar: 10
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2399,10 +2399,10 @@ ParticleSystem:
         rgba: 4278248447
       maxColor:
         serializedVersion: 2
-        rgba: 4286104575
+        rgba: 4282690815
       minMaxState: 2
     startSize:
-      scalar: .400000006
+      scalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2417,7 +2417,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: .5
+          value: .400000006
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -2453,7 +2453,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 2
     enabled: 1
-    type: 3
+    type: 1
     radius: .621109128
     angle: 14.1730852
     length: 5
@@ -2499,7 +2499,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
       minMaxState: 0
-    cnt0: 999
+    cnt0: 5
     cnt1: 3
     cnt2: 2
     cnt3: 3
@@ -2604,7 +2604,7 @@ ParticleSystem:
         ctime5: 0
         ctime6: 0
         ctime7: 0
-        atime0: 14649
+        atime0: 36815
         atime1: 65535
         atime2: 65535
         atime3: 0

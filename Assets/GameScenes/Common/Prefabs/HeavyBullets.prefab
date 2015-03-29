@@ -57,7 +57,7 @@ Transform:
   m_GameObject: {fileID: 185668}
   m_LocalRotation: {x: .70710665, y: 0, z: 0, w: -.707107008}
   m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: .0500000007, y: 1, z: .0500000007}
+  m_LocalScale: {x: .200000003, y: 1, z: .200000003}
   m_Children: []
   m_Father: {fileID: 485666}
   m_RootOrder: 0
@@ -87,7 +87,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 185668}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!54 &5478380
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -134,7 +134,7 @@ MonoBehaviour:
   Speed: 70
   Impact: .699999988
   BulletPrefab: {fileID: 485666}
-  ImpactPrefab: {fileID: 490718, guid: 3a854058e46d64e59aa71b17b8931262, type: 2}
+  ImpactPrefab: {fileID: 490718, guid: 08aee282c7904364aa3a113d2168e247, type: 2}
 --- !u!114 &11494762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Alive: 1
-  BulletElongation: 6
+  BulletElongation: 2
   Shooter: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
