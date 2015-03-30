@@ -27,6 +27,7 @@ namespace Mazzaroth {
 
             foreach(Ship ship in Ships) {
                 ship.Group = this;
+				ship.OnEnemyDetected += enemyDetected;
             }
         }
 
@@ -56,6 +57,13 @@ namespace Mazzaroth {
 
             return position / Ships.Length;
         }
+
+		private void enemyDetected(Ship enemy) {
+			for (int i = 0; i < Ships.Length; i++) {
+				Ship ship = Ships [i];
+				ship.ShipControl.ShipDetected(enemy);
+			}
+		}
 
 		private Vector3[] sendOrderToShips(Ship[] ships, Vector3 destiny, bool aggresive) {
 			Vector3[] positions = new Vector3[ships.Length];

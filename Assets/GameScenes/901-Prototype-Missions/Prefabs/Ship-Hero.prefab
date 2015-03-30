@@ -278,7 +278,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 11412220}
     m_EventID: 1577261801
-  m_CachedInstanceID: 150084
+  m_CachedInstanceID: 9294
 --- !u!114 &11412216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -305,7 +305,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 11412220}
     m_EventID: 1577261801
-  m_CachedInstanceID: 150096
+  m_CachedInstanceID: 9306
 --- !u!114 &11412218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -344,7 +344,7 @@ MonoBehaviour:
     m_EventID: 1761075472
   - m_Destination: {fileID: 11412216}
     m_EventID: 1965341386
-  m_CachedInstanceID: 150094
+  m_CachedInstanceID: 9304
 --- !u!114 &11412222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -369,7 +369,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 11412216}
     m_EventID: 1965341386
-  m_CachedInstanceID: 150092
+  m_CachedInstanceID: 9302
 --- !u!114 &11412224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -396,7 +396,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 11412216}
     m_EventID: 1965341386
-  m_CachedInstanceID: 150090
+  m_CachedInstanceID: 9300
 --- !u!114 &11412226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -477,7 +477,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 150088
+  m_CachedInstanceID: 9298
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -495,13 +495,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GUIPrefab: {fileID: 0}
+  GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
   DebugConfigurations:
     ShowSteeringLimits: 0
   TimeToFire: 0
-  FiringLocations: []
+  FiringLocations:
+  - {fileID: 412222}
+  - {fileID: 412216}
   HealthPoints: -1
-  DetectionArea: {fileID: 0}
+  DetectionArea: {fileID: 11412236}
 --- !u!114 &11412232
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -42,7 +42,7 @@ namespace Mazzaroth.Ships {
 			DebrisInstance.transform.parent = transform;
 			
 			DetectionArea.transform.localScale *= stats.Sight;
-			DetectionArea.ShipDetected += shipDetected;
+			DetectionArea.ShipDetected += ShipDetected;
 			
 			GUIShipStatus gui = (Instantiate(GUIPrefab) as GameObject).GetComponent<GUIShipStatus>();
 			gui.ship = this;
@@ -168,14 +168,16 @@ namespace Mazzaroth.Ships {
 		}
 
 		////////////////// DETECTORS /////////////////////
+		public delegate void EnemyDetected(Ship Enemy);
+		public event EnemyDetected OnEnemyDetected;
+		public void ShipDetected(Ship ship) {
+			ShipControl.ShipDetected(ship);
+			if (OnEnemyDetected != null) OnEnemyDetected(ship);
+		}
+
 		public DetectionArea DetectionArea;
 		//// PRIVATE ////
 		private int actualFiringLocation;
-
-		
-		private void shipDetected(Ship ship) {
-			ShipControl.ShipDetected(ship);
-		}
 	}
 }
 

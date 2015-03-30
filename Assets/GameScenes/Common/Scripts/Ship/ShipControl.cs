@@ -25,6 +25,7 @@ namespace Mazzaroth.Ships {
 		public void AttackOrder(Ship enemy) {
 			EnemyOnLock = enemy;
 			blackboard.SendEvent(1577261801); //EnemyDetected
+
 		}
 		
 		public void AggressiveMoveOrder(Vector3 destiny) {
@@ -48,7 +49,7 @@ namespace Mazzaroth.Ships {
 		}
 		
 		public void EnemyAtacked(Ship enemy) {
-			ShipDetected (enemy);
+			ship.ShipDetected(enemy);
 		}
 
 		virtual public void DriveToPosition() {

@@ -23,6 +23,7 @@ GameObject:
   - 114: {fileID: 11493904}
   - 114: {fileID: 11472468}
   - 114: {fileID: 11489572}
+  - 114: {fileID: 11476958}
   m_Layer: 0
   m_Name: ShootPractice
   m_TagString: Untagged
@@ -253,6 +254,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LateralStabilizatorsFactor: .100000001
+--- !u!114 &11476958
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634db10235c0241d6ad43433a106016d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FloatVars: []
+  m_IntVars: []
+  m_BoolVars: []
+  m_StringVars: []
+  m_Vector3Vars: []
+  m_RectVars: []
+  m_ColorVars: []
+  m_QuaternionVars: []
+  m_GameObjectVars: []
+  m_TextureVars: []
+  m_MaterialVars: []
+  m_ObjectVars: []
+  m_FsmEvents: []
+  m_ConcreteFsmEvents: []
+  m_Namespace: 
 --- !u!114 &11489572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -290,7 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f628474ff1d37472692c1197d13aaedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Blackboard: {fileID: 0}
+  m_Blackboard: {fileID: 11476958}
   m_Parent: {fileID: 0}
   m_StateName: Attacking On AMove
   m_Color: 4
@@ -303,7 +330,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 11493894}
     m_EventID: 1577261801
-  m_CachedInstanceID: -4919466
+  m_CachedInstanceID: 9212
 --- !u!114 &11493888
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -315,7 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d52963f1998524cd090b4370b8cd9f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Blackboard: {fileID: 0}
+  m_Blackboard: {fileID: 11476958}
   m_Parent: {fileID: 0}
   m_StateName: Aggressive Move
   m_Color: 4
@@ -330,7 +357,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 11493894}
     m_EventID: 1577261801
-  m_CachedInstanceID: -4919464
+  m_CachedInstanceID: 9220
 --- !u!114 &11493890
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -342,7 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9898cf537ddc348a99d26461205357ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Blackboard: {fileID: 0}
+  m_Blackboard: {fileID: 11476958}
   m_Parent: {fileID: 0}
   m_StateName: Moving
   m_Color: 1
@@ -355,7 +382,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 11493888}
     m_EventID: 1965341386
-  m_CachedInstanceID: -4919462
+  m_CachedInstanceID: 9214
 --- !u!114 &11493892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -367,7 +394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d2d778d7eb9447d9209188f3718a98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Blackboard: {fileID: 0}
+  m_Blackboard: {fileID: 11476958}
   m_Parent: {fileID: 0}
   m_StateName: Idle
   m_Color: 0
@@ -382,7 +409,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 11493888}
     m_EventID: 1965341386
-  m_CachedInstanceID: -4919460
+  m_CachedInstanceID: 9216
 --- !u!114 &11493894
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -394,7 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f628474ff1d37472692c1197d13aaedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Blackboard: {fileID: 0}
+  m_Blackboard: {fileID: 11476958}
   m_Parent: {fileID: 0}
   m_StateName: Attacking
   m_Color: 4
@@ -407,7 +434,7 @@ MonoBehaviour:
     m_EventID: 1761075472
   - m_Destination: {fileID: 11493888}
     m_EventID: 1965341386
-  m_CachedInstanceID: -4919458
+  m_CachedInstanceID: 9218
 --- !u!114 &11493896
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -419,13 +446,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GUIPrefab: {fileID: 0}
+  GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
   DebugConfigurations:
     ShowSteeringLimits: 0
   TimeToFire: 0
-  FiringLocations: []
+  FiringLocations:
+  - {fileID: 412222, guid: a83cb21a86269488c91b581a6117f6fb, type: 2}
+  - {fileID: 412216, guid: a83cb21a86269488c91b581a6117f6fb, type: 2}
   HealthPoints: -1
-  DetectionArea: {fileID: 0}
+  DetectionArea: {fileID: 11493898}
 --- !u!114 &11493898
 MonoBehaviour:
   m_ObjectHideFlags: 1

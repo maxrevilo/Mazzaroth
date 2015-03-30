@@ -6,24 +6,24 @@ using Mazzaroth.Ships;
 namespace Mazzaroth {
     public class StateShipIdle : StateBehaviour {
 
-        private Ship shipState;
+        private Ship ship;
 
         void OnEnable () {
-            shipState.DetectionArea.gameObject.SetActive(true);
+            ship.DetectionArea.gameObject.SetActive(true);
         }
 
         // Called when the state is disabled
         void OnDisable () {
-            shipState.DetectionArea.gameObject.SetActive(false);
+            ship.DetectionArea.gameObject.SetActive(false);
         }
 
         void Awake() {
-            shipState = GetComponent<Ship>();
+            ship = GetComponent<Ship>();
         }
 
         void FixedUpdate() {
-			shipState.MovementEngine.UseBreaks();
-			shipState.MovementEngine.UseAngularBreaks();
+			ship.MovementEngine.UseBreaks();
+			ship.MovementEngine.UseAngularBreaks();
         }
     }
 }
