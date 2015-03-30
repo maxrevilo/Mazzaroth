@@ -90,7 +90,7 @@ namespace Mazzaroth {
 		}
 
         private Ship[] aliveShips() {
-            return Array.FindAll(Ships, ship => ship.isAlive());
+            return Array.FindAll(Ships, ship => ship.IsAlive());
         }
     }
 }

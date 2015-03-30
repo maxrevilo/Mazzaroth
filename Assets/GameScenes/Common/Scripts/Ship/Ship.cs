@@ -67,7 +67,7 @@ namespace Mazzaroth.Ships {
 			if (weapon == null)
 				weapon = getWeaponAt(0);
 			
-			if (!isReadyToFire() || !IsTargetInRange(target, weapon)) {
+			if (!IsReadyToFire() || !IsTargetInRange(target, weapon)) {
 				return false;
 			}
 			
@@ -89,8 +89,17 @@ namespace Mazzaroth.Ships {
 			return true;
 		}
 		
-		public bool isReadyToFire() {
-			return isAlive() && TimeToFire <= 0f;
+		public bool IsReadyToFire() {
+			return IsAlive() && TimeToFire <= 0f;
+		}
+		
+		public bool IsTargetInRange(Transform target, WeaponStats weapon = null) {
+			if (weapon == null)
+				weapon = getWeaponAt(0);
+			
+			float distSqr = Vector3.SqrMagnitude(this.transform.position - target.position);
+			
+			return distSqr <= Mathf.Pow(weapon.Range, 2);
 		}
 		
 		//// PRIVATE ////
@@ -116,7 +125,7 @@ namespace Mazzaroth.Ships {
 		public event ShipDestroyed OnShipDestroyed;
 		public float HealthPoints = -1f;
 		
-		public bool isAlive() {
+		public bool IsAlive() {
 			return HealthPoints > 0f;
 		}
 		
@@ -130,7 +139,7 @@ namespace Mazzaroth.Ships {
 			
 			AngularImpact(weapon.Impact);
 			
-			if (!isAlive()) { Die(); }
+			if (!IsAlive()) { Die(); }
 			
 			return computedDamage;
 		}
@@ -157,15 +166,7 @@ namespace Mazzaroth.Ships {
 		public DetectionArea DetectionArea;
 		//// PRIVATE ////
 		private int actualFiringLocation;
-		
-		private bool IsTargetInRange(Transform target, WeaponStats weapon = null) {
-			if (weapon == null)
-				weapon = getWeaponAt(0);
-			
-			float distSqr = Vector3.SqrMagnitude(this.transform.position - target.position);
-			
-			return distSqr <= Mathf.Pow(weapon.Range, 2);
-		}
+
 		
 		private void shipDetected(Ship ship) {
 			ShipControl.ShipDetected(ship);

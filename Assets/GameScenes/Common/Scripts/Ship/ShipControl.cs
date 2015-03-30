@@ -31,21 +31,44 @@ namespace Mazzaroth.Ships {
 			DestinyLocation = destiny;
 			blackboard.SendEvent(1965341386); //MoveOrder
 		}
-	
+		
 		public void ShipDetected(Ship ship) {
-			if (EnemyOnLock == null || !EnemyOnLock.isAlive()) {
+			if (EnemyOnLock == null || !EnemyOnLock.IsAlive()) {
 				EnemyOnLock = ship;
 			}
 			blackboard.SendEvent(573566531); //EnemyDetected
 		}
 
-		//// PRIVATE ////
-		private Blackboard blackboard;
-		//private ShipStats stats;
-		private MovementEngine movementEngine;
+		public void EnemyDied() {
+			blackboard.SendEvent(843881883); //EnemyDied
+		}
 
+		public void OnDestiny() {
+			blackboard.SendEvent(1202858853); //OnDestiny
+		}
+
+		virtual public void DriveToPosition() {
+			movementEngine.HeadTowardPosition(DestinyLocation, true);
+			movementEngine.MoveForwardToPosition(DestinyLocation);
+		}
+		
+		virtual public void ChaceEnemy() {
+			Vector3 enemyPosition = EnemyOnLock.transform.position;
+			movementEngine.HeadTowardPosition(enemyPosition, true);
+			movementEngine.MoveForward();
+			Debug.DrawLine(transform.position, enemyPosition, Color.red);
+		}
+
+		//// PROTECTED ////
+		protected Blackboard blackboard;
+		//protected ShipStats stats;
+		protected MovementEngine movementEngine;
+		protected Ship ship;
+		
+		//// PRIVATE ////
 		private void Awake () {
 			//stats = GetComponent<ShipStats>();
+			ship = GetComponent<Ship>();
 			movementEngine = GetComponent<MovementEngine>(); 
 			blackboard = GetComponent<Blackboard>();
 			

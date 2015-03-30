@@ -27,14 +27,12 @@ namespace Mazzaroth.Ships {
 			addAngularVelocity(- angularDirection * Vector3.up * amount);
 		}
 
-		public void HeadTowardPosition(Vector3 position) {
-			float angle = Math3d.SignedVectorAngle(transform.forward, position - transform.position, transform.up) * Mathf.Deg2Rad;
+		public void HeadTowardPosition(Vector3 position, bool surroundSteeringLimits = false) {
+			float angle = angleToPosition(position);
 			float sign = Mathf.Sign(angle);
 			float absAngle = sign * angle;
-			
 			float discriminant = Mathf.Pow(rigidbody.angularVelocity.y, 2) - 2f * stats.angularAccelerationRad * absAngle;
-			
-			bool reachable = IsInsideSteeringLimit(position);
+			bool reachable = !surroundSteeringLimits || IsInsideSteeringLimit(position);
 			
 			if (reachable) {
 				if (discriminant < 0f) {
@@ -63,6 +61,10 @@ namespace Mazzaroth.Ships {
 				UseBreaks();
 			}
 			
+		}
+
+		public float angleToPosition(Vector3 position) {
+			return Math3d.SignedVectorAngle(transform.forward, position - transform.position, transform.up) * Mathf.Deg2Rad;
 		}
 
 		public void DrawSteeringLimits() {
@@ -101,11 +103,18 @@ namespace Mazzaroth.Ships {
 			return !result;
 		}
 
+		//// PROTECTED ////
+		protected Ship ship;
+		protected ShipStats stats;
+		protected float steeringLimitLateralRadius = 7.5f;
+		
+		protected void useLateralStabilizators() {
+			Vector3 stabilizerVel = -RelativeVelocity;
+			stabilizerVel.z = 0;
+			addVelocity(transform.TransformDirection(stabilizerVel) * LateralStabilizatorsFactor);
+		}
+		
 		//// PRIVATE ////
-		private Ship ship;
-		private ShipStats stats;
-		private float steeringLimitLateralRadius = 7.5f;
-
 		private void Awake () {
 			ship = GetComponent<Ship>();
 			stats = GetComponent<ShipStats> ();
@@ -124,12 +133,6 @@ namespace Mazzaroth.Ships {
 			if (rigidbody.velocity.sqrMagnitude > Mathf.Pow(stats.Speed, 2)) {
 				rigidbody.velocity = Math3d.SetVectorLength(rigidbody.velocity, stats.Speed);
 			}
-		}
-
-		private void useLateralStabilizators() {
-			Vector3 stabilizerVel = -RelativeVelocity;
-			stabilizerVel.z = 0;
-			addVelocity(transform.TransformDirection(stabilizerVel) * LateralStabilizatorsFactor);
 		}
 	}
 }

@@ -6,7 +6,7 @@ using Mazzaroth.Ships;
 namespace Mazzaroth {
     public class StateShipMoving : StateBehaviour {
 
-		protected Ship shipState;
+		protected Ship ship;
 
         void OnEnable () {
         }
@@ -16,19 +16,18 @@ namespace Mazzaroth {
         }
 
         void Awake() {
-            shipState = GetComponent<Ship>();
+            ship = GetComponent<Ship>();
         }
 
         void FixedUpdate() {
             const float MIN_DISTANCE_TO_DESTINY = 0.5f;
-			float sqrSistanceToDestiny = Vector3.SqrMagnitude(this.transform.position - shipState.ShipControl.DestinyLocation);
+			float sqrSistanceToDestiny = Vector3.SqrMagnitude(this.transform.position - ship.ShipControl.DestinyLocation);
             if (sqrSistanceToDestiny < Mathf.Pow(MIN_DISTANCE_TO_DESTINY, 2)) {
-				GetComponent<Blackboard>().SendEvent(1202858853); //OnDestiny
+				ship.ShipControl.OnDestiny();
                 return;
             }
 
-			shipState.MovementEngine.HeadTowardPosition(shipState.ShipControl.DestinyLocation);
-			shipState.MovementEngine.MoveForwardToPosition(shipState.ShipControl.DestinyLocation);
+			ship.ShipControl.DriveToPosition();
         }
     }
 }
