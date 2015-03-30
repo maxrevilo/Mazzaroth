@@ -1,11 +1,12 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using BehaviourMachine;
+using Mazzaroth.Ships;
 
 namespace Mazzaroth {
     public class StateShipIdle : StateBehaviour {
 
-        private ShipState shipState;
+        private Ship shipState;
 
         void OnEnable () {
             shipState.DetectionArea.gameObject.SetActive(true);
@@ -17,12 +18,12 @@ namespace Mazzaroth {
         }
 
         void Awake() {
-            shipState = GetComponent<ShipState>();
+            shipState = GetComponent<Ship>();
         }
 
         void FixedUpdate() {
-            shipState.UseBreaks();
-            shipState.UseAngularBreaks();
+			shipState.MovementEngine.UseBreaks();
+			shipState.MovementEngine.UseAngularBreaks();
         }
     }
 }

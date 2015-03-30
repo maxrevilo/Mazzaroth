@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using UnityEngine;
+using Mazzaroth.Ships;
 
 namespace Mazzaroth {
     public class SelectedMark : BaseMonoBehaviour {
@@ -7,11 +8,11 @@ namespace Mazzaroth {
         public Color Color = Color.white;
         public float Width = 1f;
 
-        ShipState ship;
+        Ship ship;
         LineRenderer lineRenderer;
 
         void Start() {
-            ship = GetComponent<ShipState>();
+            ship = GetComponent<Ship>();
             if (ship) {
 				Color TeamColor = ship.Color;
                 TeamColor.a = Color.a;

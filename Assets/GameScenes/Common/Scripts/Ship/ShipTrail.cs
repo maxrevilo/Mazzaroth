@@ -1,12 +1,13 @@
-﻿using System;
+using System;
 using UnityEngine;
+using Mazzaroth.Ships;
 
 namespace Mazzaroth {
 	public class ShipTrail : BaseMonoBehaviour {
-		ShipState ship;
+		Ship ship;
 
 		void Start() {
-			ship = GetComponentInParent<ShipState>();
+			ship = GetComponentInParent<Ship>();
 			if (ship) {
 				Color TeamColor = ship.Color;
 				Material trailMaterial = GetComponent<TrailRenderer>().material;

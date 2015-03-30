@@ -1,11 +1,12 @@
-﻿using UnityEngine;
+using UnityEngine;
+using Mazzaroth.Ships;
 
 namespace Mazzaroth {
     public class ProjectileState : BaseMonoBehaviour {
 
         public bool Alive = true;
         public float BulletElongation = 1f;
-        public ShipState Shooter;
+        public Ship Shooter;
 
         WeaponStats stats;
         Vector3 initialPosition;
@@ -14,7 +15,7 @@ namespace Mazzaroth {
             gameObject.DestroyAPS();
         }
 
-        public void Initiate(ShipState shooter) {
+        public void Initiate(Ship shooter) {
             stats = GetComponent<WeaponStats>();
             Shooter = shooter;
 
@@ -39,7 +40,7 @@ namespace Mazzaroth {
         }
 
         void OnTriggerEnter (Collider collider) {
-            ShipState ship = collider.GetComponent<ShipState>();
+            Ship ship = collider.GetComponent<Ship>();
 
             if (ship != null && Shooter.IsEnemy(ship)) {
                 Die();

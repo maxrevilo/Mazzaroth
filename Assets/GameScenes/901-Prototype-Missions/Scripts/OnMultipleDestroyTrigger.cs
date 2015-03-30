@@ -1,16 +1,18 @@
-﻿namespace Mazzaroth {
+using Mazzaroth.Ships;
+
+namespace Mazzaroth {
 	public class OnMultipleDestroyTrigger : BaseTrigger {
-		public ShipState[] DestructiblesToWatch;
+		public Ship[] DestructiblesToWatch;
 
 		int destroyedCount;
 
 		void Start () {
-			foreach (ShipState destructible in DestructiblesToWatch) {
+			foreach (Ship destructible in DestructiblesToWatch) {
 				destructible.OnShipDestroyed += destroyed;
 			}
 		}
 
-		void destroyed(ShipState destructible) {
+		void destroyed(Ship destructible) {
 			destroyedCount++;
 
 			if (destroyedCount == DestructiblesToWatch.Length) {

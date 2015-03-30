@@ -1,11 +1,12 @@
-﻿using System;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
+using Mazzaroth.Ships;
 
 namespace Mazzaroth {
 	public class GUIShipStatus : BaseMonoBehaviour {
 
-		public ShipState ship;
+		public Ship ship;
 		public RectTransform LifeBarContainer;
 		public RectTransform LifeBar;
 		public Color FUllLifeColor = Color.green;
@@ -17,7 +18,7 @@ namespace Mazzaroth {
 		private Canvas canvas;
 
 		void Awake() {
-			if (!ship) ship = GetComponentInParent<ShipState>();
+			if (!ship) ship = GetComponentInParent<Ship>();
 			rectTransform = GetComponent<RectTransform>();
 			LifeBarImage = LifeBar.GetComponent<Image>();
 			canvas = GetComponent<Canvas>();

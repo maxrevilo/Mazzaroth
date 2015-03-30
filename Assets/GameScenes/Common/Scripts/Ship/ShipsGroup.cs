@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System;
 using System.Collections.Generic;
+using Mazzaroth.Ships;
 
 namespace Mazzaroth {
     [Serializable]
@@ -14,7 +15,7 @@ namespace Mazzaroth {
 
 		[NonSerialized] public Army Army;
 
-        public ShipState[] Ships;
+        public Ship[] Ships;
 
         public bool Selected { get; set; }
 
@@ -24,25 +25,25 @@ namespace Mazzaroth {
             Army = army;
             Selected = false;
 
-            foreach(ShipState ship in Ships) {
+            foreach(Ship ship in Ships) {
                 ship.Group = this;
             }
         }
 
         public void MoveOrder(Vector3 destiny) {
-			ShipState[] ships = aliveShips();
+			Ship[] ships = aliveShips();
 			sendOrderToShips(ships, destiny, false);
         }
 			
 		public void AggressiveMoveOrder(Vector3 destiny) {
-			ShipState[] ships = aliveShips();
+			Ship[] ships = aliveShips();
 			sendOrderToShips(ships, destiny, true);
 		}
 
-        public void AtackOrder(ShipState enemyShip) {
+        public void AtackOrder(Ship enemyShip) {
             for (int i = 0; i < Ships.Length; i++) {
-                ShipState ship = Ships [i];
-                ship.AttackOrder(enemyShip);
+                Ship ship = Ships [i];
+				ship.ShipControl.AttackOrder(enemyShip);
             }
         }
 
@@ -56,7 +57,7 @@ namespace Mazzaroth {
             return position / Ships.Length;
         }
 
-		private Vector3[] sendOrderToShips(ShipState[] ships, Vector3 destiny, bool aggresive) {
+		private Vector3[] sendOrderToShips(Ship[] ships, Vector3 destiny, bool aggresive) {
 			Vector3[] positions = new Vector3[ships.Length];
 
 			switch (Formation) {
@@ -68,15 +69,13 @@ namespace Mazzaroth {
 					Vector3 right =Vector3.Cross(forward, Vector3.up);
 
 					for (int i = 0; i < ships.Length; i++) {
-						ShipState ship = ships[i];
+						Ship ship = ships[i];
 
 						Vector3 shipDestiny = destiny + right * (begining + distance * i);
 						positions[i] = shipDestiny;
 
-						if(aggresive)
-							ship.AggressiveMoveOrder(shipDestiny);
-						else
-							ship.MoveOrder(shipDestiny);
+						if(aggresive) ship.ShipControl.AggressiveMoveOrder(shipDestiny);
+						else ship.ShipControl.MoveOrder(shipDestiny);
 					}
 
 					break;
@@ -90,7 +89,7 @@ namespace Mazzaroth {
 			return positions;
 		}
 
-        private ShipState[] aliveShips() {
+        private Ship[] aliveShips() {
             return Array.FindAll(Ships, ship => ship.isAlive());
         }
     }

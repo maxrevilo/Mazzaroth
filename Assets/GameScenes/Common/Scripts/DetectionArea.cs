@@ -1,19 +1,20 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System;
+using Mazzaroth.Ships;
 
 namespace Mazzaroth {
     public class DetectionArea: BaseMonoBehaviour {
-        public delegate void EventHandler (ShipState ship);
+        public delegate void EventHandler (Ship ship);
         public event EventHandler ShipDetected;
 
-        private ShipState Ship;
+        private Ship Ship;
 
         void Awake() {
-            Ship = GetComponentInParent<ShipState>();
+            Ship = GetComponentInParent<Ship>();
         }
 
         void OnTriggerEnter (Collider collider) {
-            ShipState otherShip = collider.GetComponent<ShipState>();
+            Ship otherShip = collider.GetComponent<Ship>();
             if (otherShip != null && Ship.IsEnemy(otherShip)) {
                 if(ShipDetected != null) ShipDetected(otherShip);
             }

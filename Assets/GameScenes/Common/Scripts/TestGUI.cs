@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using UnityEngine;
+using Mazzaroth.Ships;
 
 namespace Mazzaroth {
     public class TestGUI : BaseMonoBehaviour {
@@ -41,7 +42,7 @@ namespace Mazzaroth {
                 foreach (Player player in Scene.Players) {
                     if (player.IsEnemy(Scene.MainPlayer)) {
                         foreach (ShipsGroup playerGroup in player.Army.Groups) {
-                            foreach (ShipState ship in playerGroup.Ships) {
+                            foreach (Ship ship in playerGroup.Ships) {
                                 if (ship.collider.Raycast(ray, out hit, float.MaxValue)) {
                                     Debug.Log("Ship hitted: " + ship.name);
                                     SelectedGroup.AtackOrder(ship);

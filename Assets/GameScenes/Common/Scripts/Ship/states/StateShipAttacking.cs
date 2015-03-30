@@ -1,11 +1,12 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using BehaviourMachine;
+using Mazzaroth.Ships;
 
 namespace Mazzaroth {
     public class StateShipAttacking : StateBehaviour {
 
-        private ShipState shipState;
+        private Ship shipState;
 
         void OnEnable () {
             shipState.DetectionArea.gameObject.SetActive(true);
@@ -17,22 +18,22 @@ namespace Mazzaroth {
         }
 
         void Awake() {
-            shipState = GetComponent<ShipState>();
+            shipState = GetComponent<Ship>();
         }
 
         void Update() {
-            shipState.Fire(shipState.EnemyOnLock.transform, null);
+			shipState.Fire(shipState.ShipControl.EnemyOnLock.transform, null);
         }
 
         void FixedUpdate() {
-            if (!shipState.EnemyOnLock.isAlive()) {
+			if (!shipState.ShipControl.EnemyOnLock.isAlive()) {
 				GetComponent<Blackboard>().SendEvent(843881883); //EnemyDied
                 return;
             }
 
-            Vector3 enemyPosition = shipState.EnemyOnLock.transform.position;
-            shipState.HeadTowardPosition(enemyPosition);
-            shipState.MoveForward();
+			Vector3 enemyPosition = shipState.ShipControl.EnemyOnLock.transform.position;
+			shipState.MovementEngine.HeadTowardPosition(enemyPosition);
+            shipState.MovementEngine.MoveForward();
 
 			Debug.DrawLine(transform.position, enemyPosition, Color.red);
         }
