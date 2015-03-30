@@ -129,17 +129,22 @@ namespace Mazzaroth.Ships {
 			return HealthPoints > 0f;
 		}
 		
-		public float Damage(WeaponStats weapon) {
-			float heatRawDamage = weapon.HeatConversion * weapon.Damage;
-			float physicalRawDamage = weapon.Damage - heatRawDamage;
+		public float Damage(ProjectileState weapon) {
+			WeaponStats weaponStats = weapon.Stats;
+			float heatRawDamage = weaponStats.HeatConversion * weaponStats.Damage;
+			float physicalRawDamage = weaponStats.Damage - heatRawDamage;
 			
 			float computedDamage = Math.Max(physicalRawDamage - stats.Armor, 0f) + heatRawDamage * (1f - stats.HeatDissipation);
 			
 			HealthPoints -= computedDamage;
 			
-			AngularImpact(weapon.Impact);
+			AngularImpact(weaponStats.Impact);
 			
-			if (!IsAlive()) { Die(); }
+			if (!IsAlive ()) {
+				Die ();
+			} else {
+				ShipControl.EnemyAtacked(weapon.Shooter);
+			}
 			
 			return computedDamage;
 		}

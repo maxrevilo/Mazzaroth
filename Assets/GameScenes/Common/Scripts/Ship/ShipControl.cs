@@ -46,6 +46,10 @@ namespace Mazzaroth.Ships {
 		public void OnDestiny() {
 			blackboard.SendEvent(1202858853); //OnDestiny
 		}
+		
+		public void EnemyAtacked(Ship enemy) {
+			ShipDetected (enemy);
+		}
 
 		virtual public void DriveToPosition() {
 			movementEngine.HeadTowardPosition(DestinyLocation, true);

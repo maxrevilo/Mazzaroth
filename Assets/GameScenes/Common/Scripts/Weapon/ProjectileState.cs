@@ -7,8 +7,7 @@ namespace Mazzaroth {
         public bool Alive = true;
         public float BulletElongation = 1f;
         public Ship Shooter;
-
-        WeaponStats stats;
+		public WeaponStats Stats;
         Vector3 initialPosition;
 
         public void Die() {
@@ -16,12 +15,12 @@ namespace Mazzaroth {
         }
 
         public void Initiate(Ship shooter) {
-            stats = GetComponent<WeaponStats>();
+            Stats = GetComponent<WeaponStats>();
             Shooter = shooter;
 
             initialPosition = this.transform.position;
 
-            Vector3 InitialVelocity = new Vector3(0, 0, stats.Speed);
+            Vector3 InitialVelocity = new Vector3(0, 0, Stats.Speed);
             InitialVelocity = this.transform.TransformDirection(InitialVelocity);
             this.rigidbody.velocity = InitialVelocity;
         }
@@ -34,7 +33,7 @@ namespace Mazzaroth {
         }
 
         void Update () {
-            if (Vector3.SqrMagnitude(initialPosition - transform.position) >= Math2d.Pow2(stats.Range)) {
+            if (Vector3.SqrMagnitude(initialPosition - transform.position) >= Math2d.Pow2(Stats.Range)) {
                 Die();
             }
         }
@@ -45,7 +44,7 @@ namespace Mazzaroth {
             if (ship != null && Shooter.IsEnemy(ship)) {
                 Die();
                 SpawnImpactPrefab();
-                ship.Damage(stats);
+                ship.Damage(this);
             }
         }
 
@@ -53,7 +52,7 @@ namespace Mazzaroth {
             PoolingSystem pS = PoolingSystem.Instance;
 
             GameObject impactGameObject = pS.InstantiateAPS(
-                stats.ImpactPrefab.name,
+                Stats.ImpactPrefab.name,
                 transform.position,
                 transform.rotation,
                 transform.parent.gameObject
