@@ -56,6 +56,8 @@ GameObject:
   - 114: {fileID: 11483692}
   - 114: {fileID: 11457766}
   - 114: {fileID: 11403546}
+  - 114: {fileID: 11420586}
+  - 114: {fileID: 11471040}
   m_Layer: 0
   m_Name: LightFighter
   m_TagString: Untagged
@@ -265,6 +267,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267a9aa501c0548879d4f2d283b8d0f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11420586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
 --- !u!114 &11457766
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -309,7 +323,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 189274}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -319,10 +333,20 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 490136}
   - {fileID: 490138}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 11466072}
+--- !u!114 &11471040
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!114 &11474738
 MonoBehaviour:
   m_ObjectHideFlags: 1

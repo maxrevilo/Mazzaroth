@@ -418,6 +418,8 @@ GameObject:
   - 114: {fileID: 87743690}
   - 114: {fileID: 87743689}
   - 114: {fileID: 87743691}
+  - 114: {fileID: 87743703}
+  - 114: {fileID: 87743704}
   m_Layer: 0
   m_Name: P2-LightFighter
   m_TagString: Untagged
@@ -688,7 +690,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 87743687}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -698,9 +700,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 1467899900}
   - {fileID: 522186763}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 946020306}
 --- !u!114 &87743698
 MonoBehaviour:
@@ -787,6 +787,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 856874573}
   m_GameObject: {fileID: 87743687}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &87743703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 856874573}
+  m_GameObject: {fileID: 87743687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &87743704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 856874573}
+  m_GameObject: {fileID: 87743687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &95380203
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,6 +972,8 @@ GameObject:
   - 114: {fileID: 99624228}
   - 114: {fileID: 99624227}
   - 114: {fileID: 99624229}
+  - 114: {fileID: 99624241}
+  - 114: {fileID: 99624242}
   m_Layer: 0
   m_Name: P1-LightFighter
   m_TagString: Untagged
@@ -1216,7 +1244,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 99624225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -1226,9 +1254,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 1660105436}
   - {fileID: 1213801797}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 974813731}
 --- !u!114 &99624236
 MonoBehaviour:
@@ -1315,6 +1341,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1571083358}
   m_GameObject: {fileID: 99624225}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &99624241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1571083358}
+  m_GameObject: {fileID: 99624225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &99624242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1571083358}
+  m_GameObject: {fileID: 99624225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &104962637
 GameObject:
   m_ObjectHideFlags: 0
@@ -1420,6 +1472,8 @@ GameObject:
   - 114: {fileID: 124939824}
   - 114: {fileID: 124939823}
   - 114: {fileID: 124939825}
+  - 114: {fileID: 124939837}
+  - 114: {fileID: 124939838}
   m_Layer: 0
   m_Name: P2-LightFighter
   m_TagString: Untagged
@@ -1690,7 +1744,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 124939821}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -1700,9 +1754,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 2138134782}
   - {fileID: 1261689801}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 248718907}
 --- !u!114 &124939832
 MonoBehaviour:
@@ -1789,6 +1841,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 727815063}
   m_GameObject: {fileID: 124939821}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &124939837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 727815063}
+  m_GameObject: {fileID: 124939821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &124939838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 727815063}
+  m_GameObject: {fileID: 124939821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1001 &130118172
 Prefab:
   m_ObjectHideFlags: 0
@@ -1966,6 +2044,8 @@ GameObject:
   - 114: {fileID: 174046351}
   - 114: {fileID: 174046350}
   - 114: {fileID: 174046352}
+  - 114: {fileID: 174046364}
+  - 114: {fileID: 174046365}
   m_Layer: 0
   m_Name: P2-LightFighter
   m_TagString: Untagged
@@ -2236,7 +2316,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 174046348}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -2246,9 +2326,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 1154097065}
   - {fileID: 1675902351}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 1094519646}
 --- !u!114 &174046359
 MonoBehaviour:
@@ -2335,6 +2413,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1778012498}
   m_GameObject: {fileID: 174046348}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &174046364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1778012498}
+  m_GameObject: {fileID: 174046348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &174046365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1778012498}
+  m_GameObject: {fileID: 174046348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &180517737
 GameObject:
   m_ObjectHideFlags: 0
@@ -4770,6 +4874,8 @@ GameObject:
   - 114: {fileID: 356301683}
   - 114: {fileID: 356301682}
   - 114: {fileID: 356301684}
+  - 114: {fileID: 356301696}
+  - 114: {fileID: 356301697}
   m_Layer: 0
   m_Name: P2-LightFighter
   m_TagString: Untagged
@@ -5040,7 +5146,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 356301680}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -5050,9 +5156,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 1745586199}
   - {fileID: 1568416545}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 1701174796}
 --- !u!114 &356301691
 MonoBehaviour:
@@ -5139,6 +5243,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1789172007}
   m_GameObject: {fileID: 356301680}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &356301696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1789172007}
+  m_GameObject: {fileID: 356301680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &356301697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1789172007}
+  m_GameObject: {fileID: 356301680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &362891456
 GameObject:
   m_ObjectHideFlags: 0
@@ -5161,6 +5291,8 @@ GameObject:
   - 114: {fileID: 362891459}
   - 114: {fileID: 362891458}
   - 114: {fileID: 362891460}
+  - 114: {fileID: 362891472}
+  - 114: {fileID: 362891473}
   m_Layer: 0
   m_Name: P1-LightFighter
   m_TagString: Untagged
@@ -5431,7 +5563,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 362891456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -5441,9 +5573,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 1995102832}
   - {fileID: 2126591329}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 1273825331}
 --- !u!114 &362891467
 MonoBehaviour:
@@ -5530,6 +5660,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2044525446}
   m_GameObject: {fileID: 362891456}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &362891472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 2044525446}
+  m_GameObject: {fileID: 362891456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &362891473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 2044525446}
+  m_GameObject: {fileID: 362891456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &376325375
 GameObject:
   m_ObjectHideFlags: 0
@@ -5828,6 +5984,8 @@ GameObject:
   - 114: {fileID: 402721702}
   - 114: {fileID: 402721701}
   - 114: {fileID: 402721703}
+  - 114: {fileID: 402721715}
+  - 114: {fileID: 402721716}
   m_Layer: 0
   m_Name: P2-LightFighter
   m_TagString: Untagged
@@ -6098,7 +6256,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 402721699}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -6108,9 +6266,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 623120921}
   - {fileID: 1206808562}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 2123556403}
 --- !u!114 &402721710
 MonoBehaviour:
@@ -6197,6 +6353,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1298447902}
   m_GameObject: {fileID: 402721699}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &402721715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1298447902}
+  m_GameObject: {fileID: 402721699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &402721716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1298447902}
+  m_GameObject: {fileID: 402721699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &406313747
 GameObject:
   m_ObjectHideFlags: 0
@@ -6457,6 +6639,8 @@ GameObject:
   - 114: {fileID: 429203196}
   - 114: {fileID: 429203195}
   - 114: {fileID: 429203197}
+  - 114: {fileID: 429203209}
+  - 114: {fileID: 429203210}
   m_Layer: 0
   m_Name: P2-LightFighter
   m_TagString: Untagged
@@ -6727,7 +6911,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 429203193}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -6737,9 +6921,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 1301021986}
   - {fileID: 1389346371}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 2112124873}
 --- !u!114 &429203204
 MonoBehaviour:
@@ -6826,6 +7008,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 426179910}
   m_GameObject: {fileID: 429203193}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &429203209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 426179910}
+  m_GameObject: {fileID: 429203193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &429203210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 426179910}
+  m_GameObject: {fileID: 429203193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1001 &449377870
 Prefab:
   m_ObjectHideFlags: 0
@@ -7696,6 +7904,8 @@ GameObject:
   - 114: {fileID: 639441104}
   - 114: {fileID: 639441103}
   - 114: {fileID: 639441105}
+  - 114: {fileID: 639441117}
+  - 114: {fileID: 639441118}
   m_Layer: 0
   m_Name: P2-LightFighter
   m_TagString: Untagged
@@ -7966,7 +8176,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 639441101}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -7976,9 +8186,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 2048865459}
   - {fileID: 642312692}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 675109440}
 --- !u!114 &639441112
 MonoBehaviour:
@@ -8065,6 +8273,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 337038769}
   m_GameObject: {fileID: 639441101}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &639441117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 337038769}
+  m_GameObject: {fileID: 639441101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &639441118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 337038769}
+  m_GameObject: {fileID: 639441101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &642312691
 GameObject:
   m_ObjectHideFlags: 0
@@ -8474,6 +8708,8 @@ GameObject:
   - 114: {fileID: 718095599}
   - 114: {fileID: 718095598}
   - 114: {fileID: 718095600}
+  - 114: {fileID: 718095612}
+  - 114: {fileID: 718095613}
   m_Layer: 0
   m_Name: P2-LightFighter
   m_TagString: Untagged
@@ -8744,7 +8980,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 718095596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -8754,9 +8990,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 789416253}
   - {fileID: 1695013735}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 1180450710}
 --- !u!114 &718095607
 MonoBehaviour:
@@ -8843,6 +9077,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1990862709}
   m_GameObject: {fileID: 718095596}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &718095612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1990862709}
+  m_GameObject: {fileID: 718095596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &718095613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1990862709}
+  m_GameObject: {fileID: 718095596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &720834901
 GameObject:
   m_ObjectHideFlags: 0
@@ -9235,6 +9495,8 @@ GameObject:
   - 114: {fileID: 758589964}
   - 114: {fileID: 758589963}
   - 114: {fileID: 758589965}
+  - 114: {fileID: 758589977}
+  - 114: {fileID: 758589978}
   m_Layer: 0
   m_Name: P1-LightFighter
   m_TagString: Untagged
@@ -9505,7 +9767,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 758589961}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -9515,9 +9777,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 2122653641}
   - {fileID: 291930840}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 756677806}
 --- !u!114 &758589972
 MonoBehaviour:
@@ -9604,6 +9864,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1963013939}
   m_GameObject: {fileID: 758589961}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &758589977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1963013939}
+  m_GameObject: {fileID: 758589961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &758589978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1963013939}
+  m_GameObject: {fileID: 758589961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &763830052
 GameObject:
   m_ObjectHideFlags: 0
@@ -9626,6 +9912,8 @@ GameObject:
   - 114: {fileID: 763830055}
   - 114: {fileID: 763830054}
   - 114: {fileID: 763830056}
+  - 114: {fileID: 763830068}
+  - 114: {fileID: 763830069}
   m_Layer: 0
   m_Name: P2-LightFighter
   m_TagString: Untagged
@@ -9896,7 +10184,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 763830052}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -9906,9 +10194,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 1860084827}
   - {fileID: 32940918}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 1283927762}
 --- !u!114 &763830063
 MonoBehaviour:
@@ -9995,6 +10281,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2117316025}
   m_GameObject: {fileID: 763830052}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &763830068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 2117316025}
+  m_GameObject: {fileID: 763830052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &763830069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 2117316025}
+  m_GameObject: {fileID: 763830052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &763842116
 GameObject:
   m_ObjectHideFlags: 0
@@ -10233,6 +10545,8 @@ GameObject:
   - 114: {fileID: 813562593}
   - 114: {fileID: 813562592}
   - 114: {fileID: 813562594}
+  - 114: {fileID: 813562606}
+  - 114: {fileID: 813562607}
   m_Layer: 0
   m_Name: P1-LightFighter
   m_TagString: Untagged
@@ -10503,7 +10817,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 813562590}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -10513,9 +10827,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 301760245}
   - {fileID: 345562217}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 781109124}
 --- !u!114 &813562601
 MonoBehaviour:
@@ -10602,6 +10914,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 756248803}
   m_GameObject: {fileID: 813562590}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &813562606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 756248803}
+  m_GameObject: {fileID: 813562590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &813562607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 756248803}
+  m_GameObject: {fileID: 813562590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1001 &856874573
 Prefab:
   m_ObjectHideFlags: 0
@@ -10723,6 +11061,8 @@ GameObject:
   - 114: {fileID: 892316155}
   - 114: {fileID: 892316154}
   - 114: {fileID: 892316156}
+  - 114: {fileID: 892316168}
+  - 114: {fileID: 892316169}
   m_Layer: 0
   m_Name: P1-LightFighter
   m_TagString: Untagged
@@ -10993,7 +11333,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 892316152}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -11003,9 +11343,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 546631545}
   - {fileID: 958324288}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 707712738}
 --- !u!114 &892316163
 MonoBehaviour:
@@ -11092,6 +11430,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1972007695}
   m_GameObject: {fileID: 892316152}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &892316168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1972007695}
+  m_GameObject: {fileID: 892316152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &892316169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1972007695}
+  m_GameObject: {fileID: 892316152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &903850741
 GameObject:
   m_ObjectHideFlags: 0
@@ -11141,6 +11505,8 @@ GameObject:
   - 114: {fileID: 918754343}
   - 114: {fileID: 918754342}
   - 114: {fileID: 918754341}
+  - 114: {fileID: 918754355}
+  - 114: {fileID: 918754356}
   m_Layer: 0
   m_Name: P1-HeavyFighter
   m_TagString: Untagged
@@ -11438,7 +11804,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 918754339}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -11448,9 +11814,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 793170103}
   - {fileID: 740685708}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 264963688}
 --- !u!135 &918754351
 SphereCollider:
@@ -11510,6 +11874,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 705173595}
   m_GameObject: {fileID: 918754339}
   m_Mesh: {fileID: 4300000, guid: fb51a688eb7f24017822b9183283e9c3, type: 3}
+--- !u!114 &918754355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11401874, guid: b081e506cbe20415fabf15fcabc2e5aa,
+    type: 2}
+  m_PrefabInternal: {fileID: 705173595}
+  m_GameObject: {fileID: 918754339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &918754356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11480938, guid: b081e506cbe20415fabf15fcabc2e5aa,
+    type: 2}
+  m_PrefabInternal: {fileID: 705173595}
+  m_GameObject: {fileID: 918754339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &920214500
 GameObject:
   m_ObjectHideFlags: 0
@@ -11532,6 +11922,8 @@ GameObject:
   - 114: {fileID: 920214503}
   - 114: {fileID: 920214502}
   - 114: {fileID: 920214504}
+  - 114: {fileID: 920214516}
+  - 114: {fileID: 920214517}
   m_Layer: 0
   m_Name: P1-LightFighter
   m_TagString: Untagged
@@ -11802,7 +12194,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 920214500}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -11812,9 +12204,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 45832361}
   - {fileID: 1582870902}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 1254061747}
 --- !u!114 &920214511
 MonoBehaviour:
@@ -11901,6 +12291,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 964735569}
   m_GameObject: {fileID: 920214500}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &920214516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 964735569}
+  m_GameObject: {fileID: 920214500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &920214517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 964735569}
+  m_GameObject: {fileID: 920214500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &920429274
 GameObject:
   m_ObjectHideFlags: 0
@@ -12921,6 +13337,8 @@ GameObject:
   - 114: {fileID: 1042943151}
   - 114: {fileID: 1042943150}
   - 114: {fileID: 1042943152}
+  - 114: {fileID: 1042943164}
+  - 114: {fileID: 1042943165}
   m_Layer: 0
   m_Name: P1-LightFighter
   m_TagString: Untagged
@@ -13191,7 +13609,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1042943148}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -13201,9 +13619,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 2125146840}
   - {fileID: 1081200038}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 933828306}
 --- !u!114 &1042943159
 MonoBehaviour:
@@ -13290,6 +13706,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1736537024}
   m_GameObject: {fileID: 1042943148}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &1042943164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1736537024}
+  m_GameObject: {fileID: 1042943148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &1042943165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1736537024}
+  m_GameObject: {fileID: 1042943148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1001 &1044134973
 Prefab:
   m_ObjectHideFlags: 0
@@ -13467,6 +13909,8 @@ GameObject:
   - 114: {fileID: 1060171697}
   - 114: {fileID: 1060171696}
   - 114: {fileID: 1060171698}
+  - 114: {fileID: 1060171710}
+  - 114: {fileID: 1060171711}
   m_Layer: 0
   m_Name: P2-LightFighter
   m_TagString: Untagged
@@ -13737,7 +14181,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1060171694}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -13747,9 +14191,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 979019027}
   - {fileID: 86104784}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 673074786}
 --- !u!114 &1060171705
 MonoBehaviour:
@@ -13836,6 +14278,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1754778552}
   m_GameObject: {fileID: 1060171694}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &1060171710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1754778552}
+  m_GameObject: {fileID: 1060171694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &1060171711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1754778552}
+  m_GameObject: {fileID: 1060171694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &1062195818
 GameObject:
   m_ObjectHideFlags: 0
@@ -14250,6 +14718,8 @@ GameObject:
   - 114: {fileID: 1142030958}
   - 114: {fileID: 1142030957}
   - 114: {fileID: 1142030959}
+  - 114: {fileID: 1142030971}
+  - 114: {fileID: 1142030972}
   m_Layer: 0
   m_Name: P2-LightFighter
   m_TagString: Untagged
@@ -14520,7 +14990,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1142030955}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -14530,9 +15000,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 1452205388}
   - {fileID: 1540997224}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 2143787026}
 --- !u!114 &1142030966
 MonoBehaviour:
@@ -14619,6 +15087,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 196460304}
   m_GameObject: {fileID: 1142030955}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &1142030971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 196460304}
+  m_GameObject: {fileID: 1142030955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &1142030972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 196460304}
+  m_GameObject: {fileID: 1142030955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &1142633712
 GameObject:
   m_ObjectHideFlags: 0
@@ -15362,6 +15856,8 @@ GameObject:
   - 114: {fileID: 1270392722}
   - 114: {fileID: 1270392721}
   - 114: {fileID: 1270392723}
+  - 114: {fileID: 1270392735}
+  - 114: {fileID: 1270392736}
   m_Layer: 0
   m_Name: P2-LightFighter
   m_TagString: Untagged
@@ -15632,7 +16128,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1270392719}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -15642,9 +16138,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 511781401}
   - {fileID: 1485347814}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 622124493}
 --- !u!114 &1270392730
 MonoBehaviour:
@@ -15731,6 +16225,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 971875386}
   m_GameObject: {fileID: 1270392719}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &1270392735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 971875386}
+  m_GameObject: {fileID: 1270392719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &1270392736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 971875386}
+  m_GameObject: {fileID: 1270392719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &1273825329
 GameObject:
   m_ObjectHideFlags: 0
@@ -16169,6 +16689,8 @@ GameObject:
   - 114: {fileID: 1306012865}
   - 114: {fileID: 1306012864}
   - 114: {fileID: 1306012866}
+  - 114: {fileID: 1306012878}
+  - 114: {fileID: 1306012879}
   m_Layer: 0
   m_Name: P1-LightFighter
   m_TagString: Untagged
@@ -16439,7 +16961,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1306012862}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -16449,9 +16971,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 1712850356}
   - {fileID: 1142633713}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 1003923522}
 --- !u!114 &1306012873
 MonoBehaviour:
@@ -16538,6 +17058,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 195524755}
   m_GameObject: {fileID: 1306012862}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &1306012878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 195524755}
+  m_GameObject: {fileID: 1306012862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &1306012879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 195524755}
+  m_GameObject: {fileID: 1306012862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &1310700111
 GameObject:
   m_ObjectHideFlags: 0
@@ -16560,6 +17106,8 @@ GameObject:
   - 114: {fileID: 1310700114}
   - 114: {fileID: 1310700113}
   - 114: {fileID: 1310700115}
+  - 114: {fileID: 1310700127}
+  - 114: {fileID: 1310700128}
   m_Layer: 0
   m_Name: P2-LightFighter
   m_TagString: Untagged
@@ -16830,7 +17378,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1310700111}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -16840,9 +17388,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 1887038431}
   - {fileID: 1890365243}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 1729145796}
 --- !u!114 &1310700122
 MonoBehaviour:
@@ -16929,6 +17475,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 738309859}
   m_GameObject: {fileID: 1310700111}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &1310700127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 738309859}
+  m_GameObject: {fileID: 1310700111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &1310700128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 738309859}
+  m_GameObject: {fileID: 1310700111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &1320323591
 GameObject:
   m_ObjectHideFlags: 0
@@ -17088,6 +17660,8 @@ GameObject:
   - 114: {fileID: 1350118724}
   - 114: {fileID: 1350118723}
   - 114: {fileID: 1350118725}
+  - 114: {fileID: 1350118737}
+  - 114: {fileID: 1350118738}
   m_Layer: 0
   m_Name: P1-LightFighter
   m_TagString: Untagged
@@ -17358,7 +17932,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1350118721}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -17368,9 +17942,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 1882532793}
   - {fileID: 376325376}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 1265398995}
 --- !u!114 &1350118732
 MonoBehaviour:
@@ -17457,6 +18029,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2120613048}
   m_GameObject: {fileID: 1350118721}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &1350118737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 2120613048}
+  m_GameObject: {fileID: 1350118721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &1350118738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 2120613048}
+  m_GameObject: {fileID: 1350118721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &1389346370
 GameObject:
   m_ObjectHideFlags: 0
@@ -18227,6 +18825,8 @@ GameObject:
   - 114: {fileID: 1497033142}
   - 114: {fileID: 1497033141}
   - 114: {fileID: 1497033143}
+  - 114: {fileID: 1497033155}
+  - 114: {fileID: 1497033156}
   m_Layer: 0
   m_Name: P1-LightFighter
   m_TagString: Untagged
@@ -18497,7 +19097,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1497033139}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -18507,9 +19107,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 565618707}
   - {fileID: 2022126674}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 46981270}
 --- !u!114 &1497033150
 MonoBehaviour:
@@ -18596,6 +19194,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2057965869}
   m_GameObject: {fileID: 1497033139}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &1497033155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 2057965869}
+  m_GameObject: {fileID: 1497033139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &1497033156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 2057965869}
+  m_GameObject: {fileID: 1497033139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &1510003162
 GameObject:
   m_ObjectHideFlags: 0
@@ -18899,6 +19523,8 @@ GameObject:
   - 114: {fileID: 1581117584}
   - 114: {fileID: 1581117583}
   - 114: {fileID: 1581117585}
+  - 114: {fileID: 1581117597}
+  - 114: {fileID: 1581117598}
   m_Layer: 0
   m_Name: P2-LightFighter
   m_TagString: Untagged
@@ -19169,7 +19795,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1581117581}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -19179,9 +19805,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 883555199}
   - {fileID: 221923772}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 1738982858}
 --- !u!114 &1581117592
 MonoBehaviour:
@@ -19268,6 +19892,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 449377870}
   m_GameObject: {fileID: 1581117581}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &1581117597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 449377870}
+  m_GameObject: {fileID: 1581117581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &1581117598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 449377870}
+  m_GameObject: {fileID: 1581117581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &1582870901
 GameObject:
   m_ObjectHideFlags: 0
@@ -19454,6 +20104,8 @@ GameObject:
   - 114: {fileID: 1614193815}
   - 114: {fileID: 1614193814}
   - 114: {fileID: 1614193816}
+  - 114: {fileID: 1614193828}
+  - 114: {fileID: 1614193829}
   m_Layer: 0
   m_Name: P2-LightFighter
   m_TagString: Untagged
@@ -19724,7 +20376,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1614193812}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -19734,9 +20386,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 267311886}
   - {fileID: 1962074774}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 1688215496}
 --- !u!114 &1614193823
 MonoBehaviour:
@@ -19823,6 +20473,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1715368693}
   m_GameObject: {fileID: 1614193812}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &1614193828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1715368693}
+  m_GameObject: {fileID: 1614193812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &1614193829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1715368693}
+  m_GameObject: {fileID: 1614193812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &1614487099
 GameObject:
   m_ObjectHideFlags: 0
@@ -19845,6 +20521,8 @@ GameObject:
   - 114: {fileID: 1614487102}
   - 114: {fileID: 1614487101}
   - 114: {fileID: 1614487103}
+  - 114: {fileID: 1614487115}
+  - 114: {fileID: 1614487116}
   m_Layer: 0
   m_Name: P1-LightFighter
   m_TagString: Untagged
@@ -20115,7 +20793,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1614487099}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -20125,9 +20803,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 1677654299}
   - {fileID: 471755812}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 84895356}
 --- !u!114 &1614487110
 MonoBehaviour:
@@ -20214,6 +20890,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 670922260}
   m_GameObject: {fileID: 1614487099}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &1614487115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 670922260}
+  m_GameObject: {fileID: 1614487099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &1614487116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 670922260}
+  m_GameObject: {fileID: 1614487099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &1620575639
 GameObject:
   m_ObjectHideFlags: 0
@@ -20319,6 +21021,8 @@ GameObject:
   - 114: {fileID: 1626500355}
   - 114: {fileID: 1626500354}
   - 114: {fileID: 1626500356}
+  - 114: {fileID: 1626500368}
+  - 114: {fileID: 1626500369}
   m_Layer: 0
   m_Name: P1-LightFighter
   m_TagString: Untagged
@@ -20589,7 +21293,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1626500352}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -20599,9 +21303,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 2036522536}
   - {fileID: 1840023409}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 96238214}
 --- !u!114 &1626500363
 MonoBehaviour:
@@ -20688,6 +21390,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1524582520}
   m_GameObject: {fileID: 1626500352}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &1626500368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1524582520}
+  m_GameObject: {fileID: 1626500352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &1626500369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1524582520}
+  m_GameObject: {fileID: 1626500352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &1632537885
 GameObject:
   m_ObjectHideFlags: 0
@@ -20907,6 +21635,8 @@ GameObject:
   - 114: {fileID: 1661032647}
   - 114: {fileID: 1661032646}
   - 114: {fileID: 1661032648}
+  - 114: {fileID: 1661032660}
+  - 114: {fileID: 1661032661}
   m_Layer: 0
   m_Name: P1-LightFighter
   m_TagString: Untagged
@@ -21177,7 +21907,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1661032644}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -21187,9 +21917,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 2067060574}
   - {fileID: 559068943}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 1114023667}
 --- !u!114 &1661032655
 MonoBehaviour:
@@ -21276,6 +22004,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2084331489}
   m_GameObject: {fileID: 1661032644}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &1661032660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 2084331489}
+  m_GameObject: {fileID: 1661032644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &1661032661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 2084331489}
+  m_GameObject: {fileID: 1661032644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &1675902350
 GameObject:
   m_ObjectHideFlags: 0
@@ -21658,6 +22412,8 @@ GameObject:
   - 114: {fileID: 1716010616}
   - 114: {fileID: 1716010615}
   - 114: {fileID: 1716010617}
+  - 114: {fileID: 1716010629}
+  - 114: {fileID: 1716010630}
   m_Layer: 0
   m_Name: P2-LightFighter
   m_TagString: Untagged
@@ -21928,7 +22684,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1716010613}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -21938,9 +22694,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 556860633}
   - {fileID: 343504962}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 763842118}
 --- !u!114 &1716010624
 MonoBehaviour:
@@ -22027,6 +22781,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1695422876}
   m_GameObject: {fileID: 1716010613}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &1716010629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1695422876}
+  m_GameObject: {fileID: 1716010613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &1716010630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1695422876}
+  m_GameObject: {fileID: 1716010613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &1729145794
 GameObject:
   m_ObjectHideFlags: 0
@@ -22103,6 +22883,8 @@ GameObject:
   - 114: {fileID: 1731356891}
   - 114: {fileID: 1731356890}
   - 114: {fileID: 1731356892}
+  - 114: {fileID: 1731356904}
+  - 114: {fileID: 1731356905}
   m_Layer: 0
   m_Name: P2-LightFighter
   m_TagString: Untagged
@@ -22373,7 +23155,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1731356888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -22383,9 +23165,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 920429275}
   - {fileID: 579666756}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 1805757085}
 --- !u!114 &1731356899
 MonoBehaviour:
@@ -22472,6 +23252,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 329595392}
   m_GameObject: {fileID: 1731356888}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &1731356904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 329595392}
+  m_GameObject: {fileID: 1731356888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &1731356905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 329595392}
+  m_GameObject: {fileID: 1731356888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1001 &1736537024
 Prefab:
   m_ObjectHideFlags: 0
@@ -23164,6 +23970,8 @@ GameObject:
   - 114: {fileID: 1802693212}
   - 114: {fileID: 1802693211}
   - 114: {fileID: 1802693213}
+  - 114: {fileID: 1802693225}
+  - 114: {fileID: 1802693226}
   m_Layer: 0
   m_Name: P2-LightFighter
   m_TagString: Untagged
@@ -23434,7 +24242,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1802693209}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -23444,9 +24252,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 1471213726}
   - {fileID: 1467177272}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 1845128960}
 --- !u!114 &1802693220
 MonoBehaviour:
@@ -23533,6 +24339,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1044134973}
   m_GameObject: {fileID: 1802693209}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &1802693225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1044134973}
+  m_GameObject: {fileID: 1802693209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &1802693226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1044134973}
+  m_GameObject: {fileID: 1802693209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &1803110489
 GameObject:
   m_ObjectHideFlags: 0
@@ -23555,6 +24387,8 @@ GameObject:
   - 114: {fileID: 1803110492}
   - 114: {fileID: 1803110491}
   - 114: {fileID: 1803110493}
+  - 114: {fileID: 1803110505}
+  - 114: {fileID: 1803110506}
   m_Layer: 0
   m_Name: P2-LightFighter
   m_TagString: Untagged
@@ -23825,7 +24659,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1803110489}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -23835,9 +24669,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 1935282231}
   - {fileID: 658801524}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 1021952444}
 --- !u!114 &1803110500
 MonoBehaviour:
@@ -23924,6 +24756,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1999370376}
   m_GameObject: {fileID: 1803110489}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &1803110505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1999370376}
+  m_GameObject: {fileID: 1803110489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &1803110506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1999370376}
+  m_GameObject: {fileID: 1803110489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &1805757083
 GameObject:
   m_ObjectHideFlags: 0
@@ -24000,6 +24858,8 @@ GameObject:
   - 114: {fileID: 1833258508}
   - 114: {fileID: 1833258507}
   - 114: {fileID: 1833258509}
+  - 114: {fileID: 1833258521}
+  - 114: {fileID: 1833258522}
   m_Layer: 0
   m_Name: P2-LightFighter
   m_TagString: Untagged
@@ -24270,7 +25130,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1833258505}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -24280,9 +25140,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 1788861875}
   - {fileID: 194232946}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 1867346204}
 --- !u!114 &1833258516
 MonoBehaviour:
@@ -24369,6 +25227,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 17206050}
   m_GameObject: {fileID: 1833258505}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &1833258521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 17206050}
+  m_GameObject: {fileID: 1833258505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &1833258522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 17206050}
+  m_GameObject: {fileID: 1833258505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &1840023408
 GameObject:
   m_ObjectHideFlags: 0
@@ -24472,6 +25356,8 @@ GameObject:
   - 114: {fileID: 1846994310}
   - 114: {fileID: 1846994309}
   - 114: {fileID: 1846994311}
+  - 114: {fileID: 1846994323}
+  - 114: {fileID: 1846994324}
   m_Layer: 0
   m_Name: P2-LightFighter
   m_TagString: Untagged
@@ -24742,7 +25628,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1846994307}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -24752,9 +25638,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 805658683}
   - {fileID: 180517738}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 575018026}
 --- !u!114 &1846994318
 MonoBehaviour:
@@ -24841,6 +25725,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 949212780}
   m_GameObject: {fileID: 1846994307}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &1846994323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 949212780}
+  m_GameObject: {fileID: 1846994307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &1846994324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 949212780}
+  m_GameObject: {fileID: 1846994307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &1860084826
 GameObject:
   m_ObjectHideFlags: 0
@@ -25079,6 +25989,8 @@ GameObject:
   - 114: {fileID: 1918256311}
   - 114: {fileID: 1918256310}
   - 114: {fileID: 1918256312}
+  - 114: {fileID: 1918256324}
+  - 114: {fileID: 1918256325}
   m_Layer: 0
   m_Name: P1-LightFighter
   m_TagString: Untagged
@@ -25349,7 +26261,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1918256308}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -25359,9 +26271,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 778695351}
   - {fileID: 1916949231}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 1648615086}
 --- !u!114 &1918256319
 MonoBehaviour:
@@ -25448,6 +26358,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 130118172}
   m_GameObject: {fileID: 1918256308}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &1918256324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 130118172}
+  m_GameObject: {fileID: 1918256308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &1918256325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 130118172}
+  m_GameObject: {fileID: 1918256308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &1924608190
 GameObject:
   m_ObjectHideFlags: 0
@@ -25470,6 +26406,8 @@ GameObject:
   - 114: {fileID: 1924608193}
   - 114: {fileID: 1924608192}
   - 114: {fileID: 1924608194}
+  - 114: {fileID: 1924608206}
+  - 114: {fileID: 1924608207}
   m_Layer: 0
   m_Name: P1-LightFighter
   m_TagString: Untagged
@@ -25740,7 +26678,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1924608190}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -25750,9 +26688,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 581585627}
   - {fileID: 461965532}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 1300708550}
 --- !u!114 &1924608201
 MonoBehaviour:
@@ -25839,6 +26775,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1087376790}
   m_GameObject: {fileID: 1924608190}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &1924608206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1087376790}
+  m_GameObject: {fileID: 1924608190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &1924608207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1087376790}
+  m_GameObject: {fileID: 1924608190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &1935282230
 GameObject:
   m_ObjectHideFlags: 0
@@ -25971,6 +26933,8 @@ GameObject:
   - 114: {fileID: 1954175262}
   - 114: {fileID: 1954175261}
   - 114: {fileID: 1954175263}
+  - 114: {fileID: 1954175275}
+  - 114: {fileID: 1954175276}
   m_Layer: 0
   m_Name: P2-LightFighter
   m_TagString: Untagged
@@ -26241,7 +27205,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1954175259}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -26251,9 +27215,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 1801867833}
   - {fileID: 903850742}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 955377193}
 --- !u!114 &1954175270
 MonoBehaviour:
@@ -26340,6 +27302,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 527114509}
   m_GameObject: {fileID: 1954175259}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &1954175275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 527114509}
+  m_GameObject: {fileID: 1954175259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &1954175276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 527114509}
+  m_GameObject: {fileID: 1954175259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &1962074773
 GameObject:
   m_ObjectHideFlags: 0
@@ -27072,6 +28060,8 @@ GameObject:
   - 114: {fileID: 2023913866}
   - 114: {fileID: 2023913865}
   - 114: {fileID: 2023913867}
+  - 114: {fileID: 2023913879}
+  - 114: {fileID: 2023913880}
   m_Layer: 0
   m_Name: P2-LightFighter
   m_TagString: Untagged
@@ -27342,7 +28332,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2023913863}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -27352,9 +28342,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 1399442171}
   - {fileID: 1443948011}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 2125614452}
 --- !u!114 &2023913874
 MonoBehaviour:
@@ -27441,6 +28429,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1251585999}
   m_GameObject: {fileID: 2023913863}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &2023913879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1251585999}
+  m_GameObject: {fileID: 2023913863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &2023913880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1251585999}
+  m_GameObject: {fileID: 2023913863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1 &2036522535
 GameObject:
   m_ObjectHideFlags: 0
@@ -27490,6 +28504,8 @@ GameObject:
   - 114: {fileID: 2037608385}
   - 114: {fileID: 2037608384}
   - 114: {fileID: 2037608386}
+  - 114: {fileID: 2037608398}
+  - 114: {fileID: 2037608399}
   m_Layer: 0
   m_Name: P2-LightFighter
   m_TagString: Untagged
@@ -27760,7 +28776,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2037608382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -27770,9 +28786,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 277574490}
   - {fileID: 701512349}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 1585764167}
 --- !u!114 &2037608393
 MonoBehaviour:
@@ -27859,6 +28873,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1290526398}
   m_GameObject: {fileID: 2037608382}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &2037608398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1290526398}
+  m_GameObject: {fileID: 2037608382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &2037608399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1290526398}
+  m_GameObject: {fileID: 2037608382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1001 &2044525446
 Prefab:
   m_ObjectHideFlags: 0
@@ -28162,6 +29202,8 @@ GameObject:
   - 114: {fileID: 2070808195}
   - 114: {fileID: 2070808194}
   - 114: {fileID: 2070808196}
+  - 114: {fileID: 2070808208}
+  - 114: {fileID: 2070808209}
   m_Layer: 0
   m_Name: P2-LightFighter
   m_TagString: Untagged
@@ -28432,7 +29474,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2070808192}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -28442,9 +29484,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 1887853135}
   - {fileID: 1068934034}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 1320323593}
 --- !u!114 &2070808203
 MonoBehaviour:
@@ -28531,6 +29571,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1796194640}
   m_GameObject: {fileID: 2070808192}
   m_Mesh: {fileID: 4300000, guid: 27276153ba20040f4b514173e39106d8, type: 3}
+--- !u!114 &2070808208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11420586, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1796194640}
+  m_GameObject: {fileID: 2070808192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
+--- !u!114 &2070808209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11471040, guid: a722de5813dd643f4b9b3af416c85044,
+    type: 2}
+  m_PrefabInternal: {fileID: 1796194640}
+  m_GameObject: {fileID: 2070808192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!1001 &2084331489
 Prefab:
   m_ObjectHideFlags: 0

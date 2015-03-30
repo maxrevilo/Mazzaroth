@@ -22,6 +22,8 @@ GameObject:
   - 114: {fileID: 11412218}
   - 114: {fileID: 11412216}
   - 114: {fileID: 11412214}
+  - 114: {fileID: 11417412}
+  - 114: {fileID: 11406282}
   m_Layer: 0
   m_Name: Ship-Hero
   m_TagString: Untagged
@@ -240,6 +242,18 @@ TrailRenderer:
       rgba: 16777215
   m_MinVertexDistance: .5
   m_Autodestruct: 0
+--- !u!114 &11406282
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!114 &11412214
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -478,20 +492,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 112214}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
+  GUIPrefab: {fileID: 0}
   DebugConfigurations:
     ShowSteeringLimits: 0
   TimeToFire: 0
-  FiringLocations:
-  - {fileID: 412222}
-  - {fileID: 412216}
-  LateralStabilizatorsFactor: .100000001
+  FiringLocations: []
   HealthPoints: -1
-  Stance: 0
-  DetectionArea: {fileID: 11412236}
+  DetectionArea: {fileID: 0}
 --- !u!114 &11412232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -540,6 +550,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0d5e4c0bae74f65bf78ee8f7236711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11417412
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
 --- !u!135 &13512214
 SphereCollider:
   m_ObjectHideFlags: 1

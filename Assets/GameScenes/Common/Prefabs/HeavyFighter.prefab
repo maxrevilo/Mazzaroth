@@ -86,6 +86,8 @@ GameObject:
   - 114: {fileID: 11417196}
   - 114: {fileID: 11417198}
   - 114: {fileID: 11417200}
+  - 114: {fileID: 11401874}
+  - 114: {fileID: 11480938}
   m_Layer: 0
   m_Name: HeavyFighter
   m_TagString: Untagged
@@ -240,6 +242,18 @@ TrailRenderer:
       rgba: 16777215
   m_MinVertexDistance: .5
   m_Autodestruct: 0
+--- !u!114 &11401874
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eabc6d986d95af4a8a417a3b7f15fd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LateralStabilizatorsFactor: .100000001
 --- !u!114 &11417192
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -489,7 +503,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 182008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa238d8a2dc114b48947444d7c551535, type: 3}
+  m_Script: {fileID: 11500000, guid: 830119e6f7b62054b8fff47ff281fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
@@ -499,9 +513,7 @@ MonoBehaviour:
   FiringLocations:
   - {fileID: 414246}
   - {fileID: 414248}
-  LateralStabilizatorsFactor: .100000001
   HealthPoints: -1
-  Stance: 0
   DetectionArea: {fileID: 11485044}
 --- !u!114 &11460708
 MonoBehaviour:
@@ -529,6 +541,18 @@ MonoBehaviour:
   angularAcceleration: 1
   ShipPrefab: {fileID: 482008}
   DebrisPrefab: {fileID: 422226, guid: 99b41810d05f29149ae8ed7aa77b50ca, type: 2}
+--- !u!114 &11480938
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!114 &11485044
 MonoBehaviour:
   m_ObjectHideFlags: 1
