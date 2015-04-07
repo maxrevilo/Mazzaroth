@@ -612,7 +612,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 185915081}
     m_EventID: 1577261801
-  m_CachedInstanceID: 8654
+  m_CachedInstanceID: 28184
 --- !u!114 &185915080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,7 +640,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 185915081}
     m_EventID: 1577261801
-  m_CachedInstanceID: 8656
+  m_CachedInstanceID: 28186
 --- !u!114 &185915081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -666,7 +666,7 @@ MonoBehaviour:
     m_EventID: 1761075472
   - m_Destination: {fileID: 185915080}
     m_EventID: 1965341386
-  m_CachedInstanceID: 8658
+  m_CachedInstanceID: 28188
 --- !u!114 &185915082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -694,7 +694,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 185915080}
     m_EventID: 1965341386
-  m_CachedInstanceID: 8660
+  m_CachedInstanceID: 28190
 --- !u!114 &185915083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -720,7 +720,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 185915080}
     m_EventID: 1965341386
-  m_CachedInstanceID: 8662
+  m_CachedInstanceID: 28192
 --- !u!114 &185915084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3091,7 +3091,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 970958825}
     m_EventID: 1577261801
-  m_CachedInstanceID: 8802
+  m_CachedInstanceID: 28338
 --- !u!114 &970958823
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3119,7 +3119,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 970958825}
     m_EventID: 1577261801
-  m_CachedInstanceID: 8804
+  m_CachedInstanceID: 28340
 --- !u!114 &970958824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3160,7 +3160,7 @@ MonoBehaviour:
     m_EventID: 1761075472
   - m_Destination: {fileID: 970958823}
     m_EventID: 1965341386
-  m_CachedInstanceID: 8808
+  m_CachedInstanceID: 28344
 --- !u!114 &970958826
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3188,7 +3188,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 970958823}
     m_EventID: 1965341386
-  m_CachedInstanceID: 8810
+  m_CachedInstanceID: 28346
 --- !u!114 &970958827
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3214,7 +3214,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 970958823}
     m_EventID: 1965341386
-  m_CachedInstanceID: 8812
+  m_CachedInstanceID: 28348
 --- !u!114 &970958828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3234,7 +3234,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 8814
+  m_CachedInstanceID: 28350
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -3597,6 +3597,7 @@ GameObject:
   - 114: {fileID: 1041055055}
   - 114: {fileID: 1041055054}
   - 114: {fileID: 1041055056}
+  - 82: {fileID: 1041055057}
   m_Layer: 0
   m_Name: Scene
   m_TagString: Untagged
@@ -3688,6 +3689,64 @@ MonoBehaviour:
   ExitTime: 2
   NextLevel: MissionsMenu
   SceneController: {fileID: 1041055055}
+--- !u!82 &1041055057
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1041055052}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 06505e58634a1ce4999bcc68d292711a, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1062195818
 GameObject:
   m_ObjectHideFlags: 0
@@ -4098,7 +4157,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 1255496953}
     m_EventID: 1577261801
-  m_CachedInstanceID: 8896
+  m_CachedInstanceID: 28436
 --- !u!114 &1255496951
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4126,7 +4185,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 1255496953}
     m_EventID: 1577261801
-  m_CachedInstanceID: 8898
+  m_CachedInstanceID: 28438
 --- !u!114 &1255496952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4167,7 +4226,7 @@ MonoBehaviour:
     m_EventID: 1761075472
   - m_Destination: {fileID: 1255496951}
     m_EventID: 1965341386
-  m_CachedInstanceID: 8902
+  m_CachedInstanceID: 28442
 --- !u!114 &1255496954
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4195,7 +4254,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 1255496951}
     m_EventID: 1965341386
-  m_CachedInstanceID: 8904
+  m_CachedInstanceID: 28444
 --- !u!114 &1255496955
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4221,7 +4280,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 1255496951}
     m_EventID: 1965341386
-  m_CachedInstanceID: 8906
+  m_CachedInstanceID: 28446
 --- !u!114 &1255496956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4241,7 +4300,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 8908
+  m_CachedInstanceID: 28448
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -6418,7 +6477,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 2033359584}
     m_EventID: 1577261801
-  m_CachedInstanceID: 9146
+  m_CachedInstanceID: 28690
 --- !u!114 &2033359582
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6446,7 +6505,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 2033359584}
     m_EventID: 1577261801
-  m_CachedInstanceID: 9148
+  m_CachedInstanceID: 28692
 --- !u!114 &2033359583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6487,7 +6546,7 @@ MonoBehaviour:
     m_EventID: 1761075472
   - m_Destination: {fileID: 2033359582}
     m_EventID: 1965341386
-  m_CachedInstanceID: 9152
+  m_CachedInstanceID: 28696
 --- !u!114 &2033359585
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6515,7 +6574,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 2033359582}
     m_EventID: 1965341386
-  m_CachedInstanceID: 9154
+  m_CachedInstanceID: 28698
 --- !u!114 &2033359586
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6541,7 +6600,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 2033359582}
     m_EventID: 1965341386
-  m_CachedInstanceID: 9156
+  m_CachedInstanceID: 28700
 --- !u!114 &2033359587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6561,7 +6620,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 9158
+  m_CachedInstanceID: 28702
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
