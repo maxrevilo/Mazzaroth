@@ -5,33 +5,31 @@ using System.Collections;
 namespace Mazzaroth {
     public class RTSCamera : BaseMonoBehaviour {
         public Vector3 TargetPosition;
-        public float TargetZoom = 1f;
-        public float MaxZoom = 4f;
-        public float MinZoom = 0.5f;
-
+        public float TargetZoom = 0f;
 
         public float MovementAdaptationSpeed = 0.6f;
         public float ZoomAdaptationSpeed = 0.1f;
 
         private Vector3 forward;
         private Vector3 right;
+		private Camera camera;
 
-        float currentZoom {
-            get {
-				if(camera.isOrthoGraphic) return  20f / camera.orthographicSize;
-				else return  60f / camera.fieldOfView;
+		private const float bottomLimit = -60f;
+		private const float topLimit = -300f;
+		public float currentZoom {
+			get {
+				return Mathf.InverseLerp(topLimit, bottomLimit, transform.InverseTransformPoint(camera.transform.position).z);
 			}
-            set {
-				if(camera.isOrthoGraphic) camera.orthographicSize = 1f / value * 20f;
-				else camera.fieldOfView = 1f / value * 60f;
-
+			set {
+				Debug.Log("SET LERP " + Mathf.Lerp(topLimit, bottomLimit, value));
+				camera.transform.position = transform.position + camera.transform.forward * Mathf.Lerp(topLimit, bottomLimit, value);
 			}
-        }
+		}
 
-        void Awake() {
+		void Awake() {
+			camera = GetComponentInChildren<Camera>();
             TargetPosition = transform.position;
-
-            currentZoom = TargetZoom;
+			TargetZoom = currentZoom;
 
             Vector3 mask = new Vector3(1, 0, 1);
             forward = Vector3.Scale(transform.forward, mask).normalized;
@@ -41,8 +39,12 @@ namespace Mazzaroth {
         void FixedUpdate() {
             transform.position = transform.position * (1f - MovementAdaptationSpeed) + TargetPosition * MovementAdaptationSpeed;
 
-            currentZoom = currentZoom * (1f - ZoomAdaptationSpeed) + TargetZoom * ZoomAdaptationSpeed;
+			currentZoom = currentZoom * (1f - ZoomAdaptationSpeed) + TargetZoom * ZoomAdaptationSpeed;
         }
+		
+		void Update() {
+			Debug.Log("GET " + transform.InverseTransformPoint(camera.transform.position).z + ", " + currentZoom + ", " + TargetZoom);
+		}
 
         public void MoveTo(Vector3 targetPosition) {
             TargetPosition = targetPosition;
@@ -54,11 +56,11 @@ namespace Mazzaroth {
         }
 
         public void ZoomTo(float targetZoom) {
-            TargetZoom = Mathf.Min(Mathf.Max(targetZoom, MinZoom), MaxZoom);
+			TargetZoom = Mathf.Clamp01(targetZoom);
         }
 
-        public void ZoomFactor(float factorZoom) {
-            ZoomTo(TargetZoom * factorZoom);
+        public void AddZoom(float diff) {
+            ZoomTo(TargetZoom + diff);
         }
 
     }

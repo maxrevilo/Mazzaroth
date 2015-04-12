@@ -14,9 +14,9 @@ namespace Mazzaroth {
         void Start() {
             ship = GetComponent<Ship>();
             if (ship) {
-				Color TeamColor = ship.Color;
+				/*Color TeamColor = ship.Color;
                 TeamColor.a = Color.a;
-                Color = TeamColor;
+                Color = TeamColor;*/
             }
 
             float theta_scale = 0.1f;             //Set lower to add more points

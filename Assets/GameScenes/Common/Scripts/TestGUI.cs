@@ -95,7 +95,7 @@ namespace Mazzaroth {
             float verticalSpeed = Input.GetAxisRaw("VerticalAxis");
             float deepSpeed = Input.GetAxisRaw("DepthAxis");
             float CameraSpeed = 80f;
-            float ZoomSpeed = 1f;
+            float ZoomSpeed = 70f;
 
             if (Mathf.Abs(verticalSpeed) > 0.05f) {
                 RTSCamera.MoveDiff(Vector3.forward * verticalSpeed * CameraSpeed * Time.deltaTime);
@@ -105,13 +105,7 @@ namespace Mazzaroth {
                 RTSCamera.MoveDiff(Vector3.right * horizontalSpeed * CameraSpeed * Time.deltaTime);
             }
 
-            if (deepSpeed > 0) {
-                RTSCamera.ZoomFactor(1f / (1f + deepSpeed) * ZoomSpeed);
-            }
-
-            if (deepSpeed < 0) {
-                RTSCamera.ZoomFactor(1f - deepSpeed * ZoomSpeed);
-            }
+			RTSCamera.AddZoom(deepSpeed * ZoomSpeed * Time.deltaTime);
         }
     }
 }
