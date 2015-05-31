@@ -14,7 +14,9 @@ namespace Mazzaroth {
 
         public Player MainPlayer;
 
-        void Awake() {
+		protected void Awake() {
+			base.Awake();
+
             foreach(Player player in Players) {
                 player.Initialize();
                 if (player.IsTheMainPlayer)

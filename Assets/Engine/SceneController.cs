@@ -1,5 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 /**
  * The base class of all SceneControllers.
@@ -16,6 +18,8 @@ public class SceneController : BaseMonoBehaviour {
 	private Texture2D fadeTexture;
 	private float fadeAlpha;
 
+	public static Infinario.Infinario infinario;
+
 	public void FadeOutAndChangeScene(string sceneName) {
 		timeToFadeOut = TotalTimeToFadeOut;
 		sceneToChangeAfterFadeOut = sceneName;
@@ -25,7 +29,27 @@ public class SceneController : BaseMonoBehaviour {
 		Application.LoadLevel(sceneName);
 	}
 
-	void Start () {
+	protected void Awake() {
+		if (SceneController.infinario == null) {
+			SceneController.infinario = new Infinario.Infinario("13e58d18-e5e0-11e4-b263-b083fedeed2e");
+			SceneController.infinario.Track("session_start", new Dictionary<string, string>() {
+				{"platform", SystemInfo.operatingSystem},
+				{"device", SystemInfo.deviceType.ToString()}
+			});
+
+			SceneController.infinario.Track("hi");
+			Debug.Log("Infinario started");
+		}
+	}
+
+	protected void OnApplicationQuit() {
+		SceneController.infinario.Track("session_end", new Dictionary<string, string>() {
+			{"duration", Time.realtimeSinceStartup.ToString()}
+		});
+		Debug.Log("Infinario closed");
+	}
+
+	protected void Start () {
 		fadeTexture = Texture2D.whiteTexture;
 		Application.targetFrameRate = 60;
 
@@ -35,7 +59,7 @@ public class SceneController : BaseMonoBehaviour {
 
 	}
 
-	void Update () {
+	protected void Update () {
 		computeFadeIn();
 		computeFadeOut();
 	}

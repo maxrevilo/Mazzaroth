@@ -14452,8 +14452,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 3
   m_Type: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: .589999974
+  m_Color: {r: .95588237, g: .491998285, b: .647057056, a: 1}
+  m_Intensity: .25
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -15454,7 +15454,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1208644335}
   m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: -4.69999981, y: -55, z: 42.7000008}
+  m_LocalPosition: {x: 0, y: -70, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1645791259}
@@ -15668,7 +15668,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: 10
+      scalar: 7
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -15683,7 +15683,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: .200000003
+          value: .285714298
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -15715,7 +15715,7 @@ ParticleSystem:
       minMaxState: 3
     gravityModifier: 0
     inheritVelocity: 0
-    maxNumParticles: 200
+    maxNumParticles: 150
   ShapeModule:
     serializedVersion: 2
     enabled: 1
@@ -15723,8 +15723,8 @@ ParticleSystem:
     radius: 1
     angle: 25
     length: 5
-    boxX: 1000
-    boxY: 1000
+    boxX: 500
+    boxY: 500
     boxZ: 100
     placementMode: 0
     m_Mesh: {fileID: 0}
@@ -15733,7 +15733,7 @@ ParticleSystem:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: .0555000007
+      scalar: .0416000001
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -16487,7 +16487,7 @@ ParticleSystem:
     range: {x: 0, y: 1}
   CollisionModule:
     enabled: 0
-    type: 0
+    type: 1
     plane0: {fileID: 0}
     plane1: {fileID: 0}
     plane2: {fileID: 0}
@@ -16502,8 +16502,8 @@ ParticleSystem:
     collidesWith:
       serializedVersion: 2
       m_Bits: 4294967295
-    quality: 0
-    voxelSize: .5
+    quality: 2
+    voxelSize: 2
     collisionMessages: 0
   SubModule:
     enabled: 0
@@ -29252,7 +29252,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: fc0b72726dae3ad49a1005dd952c740f, type: 2}
+  - {fileID: 2100000, guid: a4e788fd8932c774387b473e748346a6, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
