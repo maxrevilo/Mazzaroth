@@ -21,7 +21,6 @@ namespace Mazzaroth {
 				return Mathf.InverseLerp(topLimit, bottomLimit, transform.InverseTransformPoint(camera.transform.position).z);
 			}
 			set {
-				Debug.Log("SET LERP " + Mathf.Lerp(topLimit, bottomLimit, value));
 				camera.transform.position = transform.position + camera.transform.forward * Mathf.Lerp(topLimit, bottomLimit, value);
 			}
 		}
@@ -43,7 +42,6 @@ namespace Mazzaroth {
         }
 		
 		void Update() {
-			Debug.Log("GET " + transform.InverseTransformPoint(camera.transform.position).z + ", " + currentZoom + ", " + TargetZoom);
 		}
 
         public void MoveTo(Vector3 targetPosition) {

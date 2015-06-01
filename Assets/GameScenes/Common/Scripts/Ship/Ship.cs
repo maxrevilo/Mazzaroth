@@ -82,7 +82,7 @@ namespace Mazzaroth.Ships {
 				this.transform.parent.gameObject
 				);
 			
-			projectile.GetComponent<ProjectileState>().Initiate(this);
+			projectile.GetComponent<Projectile>().Initiate(this);
 			
 			TimeToFire = weapon.Cooldown;
 			
@@ -129,7 +129,7 @@ namespace Mazzaroth.Ships {
 			return HealthPoints > 0f;
 		}
 		
-		public float Damage(ProjectileState weapon) {
+		public float Damage(Projectile weapon) {
 			WeaponStats weaponStats = weapon.Stats;
 			float heatRawDamage = weaponStats.HeatConversion * weaponStats.Damage;
 			float physicalRawDamage = weaponStats.Damage - heatRawDamage;

@@ -12,6 +12,8 @@ GameObject:
   - 65: {fileID: 6557802}
   - 114: {fileID: 11494762}
   - 114: {fileID: 11465302}
+  - 114: {fileID: 11499672}
+  - 114: {fileID: 11479834}
   m_Layer: 0
   m_Name: HeavyBullets
   m_TagString: Untagged
@@ -135,6 +137,17 @@ MonoBehaviour:
   Impact: .699999988
   BulletPrefab: {fileID: 485666}
   ImpactPrefab: {fileID: 490718, guid: 08aee282c7904364aa3a113d2168e247, type: 2}
+--- !u!114 &11479834
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3870f1913bcdb34292c0439e87c5bbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11494762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -143,12 +156,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 185666}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31f74896a375f4754b967e002a14348e, type: 3}
+  m_Script: {fileID: 11500000, guid: ff2537e46d7677044a947351cc562959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Alive: 1
   BulletElongation: 2
   Shooter: {fileID: 0}
+--- !u!114 &11499672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05d1fa6e992c7ec4da25fe1a073251c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
