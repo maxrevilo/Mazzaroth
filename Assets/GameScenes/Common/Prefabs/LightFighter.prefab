@@ -58,6 +58,7 @@ GameObject:
   - 114: {fileID: 11403546}
   - 114: {fileID: 11420586}
   - 114: {fileID: 11471040}
+  - 114: {fileID: 11497026}
   m_Layer: 0
   m_Name: LightFighter
   m_TagString: Untagged
@@ -303,7 +304,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 11474738}
     m_EventID: 1577261801
-  m_CachedInstanceID: 11308
+  m_CachedInstanceID: 11392
 --- !u!114 &11466072
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -329,10 +330,6 @@ MonoBehaviour:
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
   DebugConfigurations:
     ShowSteeringLimits: 0
-  TimeToFire: 0
-  FiringLocations:
-  - {fileID: 490136}
-  - {fileID: 490138}
   HealthPoints: -1
   DetectionArea: {fileID: 11466072}
 --- !u!114 &11471040
@@ -371,7 +368,7 @@ MonoBehaviour:
     m_EventID: 1761075472
   - m_Destination: {fileID: 11483692}
     m_EventID: 1965341386
-  m_CachedInstanceID: 11312
+  m_CachedInstanceID: 11396
 --- !u!114 &11474740
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -398,7 +395,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 11483692}
     m_EventID: 1965341386
-  m_CachedInstanceID: 11314
+  m_CachedInstanceID: 11398
 --- !u!114 &11474742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -423,7 +420,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 11483692}
     m_EventID: 1965341386
-  m_CachedInstanceID: 11316
+  m_CachedInstanceID: 11400
 --- !u!114 &11476564
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -468,7 +465,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 11318
+  m_CachedInstanceID: 11402
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -563,7 +560,22 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 11474738}
     m_EventID: 1577261801
-  m_CachedInstanceID: 11310
+  m_CachedInstanceID: 11394
+--- !u!114 &11497026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c870ac1596a6487428a37ada0c99a262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeToFire: 0
+  FiringLocations:
+  - {fileID: 490136}
+  - {fileID: 490138}
 --- !u!135 &13512642
 SphereCollider:
   m_ObjectHideFlags: 1

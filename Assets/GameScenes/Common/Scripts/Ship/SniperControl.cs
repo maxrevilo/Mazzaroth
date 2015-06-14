@@ -18,7 +18,7 @@ namespace Mazzaroth.Ships {
 		override public void ChaceEnemy() {
 			Vector3 enemyPosition = EnemyOnLock.transform.position;
 			movementEngine.HeadTowardPosition(enemyPosition);
-			if (ship.IsTargetInRange(EnemyOnLock.transform)) {
+			if (ship.ShipWeapons.IsTargetInRange(EnemyOnLock.transform)) {
 				movementEngine.UseBreaks();
 			} else {
 				movementEngine.MoveForward ();

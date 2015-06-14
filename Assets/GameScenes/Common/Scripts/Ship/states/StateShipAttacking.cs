@@ -22,7 +22,7 @@ namespace Mazzaroth {
         }
 
         void Update() {
-			ship.Fire(ship.ShipControl.EnemyOnLock.transform, null);
+			ship.ShipWeapons.Fire(ship.ShipControl.EnemyOnLock, null);
         }
 
         void FixedUpdate() {

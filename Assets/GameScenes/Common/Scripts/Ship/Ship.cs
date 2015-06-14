@@ -17,6 +17,7 @@ namespace Mazzaroth.Ships {
 
 		public MovementEngine MovementEngine { get; private set; }
 		public ShipControl ShipControl { get; private set; }
+        public ShipWeapons ShipWeapons { get; private set; }
 		public Color Color { get { return Group.Army.Player.Color; } }
 		
 		public bool IsEnemy(Ship ship) {
@@ -30,8 +31,8 @@ namespace Mazzaroth.Ships {
 		private void Awake () {
 			stats = GetComponent<ShipStats>();
 			MovementEngine = GetComponent<MovementEngine>();
-			ShipControl = GetComponent<ShipControl>();
-			TimeToFire = 0f;
+            ShipControl = GetComponent<ShipControl>();
+            ShipWeapons = GetComponent<ShipWeapons>();
 			
 			if (HealthPoints < 0f) {
 				HealthPoints = stats.HealthPoints;
@@ -55,71 +56,9 @@ namespace Mazzaroth.Ships {
 		}
 		
 		private void Update () {
-			TimeToFire -= Time.deltaTime;
 			if(DebugConfigurations.ShowSteeringLimits) MovementEngine.DrawSteeringLimits();
 		}
 		
-		////////////////// WEAPONS /////////////////////
-		public float TimeToFire;
-		public Transform[] FiringLocations;
-		
-		public bool Fire(Transform target, WeaponStats weapon = null) {
-			if (weapon == null)
-				weapon = getWeaponAt(0);
-			
-			if (!IsReadyToFire() || !IsTargetInRange(target, weapon)) {
-				return false;
-			}
-			
-			PoolingSystem pS = PoolingSystem.Instance;
-			Transform firingLocation = getActualFiringLocation(true);
-			
-			
-			GameObject projectile = pS.InstantiateAPS(
-				weapon.BulletPrefab.name,
-				firingLocation.position,
-				firingLocation.rotation,
-				this.transform.parent.gameObject
-				);
-			
-			projectile.GetComponent<Projectile>().Initiate(this);
-			
-			TimeToFire = weapon.Cooldown;
-			
-			return true;
-		}
-		
-		public bool IsReadyToFire() {
-			return IsAlive() && TimeToFire <= 0f;
-		}
-		
-		public bool IsTargetInRange(Transform target, WeaponStats weapon = null) {
-			if (weapon == null)
-				weapon = getWeaponAt(0);
-			
-			float distSqr = Vector3.SqrMagnitude(this.transform.position - target.position);
-			
-			return distSqr <= Mathf.Pow(weapon.Range, 2);
-		}
-		
-		//// PRIVATE ////
-		WeaponStats getWeaponAt(int index) {
-			return stats.Weapons[index];
-		}
-		
-		Transform getActualFiringLocation(bool MoveToTheNextFiringLocation = false) {
-			Transform firingLocation = FiringLocations [actualFiringLocation];
-			
-			if (MoveToTheNextFiringLocation) {
-				actualFiringLocation++;
-				if (actualFiringLocation >= FiringLocations.Length) {
-					actualFiringLocation = 0;
-				}
-			}
-			
-			return firingLocation;
-		}
-
 		////////////////// HULL /////////////////////
 		public delegate void ShipDestroyed(Ship Ship);
 		public event ShipDestroyed OnShipDestroyed;
@@ -183,8 +122,6 @@ namespace Mazzaroth.Ships {
 		}
 
 		public DetectionArea DetectionArea;
-		//// PRIVATE ////
-		private int actualFiringLocation;
 	}
 }
 

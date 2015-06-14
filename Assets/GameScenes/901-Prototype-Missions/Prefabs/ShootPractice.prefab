@@ -24,6 +24,7 @@ GameObject:
   - 114: {fileID: 11472468}
   - 114: {fileID: 11489572}
   - 114: {fileID: 11476958}
+  - 114: {fileID: 11488424}
   m_Layer: 0
   m_Name: ShootPractice
   m_TagString: Untagged
@@ -280,6 +281,19 @@ MonoBehaviour:
   m_FsmEvents: []
   m_ConcreteFsmEvents: []
   m_Namespace: 
+--- !u!114 &11488424
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c870ac1596a6487428a37ada0c99a262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeToFire: 0
+  FiringLocations: []
 --- !u!114 &11489572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -330,7 +344,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 11493894}
     m_EventID: 1577261801
-  m_CachedInstanceID: 9212
+  m_CachedInstanceID: 11914
 --- !u!114 &11493888
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -357,7 +371,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 11493894}
     m_EventID: 1577261801
-  m_CachedInstanceID: 9220
+  m_CachedInstanceID: 11912
 --- !u!114 &11493890
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -382,7 +396,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 11493888}
     m_EventID: 1965341386
-  m_CachedInstanceID: 9214
+  m_CachedInstanceID: 11906
 --- !u!114 &11493892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -409,7 +423,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 11493888}
     m_EventID: 1965341386
-  m_CachedInstanceID: 9216
+  m_CachedInstanceID: 11908
 --- !u!114 &11493894
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -434,7 +448,7 @@ MonoBehaviour:
     m_EventID: 1761075472
   - m_Destination: {fileID: 11493888}
     m_EventID: 1965341386
-  m_CachedInstanceID: 9218
+  m_CachedInstanceID: 11910
 --- !u!114 &11493896
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -449,10 +463,6 @@ MonoBehaviour:
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
   DebugConfigurations:
     ShowSteeringLimits: 0
-  TimeToFire: 0
-  FiringLocations:
-  - {fileID: 412222, guid: a83cb21a86269488c91b581a6117f6fb, type: 2}
-  - {fileID: 412216, guid: a83cb21a86269488c91b581a6117f6fb, type: 2}
   HealthPoints: -1
   DetectionArea: {fileID: 11493898}
 --- !u!114 &11493898

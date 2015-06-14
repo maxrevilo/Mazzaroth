@@ -88,6 +88,7 @@ GameObject:
   - 114: {fileID: 11417200}
   - 114: {fileID: 11401874}
   - 114: {fileID: 11480938}
+  - 114: {fileID: 11411666}
   m_Layer: 0
   m_Name: HeavyFighter
   m_TagString: Untagged
@@ -254,6 +255,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LateralStabilizatorsFactor: .100000001
+--- !u!114 &11411666
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c870ac1596a6487428a37ada0c99a262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeToFire: 0
+  FiringLocations:
+  - {fileID: 414246}
+  - {fileID: 414248}
 --- !u!114 &11417192
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -278,7 +294,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 11417196}
     m_EventID: 1965341386
-  m_CachedInstanceID: 11450
+  m_CachedInstanceID: 11796
 --- !u!114 &11417194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -303,7 +319,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 11417198}
     m_EventID: 1577261801
-  m_CachedInstanceID: 11448
+  m_CachedInstanceID: 11798
 --- !u!114 &11417196
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -330,7 +346,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 11417198}
     m_EventID: 1577261801
-  m_CachedInstanceID: 11446
+  m_CachedInstanceID: 11800
 --- !u!114 &11417198
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -355,7 +371,7 @@ MonoBehaviour:
     m_EventID: 1761075472
   - m_Destination: {fileID: 11417196}
     m_EventID: 1965341386
-  m_CachedInstanceID: 11444
+  m_CachedInstanceID: 11802
 --- !u!114 &11417200
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -382,7 +398,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 11417196}
     m_EventID: 1965341386
-  m_CachedInstanceID: 11442
+  m_CachedInstanceID: 11804
 --- !u!114 &11430432
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -401,7 +417,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 11452
+  m_CachedInstanceID: 11794
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -509,10 +525,6 @@ MonoBehaviour:
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
   DebugConfigurations:
     ShowSteeringLimits: 1
-  TimeToFire: 0
-  FiringLocations:
-  - {fileID: 414246}
-  - {fileID: 414248}
   HealthPoints: -1
   DetectionArea: {fileID: 11485044}
 --- !u!114 &11460708

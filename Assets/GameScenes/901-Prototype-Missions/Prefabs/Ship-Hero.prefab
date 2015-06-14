@@ -24,6 +24,7 @@ GameObject:
   - 114: {fileID: 11412214}
   - 114: {fileID: 11417412}
   - 114: {fileID: 11406282}
+  - 114: {fileID: 11427264}
   m_Layer: 0
   m_Name: Ship-Hero
   m_TagString: Untagged
@@ -278,7 +279,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 11412220}
     m_EventID: 1577261801
-  m_CachedInstanceID: 9294
+  m_CachedInstanceID: 11864
 --- !u!114 &11412216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -305,7 +306,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 11412220}
     m_EventID: 1577261801
-  m_CachedInstanceID: 9306
+  m_CachedInstanceID: 11862
 --- !u!114 &11412218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -344,7 +345,7 @@ MonoBehaviour:
     m_EventID: 1761075472
   - m_Destination: {fileID: 11412216}
     m_EventID: 1965341386
-  m_CachedInstanceID: 9304
+  m_CachedInstanceID: 11858
 --- !u!114 &11412222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -369,7 +370,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 11412216}
     m_EventID: 1965341386
-  m_CachedInstanceID: 9302
+  m_CachedInstanceID: 11854
 --- !u!114 &11412224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -396,7 +397,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 11412216}
     m_EventID: 1965341386
-  m_CachedInstanceID: 9300
+  m_CachedInstanceID: 11856
 --- !u!114 &11412226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -477,7 +478,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 9298
+  m_CachedInstanceID: 11852
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -498,10 +499,6 @@ MonoBehaviour:
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
   DebugConfigurations:
     ShowSteeringLimits: 0
-  TimeToFire: 0
-  FiringLocations:
-  - {fileID: 412222}
-  - {fileID: 412216}
   HealthPoints: -1
   DetectionArea: {fileID: 11412236}
 --- !u!114 &11412232
@@ -564,6 +561,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LateralStabilizatorsFactor: .100000001
+--- !u!114 &11427264
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c870ac1596a6487428a37ada0c99a262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeToFire: 0
+  FiringLocations:
+  - {fileID: 412222}
+  - {fileID: 412216}
 --- !u!135 &13512214
 SphereCollider:
   m_ObjectHideFlags: 1
