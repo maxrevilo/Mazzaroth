@@ -9,7 +9,6 @@ namespace Mazzaroth {
 
         public void Initiate()
         {
-            Debug.Log("HAAA");
             projectile = GetComponent<Projectile>();
             weaponStats = GetComponent<WeaponStats>();
 

@@ -281,9 +281,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Muy bien. Con las flechas del teclado puede mover su visi\xF3n horizontalmente
-    por el campo de batalla. Si presiona la tecla \"Arriba\" encontrar\xE1 las siguientes
-    instrucciones."
+  m_Text: Very good. With the arrow keys you can move your view horizontally through
+    the battlefield. Press the "Up" key and find your next instructions.
 --- !u!222 &98711082
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -498,8 +497,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Bien! Ya no explota cuando frena.\n\nCuando termine de probar los controles
-    de movimiento, dirijase a la siguiente zona siguiendo la direcci\xF3n de las flechas"
+  m_Text: "Good! Is no longer exploding.\r\n* People celebrates in the background
+    *\r\n\r\nEjem, When You feel comfortable with motion controls, go to the next
+    area by following the direction of the arrows."
 --- !u!222 &155882165
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -612,7 +612,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 185915081}
     m_EventID: 1577261801
-  m_CachedInstanceID: 57928
+  m_CachedInstanceID: 80968
 --- !u!114 &185915080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,7 +640,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 185915081}
     m_EventID: 1577261801
-  m_CachedInstanceID: 57930
+  m_CachedInstanceID: 80970
 --- !u!114 &185915081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -666,7 +666,7 @@ MonoBehaviour:
     m_EventID: 1761075472
   - m_Destination: {fileID: 185915080}
     m_EventID: 1965341386
-  m_CachedInstanceID: 57932
+  m_CachedInstanceID: 80972
 --- !u!114 &185915082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -694,7 +694,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 185915080}
     m_EventID: 1965341386
-  m_CachedInstanceID: 57934
+  m_CachedInstanceID: 80974
 --- !u!114 &185915083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -720,7 +720,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 185915080}
     m_EventID: 1965341386
-  m_CachedInstanceID: 57936
+  m_CachedInstanceID: 80976
 --- !u!114 &185915084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2329,7 +2329,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Esta es su Nave
+  m_Text: This is your ship
 --- !u!222 &365525449
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2449,8 +2449,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Bienvenido Oficial,  este es el campo de pruebas del Proyecto Mazzaroth.\n\nEst\xE1
-    volando un caza ligero en estado de prototipo.\n"
+  m_Text: "Welcome officer, this is the tests field of the Mazzaroth Project.\r\n\r\nYou
+    are flying a prototype light fighter."
 --- !u!222 &418479796
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2873,10 +2873,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Ahora debe enfrentar naves con capacidad ofensiva. Es escencial sacar la
-    m\xE1yor ventaja posible del \xE1rea de combate, para esto la t\xE9cnica m\xE1s
-    b\xE1sica es aproximarse por detr\xE1s.\nSigua las flechas y ataque el grupo de
-    naves enemigas."
+  m_Text: "Now you must face ships with offensive capabilities. It is essential to
+    take maximum advantage of the battlefield, for this the most basic technique is
+    approaching from behind.\r\nFollow the arrows and attack the group of enemy ships
+    ahead."
 --- !u!222 &785313453
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2942,9 +2942,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Para dar una orden de ataque m\xE1s efectiva haga click derecho. La nave
-    se mover\xE1 con comportamiento agreviso y atacar\xE1 a cualquier enemigo en su
-    camino."
+  m_Text: To give the order of move and attack on sight use the right click.
 --- !u!222 &856312661
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3098,10 +3096,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Los controles b\xE1sicos de visi\xF3n funcionan correctamente.\n\nAhora
-    iniciaremos las pruebas de movimiento. Debe traer su nave hasta aqu\xED.\n\nPara
-    esto debe hacer click con el mouse sobre el punto al que desea que la nave se
-    mueva.\n\nUbiquela en el siguiente recuadro:\n\n"
+  m_Text: "Looks like the view controls are working properly.\r\n\nNow let's begin
+    with the movement tests.\r\n\nClick with the left mouse button on the point you
+    want to move the ship.\r\n\nPlace your ship right over the square below:\n"
 --- !u!222 &966982558
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3180,7 +3177,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 970958825}
     m_EventID: 1577261801
-  m_CachedInstanceID: 58094
+  m_CachedInstanceID: 81134
 --- !u!114 &970958823
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3208,7 +3205,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 970958825}
     m_EventID: 1577261801
-  m_CachedInstanceID: 58096
+  m_CachedInstanceID: 81136
 --- !u!114 &970958824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3249,7 +3246,7 @@ MonoBehaviour:
     m_EventID: 1761075472
   - m_Destination: {fileID: 970958823}
     m_EventID: 1965341386
-  m_CachedInstanceID: 58100
+  m_CachedInstanceID: 81140
 --- !u!114 &970958826
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3277,7 +3274,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 970958823}
     m_EventID: 1965341386
-  m_CachedInstanceID: 58102
+  m_CachedInstanceID: 81142
 --- !u!114 &970958827
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3303,7 +3300,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 970958823}
     m_EventID: 1965341386
-  m_CachedInstanceID: 58104
+  m_CachedInstanceID: 81144
 --- !u!114 &970958828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3323,7 +3320,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 58106
+  m_CachedInstanceID: 81146
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -3667,8 +3664,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xA1Exelente! has hecho click y la IA se ha encargado de todo \xA1eres
-    un genio!... de hacer clicks..."
+  m_Text: Wonderful! you can click and wait... and on the first try! you are a natural
 --- !u!222 &1009576669
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4290,7 +4286,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 1255496953}
     m_EventID: 1577261801
-  m_CachedInstanceID: 58200
+  m_CachedInstanceID: 81240
 --- !u!114 &1255496951
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4318,7 +4314,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 1255496953}
     m_EventID: 1577261801
-  m_CachedInstanceID: 58202
+  m_CachedInstanceID: 81242
 --- !u!114 &1255496952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4359,7 +4355,7 @@ MonoBehaviour:
     m_EventID: 1761075472
   - m_Destination: {fileID: 1255496951}
     m_EventID: 1965341386
-  m_CachedInstanceID: 58206
+  m_CachedInstanceID: 81246
 --- !u!114 &1255496954
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4387,7 +4383,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 1255496951}
     m_EventID: 1965341386
-  m_CachedInstanceID: 58208
+  m_CachedInstanceID: 81248
 --- !u!114 &1255496955
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4413,7 +4409,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 1255496951}
     m_EventID: 1965341386
-  m_CachedInstanceID: 58210
+  m_CachedInstanceID: 81250
 --- !u!114 &1255496956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4433,7 +4429,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 58212
+  m_CachedInstanceID: 81252
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -5775,9 +5771,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "En esta etapa probaremos las capacidades ofensivas de la nave. \n\nHemos
-    activado una nave se\xF1uelo en el siguiente sector. Dirija su nave cerca del
-    se\xF1uelo y esta atacar\xE1 automaticamente."
+  m_Text: "At this stage, we will test the offensive capabilities of the ship.\r\n\r\nWe
+    have activated a decoy ship in the next sector. Move your ship near the decoy
+    and it will attackautomatically."
 --- !u!222 &1625892345
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7187,8 +7183,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Si el enemigo se engancha en la cola de su nave sin permitirle contraatacar
-    use el click izquierdo para maniobrar su nave y salir del enganche.
+  m_Text: If the enemy is engaged behind your ship without allowing counterattack
+    use the left click to maneuver your ship and leave the engagement.
 --- !u!222 &1876581815
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7254,10 +7250,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "En esta misi\xF3n necesitamos que pruebe los controles visuales, motoros
-    y ofensivos de su nave.\n\nEmpezemos por los controles visuales. Puede cambiar
-    el zoom usando la rueda del mouse.\n\nTrate de expandir su campo de visi\xF3n
-    disminuyendo el zoom."
+  m_Text: "In this mission we need to test the visual, motor and offensive controls
+    of your ship.\r\n\r\nLet's start by testing visual controls. You can change the
+    zoom using the mouse wheel.\r\n\nTry to expand your field of vision by reducing
+    the zoom."
 --- !u!222 &1920298344
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7483,7 +7479,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ubique la nave en el recuadro para activar la siguiente etapa de las pruebas.
+  m_Text: Place the ship on the square to activate the next stage of testing.
 --- !u!222 &1995240309
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7655,7 +7651,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 2033359584}
     m_EventID: 1577261801
-  m_CachedInstanceID: 58448
+  m_CachedInstanceID: 81494
 --- !u!114 &2033359582
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -7683,7 +7679,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 2033359584}
     m_EventID: 1577261801
-  m_CachedInstanceID: 58450
+  m_CachedInstanceID: 81496
 --- !u!114 &2033359583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7724,7 +7720,7 @@ MonoBehaviour:
     m_EventID: 1761075472
   - m_Destination: {fileID: 2033359582}
     m_EventID: 1965341386
-  m_CachedInstanceID: 58454
+  m_CachedInstanceID: 81500
 --- !u!114 &2033359585
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -7752,7 +7748,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 2033359582}
     m_EventID: 1965341386
-  m_CachedInstanceID: 58456
+  m_CachedInstanceID: 81502
 --- !u!114 &2033359586
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -7778,7 +7774,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 2033359582}
     m_EventID: 1965341386
-  m_CachedInstanceID: 58458
+  m_CachedInstanceID: 81504
 --- !u!114 &2033359587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7798,7 +7794,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: 58460
+  m_CachedInstanceID: 81506
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -8179,7 +8175,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Misi\xF3n cumplida.\nBuen trabajo, oficial."
+  m_Text: "Mission Accomplished.\r\nGood job, officer."
 --- !u!222 &2105905260
 CanvasRenderer:
   m_ObjectHideFlags: 0
