@@ -4,7 +4,7 @@ namespace Mazzaroth {
 	public class OnMultipleDestroyTrigger : BaseTrigger {
 		public Ship[] DestructiblesToWatch;
 
-		int destroyedCount;
+		int destroyedCount = 0;
 
 		void Start () {
 			foreach (Ship destructible in DestructiblesToWatch) {
