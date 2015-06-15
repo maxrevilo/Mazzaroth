@@ -5,22 +5,23 @@ using Mazzaroth.Ships;
 namespace Mazzaroth {
     public class ProjectileControl : BaseMonoBehaviour
     {
-        public bool SetTarget(Ship ship)
+        public virtual bool SetTarget(Ship ship)
         {
             return false;
         }
 
         //// PROTECTED ////
-        protected Blackboard blackboard;
         protected ProjectileMovement movementEngine;
         protected Projectile projectile;
 
-        //// PRIVATE ////
-        private void Awake()
+        protected void Awake()
         {
             projectile = GetComponent<Projectile>();
             movementEngine = GetComponent<ProjectileMovement>();
-            blackboard = GetComponent<Blackboard>();
         }
+
+        protected void Update() { }
+
+        //// PRIVATE ////
     }
 }

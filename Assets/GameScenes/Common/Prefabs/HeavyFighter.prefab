@@ -540,11 +540,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealthPoints: 100
   Armor: 2
-  HeatDissipation: .300000012
-  Cargo: 4
-  Size: 6
+  HeatDissipation: .5
+  Cargo: 10
+  Size: 8
   Speed: 10
-  Sight: 60
+  Sight: 120
   Weapons:
   - {fileID: 11465302, guid: 6c25cd780dfb9b243b76776a3871bf32, type: 2}
   acceleration: 10

@@ -131,7 +131,7 @@ MonoBehaviour:
   Type: 0
   Damage: 10
   Cooldown: .5
-  Range: 50
+  Range: 100
   HeatConversion: .699999988
   Speed: 70
   Impact: .699999988

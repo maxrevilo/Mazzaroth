@@ -40,7 +40,8 @@ GameObject:
   - 114: {fileID: 11408030}
   - 114: {fileID: 11408032}
   - 114: {fileID: 11408012}
-  - 114: {fileID: 11408010}
+  - 114: {fileID: 11402174}
+  - 114: {fileID: 11448646}
   m_Layer: 0
   m_Name: MediumFighter
   m_TagString: Untagged
@@ -242,6 +243,21 @@ TrailRenderer:
       rgba: 16777215
   m_MinVertexDistance: .5
   m_Autodestruct: 0
+--- !u!114 &11402174
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c870ac1596a6487428a37ada0c99a262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeToFire: 0
+  FiringLocations:
+  - {fileID: 408030}
+  - {fileID: 408032}
 --- !u!114 &11408008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -253,18 +269,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267a9aa501c0548879d4f2d283b8d0f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11408010
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 108028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 971d9e2f8d047cf4bae6f41ae2c59566, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Stance: 0
 --- !u!114 &11408012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -291,10 +295,6 @@ MonoBehaviour:
   GUIPrefab: {fileID: 124012, guid: dfe00b2948ec24b8cbf0a606bd3f099d, type: 2}
   DebugConfigurations:
     ShowSteeringLimits: 1
-  TimeToFire: 0
-  FiringLocations:
-  - {fileID: 408030}
-  - {fileID: 408032}
   HealthPoints: -1
   DetectionArea: {fileID: 11408034}
 --- !u!114 &11408016
@@ -308,18 +308,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcceff334464c4d0a80513fd229f09bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthPoints: 100
-  Armor: 2
-  HeatDissipation: .300000012
-  Cargo: 4
+  HealthPoints: 60
+  Armor: 1
+  HeatDissipation: .100000001
+  Cargo: 2
   Size: 6
-  Speed: 10
-  Sight: 60
+  Speed: 20
+  Sight: 70
   Weapons:
-  - {fileID: 11465302, guid: 6c25cd780dfb9b243b76776a3871bf32, type: 2}
-  acceleration: 10
+  - {fileID: 11495168, guid: ad1dd24a6ea96d747bc412b3ca639c23, type: 2}
+  acceleration: 20
   deacceleration: 40
-  angularSpeed: .100000001
+  angularSpeed: .600000024
   angularAcceleration: 1
   ShipPrefab: {fileID: 408028}
   DebrisPrefab: {fileID: 422226, guid: 99b41810d05f29149ae8ed7aa77b50ca, type: 2}
@@ -417,7 +417,7 @@ MonoBehaviour:
   m_HideScript: 1
   m_Position: {x: 0, y: 0}
   m_Transitions: []
-  m_CachedInstanceID: -207466
+  m_CachedInstanceID: 11492
   m_Description: 
   m_EnabledState: {fileID: 0}
   m_LastEnabledState: {fileID: 0}
@@ -448,7 +448,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 11408028}
     m_EventID: 1965341386
-  m_CachedInstanceID: -207464
+  m_CachedInstanceID: 11490
 --- !u!114 &11408026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -473,7 +473,7 @@ MonoBehaviour:
     m_EventID: 843881883
   - m_Destination: {fileID: 11408030}
     m_EventID: 1577261801
-  m_CachedInstanceID: -207462
+  m_CachedInstanceID: 11488
 --- !u!114 &11408028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -500,7 +500,7 @@ MonoBehaviour:
     m_EventID: 573566531
   - m_Destination: {fileID: 11408030}
     m_EventID: 1577261801
-  m_CachedInstanceID: -207460
+  m_CachedInstanceID: 11486
 --- !u!114 &11408030
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -525,7 +525,7 @@ MonoBehaviour:
     m_EventID: 1761075472
   - m_Destination: {fileID: 11408028}
     m_EventID: 1965341386
-  m_CachedInstanceID: -207458
+  m_CachedInstanceID: 11484
 --- !u!114 &11408032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -552,7 +552,7 @@ MonoBehaviour:
     m_EventID: 1577261801
   - m_Destination: {fileID: 11408028}
     m_EventID: 1965341386
-  m_CachedInstanceID: -207456
+  m_CachedInstanceID: 11482
 --- !u!114 &11408034
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -564,6 +564,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0d5e4c0bae74f65bf78ee8f7236711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11448646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cc6511d62d2c640893ede0b3bb78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stance: 0
 --- !u!135 &13508032
 SphereCollider:
   m_ObjectHideFlags: 1

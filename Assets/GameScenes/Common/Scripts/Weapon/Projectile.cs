@@ -19,22 +19,22 @@ namespace Mazzaroth {
         }
 
         public void Initiate(Ship shooter) {
-            Stats = GetComponent<WeaponStats>();
-            ProjectileControl = GetComponent<ProjectileControl>();
-            ProjectileMovement = GetComponent<ProjectileMovement>();
             Shooter = shooter;
-
             initialPosition = this.transform.position;
 
             ProjectileMovement.Initiate();
         }
 
         // Use this for initialization
-        private void Start()
+        private void Awake()
         {
             Vector3 Scale = this.transform.localScale;
             Scale.z *= BulletElongation;
             this.transform.localScale = Scale;
+
+            Stats = GetComponent<WeaponStats>();
+            ProjectileControl = GetComponent<ProjectileControl>();
+            ProjectileMovement = GetComponent<ProjectileMovement>();
         }
 
         private void Update()

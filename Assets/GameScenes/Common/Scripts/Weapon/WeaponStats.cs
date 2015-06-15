@@ -23,7 +23,9 @@ namespace Mazzaroth {
 
         // Projectile Speed in m/s.
         public float Speed = 100;
-        //
+        // The minimun radius of the projectile when turning in meters.
+        public float TurnRadius = 0;
+        // Projectile Impact Strength (Shakes the enemy).
         public float Impact = 0.3f;
 
         // The prefab that will be instanced whit this stats.

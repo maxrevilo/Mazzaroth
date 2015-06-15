@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 436156}
   - 96: {fileID: 9636156}
+  - 114: {fileID: 11499220}
   m_Layer: 0
   m_Name: Trail
   m_TagString: Untagged
@@ -225,7 +226,8 @@ MonoBehaviour:
   Cooldown: .5
   Range: 50
   HeatConversion: .699999988
-  Speed: 70
+  Speed: 40
+  TurnRadius: 80
   Impact: .699999988
   BulletPrefab: {fileID: 495170}
   ImpactPrefab: {fileID: 490718, guid: 08aee282c7904364aa3a113d2168e247, type: 2}
@@ -243,6 +245,17 @@ MonoBehaviour:
   Alive: 1
   BulletElongation: 2
   Shooter: {fileID: 0}
+--- !u!114 &11499220
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7db47c0d4d532a40b9668b4d720c1ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
